@@ -109,8 +109,14 @@ implements <a href="NetworkComponent.html" title="interface in com.refinedmods.r
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../energy/CompositeEnergyStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.energy">CompositeEnergyStorage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyStorage()" class="member-name-link">getEnergyStorage</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(long)" class="member-name-link">extract</a><wbr>(long&nbsp;amount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCapacity()" class="member-name-link">getCapacity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onContainerAdded(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer)" class="member-name-link">onContainerAdded</a><wbr>(<a href="../node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container)</code></div>
@@ -173,9 +179,21 @@ implements <a href="NetworkComponent.html" title="interface in com.refinedmods.r
 </section>
 </li>
 <li>
-<section class="detail" id="getEnergyStorage()">
-<h3>getEnergyStorage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../energy/CompositeEnergyStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.energy">CompositeEnergyStorage</a></span>&nbsp;<span class="element-name">getEnergyStorage</span>()</div>
+<section class="detail" id="getStored()">
+<h3>getStored</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getStored</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCapacity()">
+<h3>getCapacity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getCapacity</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="extract(long)">
+<h3>extract</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(long&nbsp;amount)</span></div>
 </section>
 </li>
 </ul>
