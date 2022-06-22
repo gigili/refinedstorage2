@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;T&gt;</code>, <code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;</code>, <code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</code>, <code><a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="../StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;T&gt;</code></dd>
+<dd><code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;T&gt;</code>, <code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;</code>, <code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</code>, <code><a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="../StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;T&gt;</code>, <code><a href="../tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;T&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
@@ -95,9 +95,7 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.storage.composite.CompositeStorage,java.util.function.Supplier,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker)" class="member-name-link">StorageChannelImpl</a><wbr>(<a href="../composite/CompositeStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&nbsp;storage,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../resource/list/ResourceList.html" title="interface in com.refinedmods.refinedstorage2.api.resource.list">ResourceList</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&gt;&nbsp;listFactory,
- <a href="StorageTracker.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&nbsp;tracker)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">StorageChannelImpl</a>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -124,18 +122,18 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <div class="block">Adds a source to the channel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">extract</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">extract</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Extracts a resource from a storage.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">extract</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
- long&nbsp;amount,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceBySourceType(T,java.lang.Class)" class="member-name-link">findTrackedResourceBySourceType</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Extracts a resource from the storage channel.</div>
+<div class="block">Finds the tracked resource by source type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(T)" class="member-name-link">get</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource)</code></div>
@@ -146,41 +144,27 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StorageTracker.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTracker()" class="member-name-link">getTracker</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">insert</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
- long&nbsp;amount,
- <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Inserts a resource into a storage.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
+ <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
  <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Inserts a resource into the storage channel.</div>
+<div class="block">Inserts a resource into a storage.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#invalidate()" class="member-name-link">invalidate</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeListener(com.refinedmods.refinedstorage2.api.resource.list.listenable.ResourceListListener)" class="member-name-link">removeListener</a><wbr>(<a href="../../resource/list/listenable/ResourceListListener.html" title="interface in com.refinedmods.refinedstorage2.api.resource.list.listenable">ResourceListListener</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Invalidates the backing storage.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeListener(com.refinedmods.refinedstorage2.api.resource.list.listenable.ResourceListListener)" class="member-name-link">removeListener</a><wbr>(<a href="../../resource/list/listenable/ResourceListListener.html" title="interface in com.refinedmods.refinedstorage2.api.resource.list.listenable">ResourceListListener</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&nbsp;listener)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Removes a listener from the storage channel.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">removeSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">removeSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Removes a source from the channel.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sortSources()" class="member-name-link">sortSources</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sortSources()" class="member-name-link">sortSources</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sorts the sources in the backing storage.</div>
 </div>
 </div>
@@ -201,17 +185,9 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.api.storage.composite.CompositeStorage,java.util.function.Supplier,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker)">
+<section class="detail" id="&lt;init&gt;()">
 <h3>StorageChannelImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">StorageChannelImpl</span><wbr><span class="parameters">(<a href="../composite/CompositeStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&nbsp;storage,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../resource/list/ResourceList.html" title="interface in com.refinedmods.refinedstorage2.api.resource.list">ResourceList</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&gt;&nbsp;listFactory,
- <a href="StorageTracker.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&nbsp;tracker)</span></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>storage</code> - the backing <a href="../composite/CompositeStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a></dd>
-<dd><code>listFactory</code> - a supplier for the backing list of the <a href="../composite/CompositeStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a></dd>
-<dd><code>tracker</code> - the storage tracker</dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">StorageChannelImpl</span>()</div>
 </section>
 </li>
 </ul>
@@ -222,19 +198,6 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="invalidate()">
-<h3>invalidate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">invalidate</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="StorageChannel.html#invalidate()">StorageChannel</a></code></span></div>
-<div class="block">Invalidates the backing storage.
- This is an expensive operation and should be done with care.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="StorageChannel.html#invalidate()">invalidate</a></code>&nbsp;in interface&nbsp;<code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="sortSources()">
 <h3>sortSources</h3>
@@ -252,9 +215,7 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <h3>addSource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addSource</span><wbr><span class="parameters">(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="StorageChannel.html#addSource(com.refinedmods.refinedstorage2.api.storage.Storage)">StorageChannel</a></code></span></div>
-<div class="block">Adds a source to the channel.
- This should invalidate the backing storage.
- This is an expensive operation and should be done with care.</div>
+<div class="block">Adds a source to the channel.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StorageChannel.html#addSource(com.refinedmods.refinedstorage2.api.storage.Storage)">addSource</a></code>&nbsp;in interface&nbsp;<code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
@@ -268,9 +229,7 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <h3>removeSource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeSource</span><wbr><span class="parameters">(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="StorageChannel.html#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)">StorageChannel</a></code></span></div>
-<div class="block">Removes a source from the channel.
- This should invalidate the backing storage.
- This is an expensive operation and should be done with care.</div>
+<div class="block">Removes a source from the channel.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StorageChannel.html#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)">removeSource</a></code>&nbsp;in interface&nbsp;<code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
@@ -308,62 +267,6 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 </section>
 </li>
 <li>
-<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.storage.Source)">
-<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.Source)">extract</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
- long&nbsp;amount,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="StorageChannel.html#extract(T,long,com.refinedmods.refinedstorage2.api.storage.Source)">StorageChannel</a></code></span></div>
-<div class="block">Extracts a resource from the storage channel.
- This will perform the extraction with <a href="../../core/Action.html#EXECUTE"><code>Action.EXECUTE</code></a>
- and mark the resource as changed by the given source.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="StorageChannel.html#extract(T,long,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>resource</code> - the resource, may not be null</dd>
-<dd><code>amount</code> - the amount, must be larger than 0</dd>
-<dd><code>source</code> - the source, may not be null</dd>
-<dt>Returns:</dt>
-<dd>the amount extracted</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.storage.Source)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
- long&nbsp;amount,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="StorageChannel.html#insert(T,long,com.refinedmods.refinedstorage2.api.storage.Source)">StorageChannel</a></code></span></div>
-<div class="block">Inserts a resource into the storage channel.
- This will perform the insertion with <a href="../../core/Action.html#EXECUTE"><code>Action.EXECUTE</code></a>
- and mark the resource as changed by the given source.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="StorageChannel.html#insert(T,long,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
-<dt>Parameters:</dt>
-<dd><code>resource</code> - the resource, may not be null</dd>
-<dd><code>amount</code> - the amount, must be larger than 0</dd>
-<dd><code>source</code> - the source, may not be null</dd>
-<dt>Returns:</dt>
-<dd>the remainder (the amount not inserted)</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getTracker()">
-<h3>getTracker</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StorageTracker.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</span>&nbsp;<span class="element-name">getTracker</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="StorageChannel.html#getTracker()">getTracker</a></code>&nbsp;in interface&nbsp;<code><a href="StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
-<dt>Returns:</dt>
-<dd>the storage tracker for this storage channel</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="get(T)">
 <h3 id="get(java.lang.Object)">get</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;&gt;</span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource)</span></div>
@@ -378,42 +281,46 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 </section>
 </li>
 <li>
-<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</h3>
+<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">ExtractableStorage</a></code></span></div>
+ <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">ExtractableStorage</a></code></span></div>
 <div class="block">Extracts a resource from a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of extraction</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount extracted</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">InsertableStorage</a></code></span></div>
+ <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">InsertableStorage</a></code></span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
-<dd>the remainder (the amount not inserted)</dd>
+<dd>the amount inserted</dd>
 </dl>
 </section>
 </li>
@@ -438,6 +345,24 @@ implements <a href="StorageChannel.html" title="interface in com.refinedmods.ref
 <dd><code><a href="../StorageView.html#getStored()">getStored</a></code>&nbsp;in interface&nbsp;<code><a href="../StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>the amount stored</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="findTrackedResourceBySourceType(T,java.lang.Class)">
+<h3 id="findTrackedResourceBySourceType(java.lang.Object,java.lang.Class)">findTrackedResourceBySourceType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</span>&nbsp;<span class="element-name">findTrackedResourceBySourceType</span><wbr><span class="parameters">(<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../tracked/TrackedStorage.html#findTrackedResourceBySourceType(T,java.lang.Class)">TrackedStorage</a></code></span></div>
+<div class="block">Finds the tracked resource by source type.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../tracked/TrackedStorage.html#findTrackedResourceBySourceType(T,java.lang.Class)">findTrackedResourceBySourceType</a></code>&nbsp;in interface&nbsp;<code><a href="../tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;<a href="StorageChannelImpl.html" title="type parameter in StorageChannelImpl">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resource</code> - the resource</dd>
+<dd><code>sourceType</code> - the source type</dd>
+<dt>Returns:</dt>
+<dd>the tracked resource, if present</dd>
 </dl>
 </section>
 </li>

@@ -135,24 +135,15 @@ implements <a href="../storage/item/StorageDiskItem.html" title="interface in co
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#appendHoverText(net.minecraft.world.item.ItemStack,net.minecraft.world.level.Level,java.util.List,net.minecraft.world.item.TooltipFlag)" class="member-name-link">appendHoverText</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;stack,
- net.minecraft.world.level.Level&nbsp;level,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.network.chat.Component&gt;&nbsp;tooltip,
- net.minecraft.world.item.TooltipFlag&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract net.minecraft.world.item.ItemStack</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createPrimaryDisassemblyByproduct(int)" class="member-name-link">createPrimaryDisassemblyByproduct</a><wbr>(int&nbsp;count)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract net.minecraft.world.item.ItemStack</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createDisassemblyByproduct()" class="member-name-link">createDisassemblyByproduct</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createSecondaryDisassemblyByproduct(int)" class="member-name-link">createSecondaryDisassemblyByproduct</a><wbr>(int&nbsp;count)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract <a href="../../../api/storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStorage(net.minecraft.world.level.Level)" class="member-name-link">createStorage</a><wbr>(net.minecraft.world.level.Level&nbsp;level)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.minecraft.world.item.ItemStack&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createStoragePart(int)" class="member-name-link">createStoragePart</a><wbr>(int&nbsp;count)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#formatQuantity(long)" class="member-name-link">formatQuantity</a><wbr>(long&nbsp;qty)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDiskId(net.minecraft.world.item.ItemStack)" class="member-name-link">getDiskId</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;stack)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -169,7 +160,7 @@ implements <a href="../storage/item/StorageDiskItem.html" title="interface in co
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.InteractionResultHolder&lt;net.minecraft.world.item.ItemStack&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#use(net.minecraft.world.level.Level,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)" class="member-name-link">use</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
- net.minecraft.world.entity.player.Player&nbsp;user,
+ net.minecraft.world.entity.player.Player&nbsp;player,
  net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -177,13 +168,13 @@ implements <a href="../storage/item/StorageDiskItem.html" title="interface in co
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.item.Item">Methods inherited from class&nbsp;net.minecraft.world.item.Item</h3>
-<code>allowdedIn, asItem, byBlock, byId, canAttackBlock, canBeDepleted, canBeHurtBy, canFitInsideContainerItems, fillItemCategory, finishUsingItem, getBarColor, getBarWidth, getCraftingRemainingItem, getDefaultAttributeModifiers, getDefaultInstance, getDescription, getDescriptionId, getDescriptionId, getDestroySpeed, getDrinkingSound, getEatingSound, getEnchantmentValue, getEquipSound, getFoodProperties, getId, getItemCategory, getMaxDamage, getMaxStackSize, getName, getOrCreateDescriptionId, getPlayerPOVHitResult, getRarity, getTooltipImage, getUseAnimation, getUseDuration, hasCraftingRemainingItem, hurtEnemy, interactLivingEntity, isBarVisible, isComplex, isCorrectToolForDrops, isEdible, isEnchantable, isFireResistant, isFoil, isValidRepairItem, mineBlock, onCraftedBy, onDestroyed, onUseTick, overrideOtherStackedOnMe, overrideStackedOnOther, releaseUsing, shouldOverrideMultiplayerNbt, toString, useOn, useOnRelease, verifyTagAfterLoad</code></div>
+<code>allowdedIn, appendHoverText, asItem, builtInRegistryHolder, byBlock, byId, canAttackBlock, canBeDepleted, canBeHurtBy, canFitInsideContainerItems, fillItemCategory, finishUsingItem, getBarColor, getBarWidth, getCraftingRemainingItem, getDefaultAttributeModifiers, getDefaultInstance, getDescription, getDescriptionId, getDescriptionId, getDestroySpeed, getDrinkingSound, getEatingSound, getEnchantmentValue, getEquipSound, getFoodProperties, getId, getItemCategory, getMaxDamage, getMaxStackSize, getName, getOrCreateDescriptionId, getPlayerPOVHitResult, getRarity, getTooltipImage, getUseAnimation, getUseDuration, hasCraftingRemainingItem, hurtEnemy, interactLivingEntity, isBarVisible, isComplex, isCorrectToolForDrops, isEdible, isEnchantable, isFireResistant, isFoil, isValidRepairItem, mineBlock, onCraftedBy, onDestroyed, onUseTick, overrideOtherStackedOnMe, overrideStackedOnOther, releaseUsing, shouldOverrideMultiplayerNbt, toString, useOn, useOnRelease, verifyTagAfterLoad</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.api.storage.item.StorageDiskItem">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.platform.api.storage.item.<a href="../storage/item/StorageDiskItem.html" title="interface in com.refinedmods.refinedstorage2.platform.api.storage.item">StorageDiskItem</a></h3>
-<code><a href="../storage/item/StorageDiskItem.html#getType(net.minecraft.world.item.ItemStack)">getType</a></code></div>
+<code><a href="../storage/item/StorageDiskItem.html#getType(net.minecraft.world.item.ItemStack)">getType</a>, <a href="../storage/item/StorageDiskItem.html#hasStacking()">hasStacking</a></code></div>
 </section>
 </li>
 </ul>
@@ -231,52 +222,15 @@ implements <a href="../storage/item/StorageDiskItem.html" title="interface in co
 </section>
 </li>
 <li>
-<section class="detail" id="appendHoverText(net.minecraft.world.item.ItemStack,net.minecraft.world.level.Level,java.util.List,net.minecraft.world.item.TooltipFlag)">
-<h3>appendHoverText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">appendHoverText</span><wbr><span class="parameters">(net.minecraft.world.item.ItemStack&nbsp;stack,
- net.minecraft.world.level.Level&nbsp;level,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.network.chat.Component&gt;&nbsp;tooltip,
- net.minecraft.world.item.TooltipFlag&nbsp;context)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code>appendHoverText</code>&nbsp;in class&nbsp;<code>net.minecraft.world.item.Item</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="formatQuantity(long)">
-<h3>formatQuantity</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">formatQuantity</span><wbr><span class="parameters">(long&nbsp;qty)</span></div>
-</section>
-</li>
-<li>
 <section class="detail" id="use(net.minecraft.world.level.Level,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">
 <h3>use</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.world.InteractionResultHolder&lt;net.minecraft.world.item.ItemStack&gt;</span>&nbsp;<span class="element-name">use</span><wbr><span class="parameters">(net.minecraft.world.level.Level&nbsp;level,
- net.minecraft.world.entity.player.Player&nbsp;user,
+ net.minecraft.world.entity.player.Player&nbsp;player,
  net.minecraft.world.InteractionHand&nbsp;hand)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code>use</code>&nbsp;in class&nbsp;<code>net.minecraft.world.item.Item</code></dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="createStoragePart(int)">
-<h3>createStoragePart</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.minecraft.world.item.ItemStack&gt;</span>&nbsp;<span class="element-name">createStoragePart</span><wbr><span class="parameters">(int&nbsp;count)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="createStorage(net.minecraft.world.level.Level)">
-<h3>createStorage</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="../../../api/storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;</span>&nbsp;<span class="element-name">createStorage</span><wbr><span class="parameters">(net.minecraft.world.level.Level&nbsp;level)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="createDisassemblyByproduct()">
-<h3>createDisassemblyByproduct</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">net.minecraft.world.item.ItemStack</span>&nbsp;<span class="element-name">createDisassemblyByproduct</span>()</div>
 </section>
 </li>
 <li>
@@ -291,6 +245,24 @@ implements <a href="../storage/item/StorageDiskItem.html" title="interface in co
 <dt>Overrides:</dt>
 <dd><code>inventoryTick</code>&nbsp;in class&nbsp;<code>net.minecraft.world.item.Item</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="createStorage(net.minecraft.world.level.Level)">
+<h3>createStorage</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="../../../api/storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;</span>&nbsp;<span class="element-name">createStorage</span><wbr><span class="parameters">(net.minecraft.world.level.Level&nbsp;level)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="createPrimaryDisassemblyByproduct(int)">
+<h3>createPrimaryDisassemblyByproduct</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">net.minecraft.world.item.ItemStack</span>&nbsp;<span class="element-name">createPrimaryDisassemblyByproduct</span><wbr><span class="parameters">(int&nbsp;count)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="createSecondaryDisassemblyByproduct(int)">
+<h3>createSecondaryDisassemblyByproduct</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">net.minecraft.world.item.ItemStack</span>&nbsp;<span class="element-name">createSecondaryDisassemblyByproduct</span><wbr><span class="parameters">(int&nbsp;count)</span></div>
 </section>
 </li>
 </ul>

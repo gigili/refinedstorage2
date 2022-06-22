@@ -84,10 +84,10 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="ControllerBlockItem.html" title="class in com.refinedmods.refinedstorage2.platform.common.item.block">ControllerBlockItem</a></code></dd>
+<dd><code><a href="CreativeControllerBlockItem.html" title="class in com.refinedmods.refinedstorage2.platform.common.item.block">CreativeControllerBlockItem</a></code>, <code><a href="GridBlockItem.html" title="class in com.refinedmods.refinedstorage2.platform.common.item.block">GridBlockItem</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">NameableBlockItem</span>
+<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">NameableBlockItem</span>
 <span class="extends-implements">extends net.minecraft.world.item.BlockItem</span></div>
 </section>
 <section class="summary">
@@ -118,12 +118,13 @@ loadScripts(document, 'script');</script>
 <section class="constructor-summary" id="constructor-summary">
 <h2>Constructor Summary</h2>
 <div class="caption"><span>Constructors</span></div>
-<div class="summary-table two-column-summary">
-<div class="table-header col-first">Constructor</div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier</div>
+<div class="table-header col-second">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.level.block.Block,net.minecraft.world.item.Item.Properties,net.minecraft.world.item.DyeColor,net.minecraft.network.chat.Component)" class="member-name-link">NameableBlockItem</a><wbr>(net.minecraft.world.level.block.Block&nbsp;block,
+<div class="col-first even-row-color"><code>protected </code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.level.block.Block,net.minecraft.world.item.Item.Properties,net.minecraft.network.chat.Component)" class="member-name-link">NameableBlockItem</a><wbr>(net.minecraft.world.level.block.Block&nbsp;block,
  net.minecraft.world.item.Item.Properties&nbsp;properties,
- net.minecraft.world.item.DyeColor&nbsp;color,
  net.minecraft.network.chat.Component&nbsp;name)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
@@ -154,7 +155,7 @@ loadScripts(document, 'script');</script>
 <code>appendHoverText, canFitInsideContainerItems, canPlace, fillItemCategory, getBlock, getBlockEntityData, getDescriptionId, getPlacementState, getPlaceSound, mustSurvive, onDestroyed, place, placeBlock, registerBlocks, setBlockEntityData, updateCustomBlockEntityTag, updateCustomBlockEntityTag, updatePlacementContext, useOn</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.item.Item">Methods inherited from class&nbsp;net.minecraft.world.item.Item</h3>
-<code>allowdedIn, asItem, byBlock, byId, canAttackBlock, canBeDepleted, canBeHurtBy, finishUsingItem, getBarColor, getBarWidth, getCraftingRemainingItem, getDefaultAttributeModifiers, getDefaultInstance, getDescriptionId, getDestroySpeed, getDrinkingSound, getEatingSound, getEnchantmentValue, getEquipSound, getFoodProperties, getId, getItemCategory, getMaxDamage, getMaxStackSize, getOrCreateDescriptionId, getPlayerPOVHitResult, getRarity, getTooltipImage, getUseAnimation, getUseDuration, hasCraftingRemainingItem, hurtEnemy, interactLivingEntity, inventoryTick, isBarVisible, isComplex, isCorrectToolForDrops, isEdible, isEnchantable, isFireResistant, isFoil, isValidRepairItem, mineBlock, onCraftedBy, onUseTick, overrideOtherStackedOnMe, overrideStackedOnOther, releaseUsing, shouldOverrideMultiplayerNbt, toString, use, useOnRelease, verifyTagAfterLoad</code></div>
+<code>allowdedIn, asItem, builtInRegistryHolder, byBlock, byId, canAttackBlock, canBeDepleted, canBeHurtBy, finishUsingItem, getBarColor, getBarWidth, getCraftingRemainingItem, getDefaultAttributeModifiers, getDefaultInstance, getDescriptionId, getDestroySpeed, getDrinkingSound, getEatingSound, getEnchantmentValue, getEquipSound, getFoodProperties, getId, getItemCategory, getMaxDamage, getMaxStackSize, getOrCreateDescriptionId, getPlayerPOVHitResult, getRarity, getTooltipImage, getUseAnimation, getUseDuration, hasCraftingRemainingItem, hurtEnemy, interactLivingEntity, inventoryTick, isBarVisible, isComplex, isCorrectToolForDrops, isEdible, isEnchantable, isFireResistant, isFoil, isValidRepairItem, mineBlock, onCraftedBy, onUseTick, overrideOtherStackedOnMe, overrideStackedOnOther, releaseUsing, shouldOverrideMultiplayerNbt, toString, use, useOnRelease, verifyTagAfterLoad</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -170,11 +171,10 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.world.level.block.Block,net.minecraft.world.item.Item.Properties,net.minecraft.world.item.DyeColor,net.minecraft.network.chat.Component)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.world.level.block.Block,net.minecraft.world.item.Item.Properties,net.minecraft.network.chat.Component)">
 <h3>NameableBlockItem</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NameableBlockItem</span><wbr><span class="parameters">(net.minecraft.world.level.block.Block&nbsp;block,
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">NameableBlockItem</span><wbr><span class="parameters">(net.minecraft.world.level.block.Block&nbsp;block,
  net.minecraft.world.item.Item.Properties&nbsp;properties,
- net.minecraft.world.item.DyeColor&nbsp;color,
  net.minecraft.network.chat.Component&nbsp;name)</span></div>
 </section>
 </li>

@@ -111,23 +111,23 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSortingType()" class="member-name-link">getSortingType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTrackerEntry(T)" class="member-name-link">getTrackerEntry</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTrackedResource(T)" class="member-name-link">getTrackedResource</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isPreventSorting()" class="member-name-link">isPreventSorting</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#loadResource(T,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)" class="member-name-link">loadResource</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#loadResource(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)" class="member-name-link">loadResource</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&nbsp;trackerEntry)</code></div>
+ <a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Loads a resource in the backing list.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onChange(T,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)" class="member-name-link">onChange</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onChange(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)" class="member-name-link">onChange</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&nbsp;trackerEntry)</code></div>
+ <a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Applies a change to a resource.</div>
 </div>
@@ -266,30 +266,30 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="loadResource(T,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)">
-<h3 id="loadResource(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)">loadResource</h3>
+<section class="detail" id="loadResource(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">
+<h3 id="loadResource(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">loadResource</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">loadResource</span><wbr><span class="parameters">(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&nbsp;trackerEntry)</span></div>
+ <a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
 <div class="block">Loads a resource in the backing list. The resource still won't be visible in the view list,
  call <a href="#sort()"><code>sort()</code></a> for that.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource</dd>
 <dd><code>amount</code> - the amount</dd>
-<dd><code>trackerEntry</code> - the tracker entry, can be null</dd>
+<dd><code>trackedResource</code> - the tracked resource, can be null</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getTrackerEntry(T)">
-<h3 id="getTrackerEntry(java.lang.Object)">getTrackerEntry</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&gt;</span>&nbsp;<span class="element-name">getTrackerEntry</span><wbr><span class="parameters">(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource)</span></div>
+<section class="detail" id="getTrackedResource(T)">
+<h3 id="getTrackedResource(java.lang.Object)">getTrackedResource</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</span>&nbsp;<span class="element-name">getTrackedResource</span><wbr><span class="parameters">(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource</dd>
 <dt>Returns:</dt>
-<dd>the tracker entry, if present</dd>
+<dd>the tracked resource, if present</dd>
 </dl>
 </section>
 </li>
@@ -302,18 +302,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onChange(T,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)">
-<h3 id="onChange(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)">onChange</h3>
+<section class="detail" id="onChange(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">
+<h3 id="onChange(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onChange</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onChange</span><wbr><span class="parameters">(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&nbsp;trackerEntry)</span></div>
+ <a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
 <div class="block">Applies a change to a resource. Will update the backing list, and will also update the view list (depending
  if the view is preventing sorting).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource</dd>
 <dd><code>amount</code> - the amount, can be negative or positive</dd>
-<dd><code>trackerEntry</code> - the tracker entry, can be null</dd>
+<dd><code>trackedResource</code> - the tracked resource, can be null</dd>
 </dl>
 </section>
 </li>

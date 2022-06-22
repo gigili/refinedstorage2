@@ -103,8 +103,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.grid.search.GridSearchBoxMode,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)" class="member-name-link">GridNetworkNode</a><wbr>(<a href="../../../grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a>&nbsp;defaultSearchBoxMode,
- long&nbsp;energyUsage,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)" class="member-name-link">GridNetworkNode</a><wbr>(long&nbsp;energyUsage,
  <a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;&nbsp;type)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
@@ -125,25 +124,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">addWatcher</a><wbr>(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forEachResource(java.util.function.BiConsumer)" class="member-name-link">forEachResource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&gt;&gt;&nbsp;consumer)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forEachResource(java.util.function.BiConsumer,java.lang.Class)" class="member-name-link">forEachResource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;&gt;&nbsp;consumer,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceCount()" class="member-name-link">getResourceCount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchBoxMode()" class="member-name-link">getSearchBoxMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSortingDirection()" class="member-name-link">getSortingDirection</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSortingType()" class="member-name-link">getSortingType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../storage/channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageChannel()" class="member-name-link">getStorageChannel</a>()</code></div>
@@ -153,18 +141,6 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">removeWatcher</a><wbr>(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSearchBoxMode(com.refinedmods.refinedstorage2.api.grid.search.GridSearchBoxMode)" class="member-name-link">setSearchBoxMode</a><wbr>(<a href="../../../grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a>&nbsp;searchBoxMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSize(com.refinedmods.refinedstorage2.api.grid.view.GridSize)" class="member-name-link">setSize</a><wbr>(<a href="../../../grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a>&nbsp;size)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)" class="member-name-link">setSortingDirection</a><wbr>(<a href="../../../grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a>&nbsp;sortingDirection)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)" class="member-name-link">setSortingType</a><wbr>(<a href="../../../grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a>&nbsp;sortingType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -187,10 +163,9 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.api.grid.search.GridSearchBoxMode,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">
+<section class="detail" id="&lt;init&gt;(long,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">
 <h3>GridNetworkNode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">GridNetworkNode</span><wbr><span class="parameters">(<a href="../../../grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a>&nbsp;defaultSearchBoxMode,
- long&nbsp;energyUsage,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">GridNetworkNode</span><wbr><span class="parameters">(long&nbsp;energyUsage,
  <a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;&nbsp;type)</span></div>
 </section>
 </li>
@@ -202,54 +177,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="getSortingDirection()">
-<h3>getSortingDirection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a></span>&nbsp;<span class="element-name">getSortingDirection</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">
-<h3>setSortingDirection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSortingDirection</span><wbr><span class="parameters">(<a href="../../../grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a>&nbsp;sortingDirection)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSortingType()">
-<h3>getSortingType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></span>&nbsp;<span class="element-name">getSortingType</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)">
-<h3>setSortingType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSortingType</span><wbr><span class="parameters">(<a href="../../../grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a>&nbsp;sortingType)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSize()">
-<h3>getSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a></span>&nbsp;<span class="element-name">getSize</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSize(com.refinedmods.refinedstorage2.api.grid.view.GridSize)">
-<h3>setSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSize</span><wbr><span class="parameters">(<a href="../../../grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a>&nbsp;size)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSearchBoxMode()">
-<h3>getSearchBoxMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a></span>&nbsp;<span class="element-name">getSearchBoxMode</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSearchBoxMode(com.refinedmods.refinedstorage2.api.grid.search.GridSearchBoxMode)">
-<h3>setSearchBoxMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSearchBoxMode</span><wbr><span class="parameters">(<a href="../../../grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a>&nbsp;searchBoxMode)</span></div>
-</section>
-</li>
 <li>
 <section class="detail" id="getStorageChannel()">
 <h3>getStorageChannel</h3>
@@ -263,9 +190,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="forEachResource(java.util.function.BiConsumer)">
+<section class="detail" id="forEachResource(java.util.function.BiConsumer,java.lang.Class)">
 <h3>forEachResource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">forEachResource</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&gt;&gt;&nbsp;consumer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">forEachResource</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;&gt;&nbsp;consumer,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</span></div>
 </section>
 </li>
 <li>

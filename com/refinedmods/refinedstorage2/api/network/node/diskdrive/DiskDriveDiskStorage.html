@@ -76,12 +76,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;</code>, <code><a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</code>, <code><a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="../../../storage/StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;T&gt;</code></dd>
+<dd><code><a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;</code>, <code><a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</code>, <code><a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="../../../storage/StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;T&gt;</code>, <code><a href="../../../storage/tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;T&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveDiskStorage&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</span></div>
+implements <a href="../../../storage/tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;T&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -93,7 +93,7 @@ implements <a href="../../../storage/Storage.html" title="interface in com.refin
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.storage.Storage,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType,com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveListener)" class="member-name-link">DiskDriveDiskStorage</a><wbr>(<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&nbsp;parent,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.storage.Storage,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType,com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveListener)" class="member-name-link">DiskDriveDiskStorage</a><wbr>(<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&nbsp;delegate,
  <a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&nbsp;storageChannelType,
  <a href="DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -112,29 +112,37 @@ implements <a href="../../../storage/Storage.html" title="interface in com.refin
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">extract</a><wbr>(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">extract</a><wbr>(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Extracts a resource from a storage.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAll()" class="member-name-link">getAll</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StorageDiskState.html" title="enum class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">StorageDiskState</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceBySourceType(T,java.lang.Class)" class="member-name-link">findTrackedResourceBySourceType</a><wbr>(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Finds the tracked resource by source type.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAll()" class="member-name-link">getAll</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageChannelType()" class="member-name-link">getStorageChannelType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StorageDiskState.html" title="enum class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">StorageDiskState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageChannelType()" class="member-name-link">getStorageChannelType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">insert</a><wbr>(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+ <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Inserts a resource into a storage.</div>
 </div>
 </div>
@@ -157,7 +165,7 @@ implements <a href="../../../storage/Storage.html" title="interface in com.refin
 <li>
 <section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.api.storage.Storage,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType,com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveListener)">
 <h3>DiskDriveDiskStorage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveDiskStorage</span><wbr><span class="parameters">(<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&nbsp;parent,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveDiskStorage</span><wbr><span class="parameters">(<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&nbsp;delegate,
  <a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;&nbsp;storageChannelType,
  <a href="DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a>&nbsp;listener)</span></div>
 </section>
@@ -183,42 +191,46 @@ implements <a href="../../../storage/Storage.html" title="interface in com.refin
 </section>
 </li>
 <li>
-<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</h3>
+<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../storage/ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">ExtractableStorage</a></code></span></div>
+ <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../storage/ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">ExtractableStorage</a></code></span></div>
 <div class="block">Extracts a resource from a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../storage/ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></dd>
+<dd><code><a href="../../../storage/ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of extraction</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount extracted</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../storage/InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">InsertableStorage</a></code></span></div>
+ <a href="../../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../storage/InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">InsertableStorage</a></code></span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../storage/InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></dd>
+<dd><code><a href="../../../storage/InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
-<dd>the remainder (the amount not inserted)</dd>
+<dd>the amount inserted</dd>
 </dl>
 </section>
 </li>
@@ -243,6 +255,24 @@ implements <a href="../../../storage/Storage.html" title="interface in com.refin
 <dd><code><a href="../../../storage/StorageView.html#getStored()">getStored</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>the amount stored</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="findTrackedResourceBySourceType(T,java.lang.Class)">
+<h3 id="findTrackedResourceBySourceType(java.lang.Object,java.lang.Class)">findTrackedResourceBySourceType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</span>&nbsp;<span class="element-name">findTrackedResourceBySourceType</span><wbr><span class="parameters">(<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../storage/tracked/TrackedStorage.html#findTrackedResourceBySourceType(T,java.lang.Class)">TrackedStorage</a></code></span></div>
+<div class="block">Finds the tracked resource by source type.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../storage/tracked/TrackedStorage.html#findTrackedResourceBySourceType(T,java.lang.Class)">findTrackedResourceBySourceType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;<a href="DiskDriveDiskStorage.html" title="type parameter in DiskDriveDiskStorage">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resource</code> - the resource</dd>
+<dd><code>sourceType</code> - the source type</dd>
+<dt>Returns:</dt>
+<dd>the tracked resource, if present</dd>
 </dl>
 </section>
 </li>

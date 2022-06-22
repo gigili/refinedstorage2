@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>net.minecraft.world.level.block.EntityBlock</code>, <code>net.minecraft.world.level.ItemLike</code></dd>
+<dd><code><a href="ColorableBlock.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block">ColorableBlock</a></code>, <code>net.minecraft.world.level.block.EntityBlock</code>, <code>net.minecraft.world.level.ItemLike</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">FluidGridBlock</span>
@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
 <code><a href="BaseBlock.html#DIRECTION">DIRECTION</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.level.block.Block">Fields inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
-<code>BLOCK_STATE_REGISTRY, INDESTRUCTIBLE, INSTANT, LOGGER, stateDefinition, UPDATE_ALL, UPDATE_ALL_IMMEDIATE, UPDATE_CLIENTS, UPDATE_IMMEDIATE, UPDATE_INVISIBLE, UPDATE_KNOWN_SHAPE, UPDATE_LIMIT, UPDATE_MOVE_BY_PISTON, UPDATE_NEIGHBORS, UPDATE_NONE, UPDATE_SUPPRESS_DROPS, UPDATE_SUPPRESS_LIGHT</code></div>
+<code>BLOCK_STATE_REGISTRY, INDESTRUCTIBLE, INSTANT, stateDefinition, UPDATE_ALL, UPDATE_ALL_IMMEDIATE, UPDATE_CLIENTS, UPDATE_IMMEDIATE, UPDATE_INVISIBLE, UPDATE_KNOWN_SHAPE, UPDATE_LIMIT, UPDATE_MOVE_BY_PISTON, UPDATE_NEIGHBORS, UPDATE_NONE, UPDATE_SUPPRESS_DROPS, UPDATE_SUPPRESS_LIGHT</code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.level.block.state.BlockBehaviour">Fields inherited from class&nbsp;net.minecraft.world.level.block.state.BlockBehaviour</h3>
 <code>drops, dynamicShape, explosionResistance, friction, hasCollision, isRandomlyTicking, jumpFactor, material, properties, soundType, speedFactor, UPDATE_SHAPE_ORDER</code></div>
@@ -148,7 +148,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../content/BlockColorMap.html" title="class in com.refinedmods.refinedstorage2.platform.common.content">BlockColorMap</a>&lt;?&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../content/BlockColorMap.html" title="class in com.refinedmods.refinedstorage2.platform.common.content">BlockColorMap</a>&lt;?&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlockColorMap()" class="member-name-link">getBlockColorMap</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.chat.MutableComponent</code></div>
@@ -163,16 +163,16 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.GridBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="GridBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">GridBlock</a></h3>
-<code><a href="GridBlock.html#hasActive()">hasActive</a>, <a href="GridBlock.html#hasBiDirection()">hasBiDirection</a>, <a href="GridBlock.html#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)">use</a></code></div>
+<code><a href="GridBlock.html#hasActive()">hasActive</a>, <a href="GridBlock.html#hasBiDirection()">hasBiDirection</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.NetworkNodeContainerBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="NetworkNodeContainerBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">NetworkNodeContainerBlock</a></h3>
 <code><a href="NetworkNodeContainerBlock.html#createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition.Builder)">createBlockStateDefinition</a>, <a href="NetworkNodeContainerBlock.html#getTicker(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.entity.BlockEntityType)">getTicker</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.BaseBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="BaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">BaseBlock</a></h3>
-<code><a href="BaseBlock.html#getMenuProvider(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos)">getMenuProvider</a>, <a href="BaseBlock.html#getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext)">getStateForPlacement</a>, <a href="BaseBlock.html#onRemove(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState,boolean)">onRemove</a>, <a href="BaseBlock.html#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)">rotate</a>, <a href="BaseBlock.html#useWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">useWrench</a></code></div>
+<code><a href="BaseBlock.html#getMenuProvider(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos)">getMenuProvider</a>, <a href="BaseBlock.html#getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext)">getStateForPlacement</a>, <a href="BaseBlock.html#onRemove(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState,boolean)">onRemove</a>, <a href="BaseBlock.html#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)">rotate</a>, <a href="BaseBlock.html#tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUpdateColor</a>, <a href="BaseBlock.html#tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUseWrench</a>, <a href="BaseBlock.html#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)">use</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.Block">Methods inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
-<code>animateTick, appendHoverText, asBlock, asItem, box, byItem, canSupportCenter, canSupportRigidBlock, defaultBlockState, destroy, dropFromExplosion, dropResources, dropResources, dropResources, dropResources, fallOn, fillItemCategory, getCloneItemStack, getDescriptionId, getDrops, getDrops, getExplosionResistance, getFriction, getId, getJumpFactor, getShapeForEachState, getSoundType, getSpeedFactor, getStateDefinition, handlePrecipitation, hasDynamicShape, isExceptionForConnection, isFaceFull, isPossibleToRespawnInThis, isRandomlyTicking, isShapeFullBlock, playerDestroy, playerWillDestroy, popExperience, popResource, popResourceFromFace, propagatesSkylightDown, pushEntitiesUp, registerDefaultState, setPlacedBy, shouldRenderFace, spawnDestroyParticles, stateById, stepOn, toString, updateEntityAfterFallOn, updateFromNeighbourShapes, updateOrDestroy, updateOrDestroy, wasExploded, withPropertiesOf</code></div>
+<code>animateTick, appendHoverText, asBlock, asItem, box, builtInRegistryHolder, byItem, canSupportCenter, canSupportRigidBlock, defaultBlockState, destroy, dropFromExplosion, dropResources, dropResources, dropResources, dropResources, fallOn, fillItemCategory, getCloneItemStack, getDescriptionId, getDrops, getDrops, getExplosionResistance, getFriction, getId, getJumpFactor, getShapeForEachState, getSoundType, getSpeedFactor, getStateDefinition, handlePrecipitation, hasDynamicShape, isExceptionForConnection, isFaceFull, isPossibleToRespawnInThis, isRandomlyTicking, isShapeFullBlock, playerDestroy, playerWillDestroy, popExperience, popResource, popResourceFromFace, propagatesSkylightDown, pushEntitiesUp, registerDefaultState, setPlacedBy, shouldRenderFace, spawnDestroyParticles, stateById, stepOn, toString, updateEntityAfterFallOn, updateFromNeighbourShapes, updateOrDestroy, updateOrDestroy, wasExploded, withPropertiesOf</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.state.BlockBehaviour">Methods inherited from class&nbsp;net.minecraft.world.level.block.state.BlockBehaviour</h3>
 <code>attack, canBeReplaced, canBeReplaced, canSurvive, defaultDestroyTime, defaultMaterialColor, entityInside, getAnalogOutputSignal, getBlockSupportShape, getCollisionShape, getDestroyProgress, getDirectSignal, getDrops, getFluidState, getInteractionShape, getLightBlock, getLootTable, getMaxHorizontalOffset, getMaxVerticalOffset, getOcclusionShape, getOffsetType, getPistonPushReaction, getRenderShape, getSeed, getShadeBrightness, getShape, getSignal, getVisualShape, hasAnalogOutputSignal, isCollisionShapeFullBlock, isPathfindable, isSignalSource, mirror, neighborChanged, onPlace, onProjectileHit, randomTick, skipRendering, spawnAfterBreak, tick, triggerEvent, updateIndirectNeighbourShapes, updateShape, useShapeForLightOcclusion</code></div>
@@ -220,11 +220,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getBlockColorMap()">
 <h3>getBlockColorMap</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../content/BlockColorMap.html" title="class in com.refinedmods.refinedstorage2.platform.common.content">BlockColorMap</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getBlockColorMap</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="GridBlock.html#getBlockColorMap()">getBlockColorMap</a></code>&nbsp;in class&nbsp;<code><a href="GridBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">GridBlock</a></code></dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../content/BlockColorMap.html" title="class in com.refinedmods.refinedstorage2.platform.common.content">BlockColorMap</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getBlockColorMap</span>()</div>
 </section>
 </li>
 <li>

@@ -117,9 +117,10 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">extract</a><wbr>(<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">extract</a><wbr>(<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Extracts a resource from a storage.</div>
 </div>
@@ -130,9 +131,10 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">insert</a><wbr>(<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&nbsp;resource,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Inserts a resource into a storage.</div>
 </div>
@@ -168,42 +170,46 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</h3>
+<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">ExtractableStorage</a></code></span></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">ExtractableStorage</a></code></span></div>
 <div class="block">Extracts a resource from a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of extraction</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount extracted</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">InsertableStorage</a></code></span></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">InsertableStorage</a></code></span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="InMemoryStorageImpl.html" title="type parameter in InMemoryStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
-<dd>the remainder (the amount not inserted)</dd>
+<dd>the amount inserted</dd>
 </dl>
 </section>
 </li>

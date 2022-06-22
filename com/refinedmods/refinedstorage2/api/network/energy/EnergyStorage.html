@@ -76,7 +76,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CompositeEnergyStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.energy">CompositeEnergyStorage</a></code>, <code><a href="../../../platform/forge/integration/energy/ControllerForgeEnergy.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.energy">ControllerForgeEnergy</a></code>, <code><a href="../node/controller/ControllerNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.controller">ControllerNetworkNode</a></code>, <code><a href="../../../platform/fabric/integration/energy/ControllerTeamRebornEnergy.html" title="class in com.refinedmods.refinedstorage2.platform.fabric.integration.energy">ControllerTeamRebornEnergy</a></code>, <code><a href="EnergyStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.energy">EnergyStorageImpl</a></code>, <code><a href="InfiniteEnergyStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.energy">InfiniteEnergyStorage</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">EnergyStorage</span></div>
+<div class="type-signature"><span class="annotations">@API(status=STABLE,
+     since="2.0.0-milestone.1.0")
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">EnergyStorage</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -94,7 +96,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#extract(long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">extract</a><wbr>(long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Extracts energy from the energy storage.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCapacity()" class="member-name-link">getCapacity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
@@ -104,7 +108,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#receive(long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">receive</a><wbr>(long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Adds energy to the energy storage.</div>
+</div>
 </div>
 </div>
 </div>
@@ -123,12 +129,20 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getStored()">
 <h3>getStored</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getStored</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the amount stored</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCapacity()">
 <h3>getCapacity</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">getCapacity</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the capacity</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -136,6 +150,14 @@ loadScripts(document, 'script');</script>
 <h3>receive</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">receive</span><wbr><span class="parameters">(long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
+<div class="block">Adds energy to the energy storage.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>amount</code> - the amount of energy to be received</dd>
+<dd><code>action</code> - the action</dd>
+<dt>Returns:</dt>
+<dd>the amount received</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -143,6 +165,14 @@ loadScripts(document, 'script');</script>
 <h3>extract</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
+<div class="block">Extracts energy from the energy storage.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>amount</code> - the amount of energy to be extracted</dd>
+<dd><code>action</code> - the action</dd>
+<dt>Returns:</dt>
+<dd>the amount extracted</dd>
+</dl>
 </section>
 </li>
 </ul>

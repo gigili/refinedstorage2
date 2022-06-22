@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code>, <code><a href="../../../../abstractions/menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.abstractions.menu">ExtendedMenuProvider</a></code>, <code>net.minecraft.world.inventory.MenuConstructor</code>, <code>net.minecraft.world.MenuProvider</code></dd>
+<dd><code><a href="../../../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code>, <code><a href="../../../menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.menu">ExtendedMenuProvider</a></code>, <code>net.minecraft.world.inventory.MenuConstructor</code>, <code>net.minecraft.world.MenuProvider</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -91,7 +91,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">GridBlockEntity&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a>&lt;<a href="../../../../../api/network/node/grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a>&lt;T&gt;&gt;
-implements <a href="../../../../abstractions/menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.abstractions.menu">ExtendedMenuProvider</a></span></div>
+implements <a href="../../../menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.menu">ExtendedMenuProvider</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -139,38 +139,8 @@ implements <a href="../../../../abstractions/menu/ExtendedMenuProvider.html" tit
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.chat.Component</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDisplayName()" class="member-name-link">getDisplayName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../../api/grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchBoxMode()" class="member-name-link">getSearchBoxMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../../api/grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../../api/grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSortingDirection()" class="member-name-link">getSortingDirection</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../../api/grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSortingType()" class="member-name-link">getSortingType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">removeWatcher</a><wbr>(<a href="../../../../../api/grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSearchBoxMode(com.refinedmods.refinedstorage2.api.grid.search.GridSearchBoxMode)" class="member-name-link">setSearchBoxMode</a><wbr>(<a href="../../../../../api/grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a>&nbsp;searchBoxMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSize(com.refinedmods.refinedstorage2.api.grid.view.GridSize)" class="member-name-link">setSize</a><wbr>(<a href="../../../../../api/grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a>&nbsp;size)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)" class="member-name-link">setSortingDirection</a><wbr>(<a href="../../../../../api/grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a>&nbsp;sortingDirection)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)" class="member-name-link">setSortingType</a><wbr>(<a href="../../../../../api/grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a>&nbsp;sortingType)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">removeWatcher</a><wbr>(<a href="../../../../../api/grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#writeResourceAmount(net.minecraft.network.FriendlyByteBuf,com.refinedmods.refinedstorage2.api.resource.ResourceAmount)" class="member-name-link">writeResourceAmount</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
@@ -185,16 +155,16 @@ implements <a href="../../../../abstractions/menu/ExtendedMenuProvider.html" tit
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.entity.InternalNetworkNodeContainerBlockEntity">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.entity.<a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a></h3>
-<code><a href="../InternalNetworkNodeContainerBlockEntity.html#activenessChanged(boolean)">activenessChanged</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#getRedstoneMode()">getRedstoneMode</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#serverTick(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.InternalNetworkNodeContainerBlockEntity)">serverTick</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.api.network.node.RedstoneMode)">setRedstoneMode</a></code></div>
+<code><a href="../InternalNetworkNodeContainerBlockEntity.html#activenessChanged(boolean)">activenessChanged</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#getRedstoneMode()">getRedstoneMode</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#load(net.minecraft.nbt.CompoundTag)">load</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#saveAdditional(net.minecraft.nbt.CompoundTag)">saveAdditional</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#serverTick(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.InternalNetworkNodeContainerBlockEntity)">serverTick</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.api.blockentity.NetworkNodeContainerBlockEntity">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.api.blockentity.<a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.api.blockentity">NetworkNodeContainerBlockEntity</a></h3>
-<code><a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#onNetworkInNodeInitialized()">onNetworkInNodeInitialized</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a></code></div>
+<code><a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#onNetworkInNodeInitialized()">onNetworkInNodeInitialized</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.entity.BlockEntity">Methods inherited from class&nbsp;net.minecraft.world.level.block.entity.BlockEntity</h3>
 <code>addEntityType, fillCrashReportCategory, getBlockPos, getBlockState, getLevel, getPosFromTag, getType, getUpdatePacket, getUpdateTag, hasLevel, isRemoved, loadStatic, onlyOpCanSetNbt, saveToItem, saveWithFullMetadata, saveWithId, saveWithoutMetadata, setBlockState, setChanged, setChanged, setLevel, triggerEvent</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.inventory.MenuConstructor">Methods inherited from interface&nbsp;net.minecraft.world.inventory.MenuConstructor</h3>
 <code>createMenu</code></div>
@@ -237,33 +207,13 @@ implements <a href="../../../../abstractions/menu/ExtendedMenuProvider.html" tit
 </section>
 </li>
 <li>
-<section class="detail" id="saveAdditional(net.minecraft.nbt.CompoundTag)">
-<h3>saveAdditional</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveAdditional</span><wbr><span class="parameters">(net.minecraft.nbt.CompoundTag&nbsp;tag)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="../InternalNetworkNodeContainerBlockEntity.html#saveAdditional(net.minecraft.nbt.CompoundTag)">saveAdditional</a></code>&nbsp;in class&nbsp;<code><a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a>&lt;<a href="../../../../../api/network/node/grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a>&lt;<a href="GridBlockEntity.html" title="type parameter in GridBlockEntity">T</a>&gt;&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="load(net.minecraft.nbt.CompoundTag)">
-<h3>load</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(net.minecraft.nbt.CompoundTag&nbsp;tag)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="../InternalNetworkNodeContainerBlockEntity.html#load(net.minecraft.nbt.CompoundTag)">load</a></code>&nbsp;in class&nbsp;<code><a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a>&lt;<a href="../../../../../api/network/node/grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a>&lt;<a href="GridBlockEntity.html" title="type parameter in GridBlockEntity">T</a>&gt;&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="writeScreenOpeningData(net.minecraft.server.level.ServerPlayer,net.minecraft.network.FriendlyByteBuf)">
 <h3>writeScreenOpeningData</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeScreenOpeningData</span><wbr><span class="parameters">(net.minecraft.server.level.ServerPlayer&nbsp;player,
  net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../abstractions/menu/ExtendedMenuProvider.html#writeScreenOpeningData(net.minecraft.server.level.ServerPlayer,net.minecraft.network.FriendlyByteBuf)">writeScreenOpeningData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../abstractions/menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.abstractions.menu">ExtendedMenuProvider</a></code></dd>
+<dd><code><a href="../../../menu/ExtendedMenuProvider.html#writeScreenOpeningData(net.minecraft.server.level.ServerPlayer,net.minecraft.network.FriendlyByteBuf)">writeScreenOpeningData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.menu">ExtendedMenuProvider</a></code></dd>
 </dl>
 </section>
 </li>
@@ -272,54 +222,6 @@ implements <a href="../../../../abstractions/menu/ExtendedMenuProvider.html" tit
 <h3>writeResourceAmount</h3>
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeResourceAmount</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
  <a href="../../../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridBlockEntity.html" title="type parameter in GridBlockEntity">T</a>&gt;&nbsp;stack)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSortingType()">
-<h3>getSortingType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../api/grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></span>&nbsp;<span class="element-name">getSortingType</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)">
-<h3>setSortingType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSortingType</span><wbr><span class="parameters">(<a href="../../../../../api/grid/view/GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a>&nbsp;sortingType)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSortingDirection()">
-<h3>getSortingDirection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../api/grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a></span>&nbsp;<span class="element-name">getSortingDirection</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">
-<h3>setSortingDirection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSortingDirection</span><wbr><span class="parameters">(<a href="../../../../../api/grid/view/GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a>&nbsp;sortingDirection)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSearchBoxMode()">
-<h3>getSearchBoxMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../api/grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a></span>&nbsp;<span class="element-name">getSearchBoxMode</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSearchBoxMode(com.refinedmods.refinedstorage2.api.grid.search.GridSearchBoxMode)">
-<h3>setSearchBoxMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSearchBoxMode</span><wbr><span class="parameters">(<a href="../../../../../api/grid/search/GridSearchBoxMode.html" title="interface in com.refinedmods.refinedstorage2.api.grid.search">GridSearchBoxMode</a>&nbsp;searchBoxMode)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSize()">
-<h3>getSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../api/grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a></span>&nbsp;<span class="element-name">getSize</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setSize(com.refinedmods.refinedstorage2.api.grid.view.GridSize)">
-<h3>setSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSize</span><wbr><span class="parameters">(<a href="../../../../../api/grid/view/GridSize.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSize</a>&nbsp;size)</span></div>
 </section>
 </li>
 <li>

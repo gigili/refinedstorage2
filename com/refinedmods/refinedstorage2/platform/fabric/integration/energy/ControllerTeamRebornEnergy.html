@@ -128,7 +128,9 @@ implements <a href="../../../../api/network/energy/EnergyStorage.html" title="in
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">extract</a><wbr>(long&nbsp;amount,
  <a href="../../../../api/core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extracts energy from the energy storage.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>team.reborn.energy.api.base.LimitingEnergyStorage</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExposedStorage()" class="member-name-link">getExposedStorage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -141,7 +143,9 @@ implements <a href="../../../../api/network/energy/EnergyStorage.html" title="in
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#receive(long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">receive</a><wbr>(long&nbsp;amount,
  <a href="../../../../api/core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds energy to the energy storage.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStoredSilently(long)" class="member-name-link">setStoredSilently</a><wbr>(long&nbsp;stored)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -214,6 +218,8 @@ implements <a href="../../../../api/network/energy/EnergyStorage.html" title="in
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/network/energy/EnergyStorage.html#getStored()">getStored</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/network/energy/EnergyStorage.html" title="interface in com.refinedmods.refinedstorage2.api.network.energy">EnergyStorage</a></code></dd>
+<dt>Returns:</dt>
+<dd>the amount stored</dd>
 </dl>
 </section>
 </li>
@@ -222,9 +228,16 @@ implements <a href="../../../../api/network/energy/EnergyStorage.html" title="in
 <h3>receive</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">receive</span><wbr><span class="parameters">(long&nbsp;amount,
  <a href="../../../../api/core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/network/energy/EnergyStorage.html#receive(long,com.refinedmods.refinedstorage2.api.core.Action)">EnergyStorage</a></code></span></div>
+<div class="block">Adds energy to the energy storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/network/energy/EnergyStorage.html#receive(long,com.refinedmods.refinedstorage2.api.core.Action)">receive</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/network/energy/EnergyStorage.html" title="interface in com.refinedmods.refinedstorage2.api.network.energy">EnergyStorage</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>amount</code> - the amount of energy to be received</dd>
+<dd><code>action</code> - the action</dd>
+<dt>Returns:</dt>
+<dd>the amount received</dd>
 </dl>
 </section>
 </li>
@@ -233,9 +246,16 @@ implements <a href="../../../../api/network/energy/EnergyStorage.html" title="in
 <h3>extract</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(long&nbsp;amount,
  <a href="../../../../api/core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/network/energy/EnergyStorage.html#extract(long,com.refinedmods.refinedstorage2.api.core.Action)">EnergyStorage</a></code></span></div>
+<div class="block">Extracts energy from the energy storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../api/network/energy/EnergyStorage.html#extract(long,com.refinedmods.refinedstorage2.api.core.Action)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/network/energy/EnergyStorage.html" title="interface in com.refinedmods.refinedstorage2.api.network.energy">EnergyStorage</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>amount</code> - the amount of energy to be extracted</dd>
+<dd><code>action</code> - the action</dd>
+<dt>Returns:</dt>
+<dd>the amount extracted</dd>
 </dl>
 </section>
 </li>

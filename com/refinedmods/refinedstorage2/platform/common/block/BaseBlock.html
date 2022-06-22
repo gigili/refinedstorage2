@@ -119,7 +119,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.level.block.Block">Fields inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
-<code>BLOCK_STATE_REGISTRY, INDESTRUCTIBLE, INSTANT, LOGGER, stateDefinition, UPDATE_ALL, UPDATE_ALL_IMMEDIATE, UPDATE_CLIENTS, UPDATE_IMMEDIATE, UPDATE_INVISIBLE, UPDATE_KNOWN_SHAPE, UPDATE_LIMIT, UPDATE_MOVE_BY_PISTON, UPDATE_NEIGHBORS, UPDATE_NONE, UPDATE_SUPPRESS_DROPS, UPDATE_SUPPRESS_LIGHT</code></div>
+<code>BLOCK_STATE_REGISTRY, INDESTRUCTIBLE, INSTANT, stateDefinition, UPDATE_ALL, UPDATE_ALL_IMMEDIATE, UPDATE_CLIENTS, UPDATE_IMMEDIATE, UPDATE_INVISIBLE, UPDATE_KNOWN_SHAPE, UPDATE_LIMIT, UPDATE_MOVE_BY_PISTON, UPDATE_NEIGHBORS, UPDATE_NONE, UPDATE_SUPPRESS_DROPS, UPDATE_SUPPRESS_LIGHT</code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.level.block.state.BlockBehaviour">Fields inherited from class&nbsp;net.minecraft.world.level.block.state.BlockBehaviour</h3>
 <code>drops, dynamicShape, explosionResistance, friction, hasCollision, isRandomlyTicking, jumpFactor, material, properties, soundType, speedFactor, UPDATE_SHAPE_ORDER</code></div>
@@ -176,6 +176,20 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)" class="member-name-link">rotate</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
  net.minecraft.world.level.block.Rotation&nbsp;rotation)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.minecraft.world.InteractionResult&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)" class="member-name-link">tryUpdateColor</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ net.minecraft.world.level.Level&nbsp;level,
+ net.minecraft.core.BlockPos&nbsp;pos,
+ net.minecraft.world.entity.player.Player&nbsp;player,
+ net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.minecraft.world.InteractionResult&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)" class="member-name-link">tryUseWrench</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ net.minecraft.world.level.Level&nbsp;level,
+ net.minecraft.world.phys.BlockHitResult&nbsp;hitResult,
+ net.minecraft.world.entity.player.Player&nbsp;player,
+ net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.InteractionResult</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)" class="member-name-link">use</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
  net.minecraft.world.level.Level&nbsp;level,
@@ -184,19 +198,12 @@ loadScripts(document, 'script');</script>
  net.minecraft.world.InteractionHand&nbsp;hand,
  net.minecraft.world.phys.BlockHitResult&nbsp;hit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static net.minecraft.world.InteractionResult</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#useWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)" class="member-name-link">useWrench</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- net.minecraft.world.level.Level&nbsp;level,
- net.minecraft.core.BlockPos&nbsp;pos,
- net.minecraft.world.entity.player.Player&nbsp;player,
- net.minecraft.world.InteractionHand&nbsp;hand)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.Block">Methods inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
-<code>animateTick, appendHoverText, asBlock, asItem, box, byItem, canSupportCenter, canSupportRigidBlock, defaultBlockState, destroy, dropFromExplosion, dropResources, dropResources, dropResources, dropResources, fallOn, fillItemCategory, getCloneItemStack, getDescriptionId, getDrops, getDrops, getExplosionResistance, getFriction, getId, getJumpFactor, getName, getShapeForEachState, getSoundType, getSpeedFactor, getStateDefinition, handlePrecipitation, hasDynamicShape, isExceptionForConnection, isFaceFull, isPossibleToRespawnInThis, isRandomlyTicking, isShapeFullBlock, playerDestroy, playerWillDestroy, popExperience, popResource, popResourceFromFace, propagatesSkylightDown, pushEntitiesUp, registerDefaultState, setPlacedBy, shouldRenderFace, spawnDestroyParticles, stateById, stepOn, toString, updateEntityAfterFallOn, updateFromNeighbourShapes, updateOrDestroy, updateOrDestroy, wasExploded, withPropertiesOf</code></div>
+<code>animateTick, appendHoverText, asBlock, asItem, box, builtInRegistryHolder, byItem, canSupportCenter, canSupportRigidBlock, defaultBlockState, destroy, dropFromExplosion, dropResources, dropResources, dropResources, dropResources, fallOn, fillItemCategory, getCloneItemStack, getDescriptionId, getDrops, getDrops, getExplosionResistance, getFriction, getId, getJumpFactor, getName, getShapeForEachState, getSoundType, getSpeedFactor, getStateDefinition, handlePrecipitation, hasDynamicShape, isExceptionForConnection, isFaceFull, isPossibleToRespawnInThis, isRandomlyTicking, isShapeFullBlock, playerDestroy, playerWillDestroy, popExperience, popResource, popResourceFromFace, propagatesSkylightDown, pushEntitiesUp, registerDefaultState, setPlacedBy, shouldRenderFace, spawnDestroyParticles, stateById, stepOn, toString, updateEntityAfterFallOn, updateFromNeighbourShapes, updateOrDestroy, updateOrDestroy, wasExploded, withPropertiesOf</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.state.BlockBehaviour">Methods inherited from class&nbsp;net.minecraft.world.level.block.state.BlockBehaviour</h3>
 <code>attack, canBeReplaced, canBeReplaced, canSurvive, defaultDestroyTime, defaultMaterialColor, entityInside, getAnalogOutputSignal, getBlockSupportShape, getCollisionShape, getDestroyProgress, getDirectSignal, getDrops, getFluidState, getInteractionShape, getLightBlock, getLootTable, getMaxHorizontalOffset, getMaxVerticalOffset, getOcclusionShape, getOffsetType, getPistonPushReaction, getRenderShape, getSeed, getShadeBrightness, getShape, getSignal, getVisualShape, hasAnalogOutputSignal, isCollisionShapeFullBlock, isPathfindable, isSignalSource, mirror, neighborChanged, onPlace, onProjectileHit, randomTick, skipRendering, spawnAfterBreak, tick, triggerEvent, updateIndirectNeighbourShapes, updateShape, useShapeForLightOcclusion</code></div>
@@ -321,9 +328,19 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="useWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">
-<h3>useWrench</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">net.minecraft.world.InteractionResult</span>&nbsp;<span class="element-name">useWrench</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+<section class="detail" id="tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">
+<h3>tryUseWrench</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.minecraft.world.InteractionResult&gt;</span>&nbsp;<span class="element-name">tryUseWrench</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ net.minecraft.world.level.Level&nbsp;level,
+ net.minecraft.world.phys.BlockHitResult&nbsp;hitResult,
+ net.minecraft.world.entity.player.Player&nbsp;player,
+ net.minecraft.world.InteractionHand&nbsp;hand)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">
+<h3>tryUpdateColor</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;net.minecraft.world.InteractionResult&gt;</span>&nbsp;<span class="element-name">tryUpdateColor</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
  net.minecraft.world.level.Level&nbsp;level,
  net.minecraft.core.BlockPos&nbsp;pos,
  net.minecraft.world.entity.player.Player&nbsp;player,

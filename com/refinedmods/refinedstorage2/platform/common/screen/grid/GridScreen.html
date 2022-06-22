@@ -120,6 +120,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.client.gui.GuiComponent">Fields inherited from class&nbsp;net.minecraft.client.gui.GuiComponent</h3>
 <code>BACKGROUND_LOCATION, GUI_ICONS_LOCATION, STATS_ICON_LOCATION</code></div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-net.minecraft.client.gui.components.events.GuiEventListener">Fields inherited from interface&nbsp;net.minecraft.client.gui.components.events.GuiEventListener</h3>
+<code>DOUBLE_CLICK_THRESHOLD_MS</code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -142,7 +145,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -237,6 +240,9 @@ loadScripts(document, 'script');</script>
  int&nbsp;slotY,
  <a href="../../../../api/grid/view/GridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">GridResource</a>&lt;<a href="GridScreen.html" title="type parameter in GridScreen">R</a>&gt;&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setSynchronizer(com.refinedmods.refinedstorage2.platform.api.grid.GridSynchronizer)" class="member-name-link">setSynchronizer</a><wbr>(<a href="../../../api/grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a>&nbsp;synchronizer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -248,7 +254,7 @@ loadScripts(document, 'script');</script>
 <code>checkHotbarKeyPressed, getMenu, hasClickedOutside, isHovering, isPauseScreen, mouseDragged, onClose, removed, renderLabels, renderSlotHighlight, slotClicked, tick</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.Screen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.Screen</h3>
-<code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, sendMessage, sendMessage, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
+<code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, hideWidgets, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, sendMessage, sendMessage, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.AbstractContainerEventHandler">Methods inherited from class&nbsp;net.minecraft.client.gui.components.events.AbstractContainerEventHandler</h3>
 <code>getFocused, isDragging, setDragging, setFocused</code></div>
@@ -288,6 +294,12 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="setSynchronizer(com.refinedmods.refinedstorage2.platform.api.grid.GridSynchronizer)">
+<h3>setSynchronizer</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSynchronizer</span><wbr><span class="parameters">(<a href="../../../api/grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a>&nbsp;synchronizer)</span></div>
+</section>
+</li>
 <li>
 <section class="detail" id="init()">
 <h3>init</h3>

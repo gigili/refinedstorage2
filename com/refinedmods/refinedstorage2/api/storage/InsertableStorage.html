@@ -77,11 +77,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;T&gt;</code></dd>
+<dd><code><a href="composite/CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorage</a>&lt;T&gt;</code>, <code><a href="limited/LimitedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.limited">LimitedStorage</a>&lt;T&gt;</code>, <code><a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;T&gt;</code>, <code><a href="tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;T&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="CappedStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">CappedStorage</a></code>, <code><a href="composite/CompositeStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorage</a></code>, <code><a href="../network/node/diskdrive/DiskDriveDiskStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveDiskStorage</a></code>, <code><a href="../network/node/diskdrive/DiskDriveStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveStorage</a></code>, <code><a href="InMemoryStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage">InMemoryStorageImpl</a></code>, <code><a href="../../platform/api/storage/PlatformCappedStorage.html" title="class in com.refinedmods.refinedstorage2.platform.api.storage">PlatformCappedStorage</a></code>, <code><a href="../../platform/api/storage/PlatformStorage.html" title="class in com.refinedmods.refinedstorage2.platform.api.storage">PlatformStorage</a></code>, <code><a href="ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a></code>, <code><a href="channel/StorageChannelImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelImpl</a></code></dd>
+<dd><code><a href="composite/CompositeStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorageImpl</a></code>, <code><a href="../network/node/diskdrive/DiskDriveDiskStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveDiskStorage</a></code>, <code><a href="InMemoryStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage">InMemoryStorageImpl</a></code>, <code><a href="../../platform/apiimpl/storage/LimitedPlatformStorage.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.storage">LimitedPlatformStorage</a></code>, <code><a href="limited/LimitedStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.limited">LimitedStorageImpl</a></code>, <code><a href="../../platform/apiimpl/storage/PlatformStorage.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.storage">PlatformStorage</a></code>, <code><a href="ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a></code>, <code><a href="channel/StorageChannelImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelImpl</a></code>, <code><a href="tracked/TrackedStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorageImpl</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
@@ -103,9 +103,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">insert</a><wbr>(<a href="InsertableStorage.html" title="type parameter in InsertableStorage">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="InsertableStorage.html" title="type parameter in InsertableStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Inserts a resource into a storage.</div>
 </div>
@@ -124,19 +125,21 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
 <div class="member-signature"><span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="InsertableStorage.html" title="type parameter in InsertableStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
-<dd>the remainder (the amount not inserted)</dd>
+<dd>the amount inserted</dd>
 </dl>
 </section>
 </li>

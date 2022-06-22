@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a></code></dd>
+<dd><code><a href="storage/StorageContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageContainerMenu</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">ResourceFilterableContainerMenu</span>
@@ -116,10 +116,10 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
  int&nbsp;syncId)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>protected </code></div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.inventory.MenuType,int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.api.resource.filter.ResourceFilterContainer)" class="member-name-link">ResourceFilterableContainerMenu</a><wbr>(net.minecraft.world.inventory.MenuType&lt;?&gt;&nbsp;type,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.inventory.MenuType,int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer)" class="member-name-link">ResourceFilterableContainerMenu</a><wbr>(net.minecraft.world.inventory.MenuType&lt;?&gt;&nbsp;type,
  int&nbsp;syncId,
  net.minecraft.world.entity.player.Player&nbsp;player,
- <a href="../../api/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource.filter">ResourceFilterContainer</a>&nbsp;container)</code></div>
+ <a href="../../apiimpl/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter">ResourceFilterContainer</a>&nbsp;container)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
@@ -178,7 +178,7 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <code><a href="BaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="BaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="BaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Methods inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
-<code>addDataSlot, addDataSlots, addSlotListener, broadcastFullState, canDragTo, canItemQuickReplace, checkContainerDataCount, checkContainerSize, clearContainer, clickMenuButton, findSlot, getCarried, getItems, getQuickcraftHeader, getQuickcraftMask, getQuickCraftSlotCount, getQuickcraftType, getRedstoneSignalFromBlockEntity, getRedstoneSignalFromContainer, getSlot, getStateId, getType, incrementStateId, initializeContents, isValidQuickcraftType, moveItemStackTo, removed, removeSlotListener, resetQuickCraft, resumeRemoteUpdates, sendAllDataToRemote, setCarried, setData, setItem, setRemoteCarried, setRemoteSlot, setRemoteSlotNoCopy, setSynchronizer, slotsChanged, stillValid, suppressRemoteUpdates, transferState</code></div>
+<code>addDataSlot, addDataSlots, addSlotListener, broadcastFullState, canDragTo, canItemQuickReplace, checkContainerDataCount, checkContainerSize, clearContainer, clickMenuButton, findSlot, getCarried, getItems, getQuickcraftHeader, getQuickcraftMask, getQuickCraftSlotCount, getQuickcraftType, getRedstoneSignalFromBlockEntity, getRedstoneSignalFromContainer, getSlot, getStateId, getType, incrementStateId, initializeContents, isValidQuickcraftType, isValidSlotIndex, moveItemStackTo, removed, removeSlotListener, resetQuickCraft, resumeRemoteUpdates, sendAllDataToRemote, setCarried, setData, setItem, setRemoteCarried, setRemoteSlot, setRemoteSlotNoCopy, setSynchronizer, slotsChanged, stillValid, suppressRemoteUpdates, transferState</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -194,12 +194,12 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.world.inventory.MenuType,int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.api.resource.filter.ResourceFilterContainer)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.world.inventory.MenuType,int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer)">
 <h3>ResourceFilterableContainerMenu</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">ResourceFilterableContainerMenu</span><wbr><span class="parameters">(net.minecraft.world.inventory.MenuType&lt;?&gt;&nbsp;type,
  int&nbsp;syncId,
  net.minecraft.world.entity.player.Player&nbsp;player,
- <a href="../../api/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource.filter">ResourceFilterContainer</a>&nbsp;container)</span></div>
+ <a href="../../apiimpl/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter">ResourceFilterContainer</a>&nbsp;container)</span></div>
 </section>
 </li>
 <li>

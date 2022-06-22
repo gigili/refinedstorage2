@@ -75,8 +75,10 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.client.gui.components.events.AbstractContainerEventHandler
 <div class="inheritance">net.minecraft.client.gui.screens.Screen
 <div class="inheritance">net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;T&gt;
-<div class="inheritance"><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">com.refinedmods.refinedstorage2.platform.common.screen.BaseScreen</a>&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;
+<div class="inheritance"><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">com.refinedmods.refinedstorage2.platform.common.screen.BaseScreen</a>&lt;T&gt;
+<div class="inheritance"><a href="StorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">com.refinedmods.refinedstorage2.platform.common.screen.StorageScreen</a>&lt;<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.common.screen.DiskDriveScreen</div>
+</div>
 </div>
 </div>
 </div>
@@ -86,11 +88,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>net.minecraft.client.gui.components.events.ContainerEventHandler</code>, <code>net.minecraft.client.gui.components.events.GuiEventListener</code>, <code>net.minecraft.client.gui.components.Widget</code>, <code>net.minecraft.client.gui.screens.inventory.MenuAccess&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
+<dd><code>net.minecraft.client.gui.components.events.ContainerEventHandler</code>, <code>net.minecraft.client.gui.components.events.GuiEventListener</code>, <code>net.minecraft.client.gui.components.Widget</code>, <code>net.minecraft.client.gui.screens.inventory.MenuAccess&lt;<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveScreen</span>
-<span class="extends-implements">extends <a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a>&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="StorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">StorageScreen</a>&lt;<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -116,6 +118,9 @@ loadScripts(document, 'script');</script>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.client.gui.GuiComponent">Fields inherited from class&nbsp;net.minecraft.client.gui.GuiComponent</h3>
 <code>BACKGROUND_LOCATION, GUI_ICONS_LOCATION, STATS_ICON_LOCATION</code></div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-net.minecraft.client.gui.components.events.GuiEventListener">Fields inherited from interface&nbsp;net.minecraft.client.gui.components.events.GuiEventListener</h3>
+<code>DOUBLE_CLICK_THRESHOLD_MS</code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -126,9 +131,9 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive.DiskDriveContainerMenu,net.minecraft.world.entity.player.Inventory,net.minecraft.network.chat.Component)" class="member-name-link">DiskDriveScreen</a><wbr>(<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&nbsp;menu,
- net.minecraft.world.entity.player.Inventory&nbsp;inventory,
- net.minecraft.network.chat.Component&nbsp;title)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive.DiskDriveContainerMenu,net.minecraft.world.entity.player.Inventory,net.minecraft.network.chat.Component)" class="member-name-link">DiskDriveScreen</a><wbr>(<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&nbsp;menu,
+ net.minecraft.world.entity.player.Inventory&nbsp;playerInventory,
+ net.minecraft.network.chat.Component&nbsp;text)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -144,29 +149,26 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#init()" class="member-name-link">init</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isResourceFilterButtonActive()" class="member-name-link">isResourceFilterButtonActive</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#render(com.mojang.blaze3d.vertex.PoseStack,int,int,float)" class="member-name-link">render</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
- int&nbsp;mouseX,
- int&nbsp;mouseY,
- float&nbsp;delta)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)" class="member-name-link">renderBg</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)" class="member-name-link">renderBg</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
  float&nbsp;delta,
  int&nbsp;mouseX,
  int&nbsp;mouseY)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderLabels(com.mojang.blaze3d.vertex.PoseStack,int,int)" class="member-name-link">renderLabels</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderLabels(com.mojang.blaze3d.vertex.PoseStack,int,int)" class="member-name-link">renderLabels</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
  int&nbsp;mouseX,
  int&nbsp;mouseY)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.screen.StorageScreen">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.screen.<a href="StorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">StorageScreen</a></h3>
+<code><a href="StorageScreen.html#formatQuantity(long)">formatQuantity</a>, <a href="StorageScreen.html#init()">init</a>, <a href="StorageScreen.html#render(com.mojang.blaze3d.vertex.PoseStack,int,int,float)">render</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.screen.BaseScreen">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.screen.<a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a></h3>
 <code><a href="BaseScreen.html#addSideButton(com.refinedmods.refinedstorage2.platform.common.screen.widget.SideButtonWidget)">addSideButton</a>, <a href="BaseScreen.html#disableScissor()">disableScissor</a>, <a href="BaseScreen.html#renderResourceFilterSlots(com.mojang.blaze3d.vertex.PoseStack)">renderResourceFilterSlots</a>, <a href="BaseScreen.html#renderTooltip(com.mojang.blaze3d.vertex.PoseStack,int,int)">renderTooltip</a>, <a href="BaseScreen.html#setScissor(int,int,int,int)">setScissor</a></code></div>
@@ -175,7 +177,7 @@ loadScripts(document, 'script');</script>
 <code>checkHotbarKeyPressed, containerTick, getMenu, hasClickedOutside, isHovering, isPauseScreen, keyPressed, mouseClicked, mouseDragged, mouseReleased, onClose, removed, renderSlotHighlight, slotClicked, tick</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.Screen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.Screen</h3>
-<code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, sendMessage, sendMessage, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
+<code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, hideWidgets, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, sendMessage, sendMessage, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.AbstractContainerEventHandler">Methods inherited from class&nbsp;net.minecraft.client.gui.components.events.AbstractContainerEventHandler</h3>
 <code>getFocused, isDragging, setDragging, setFocused</code></div>
@@ -203,11 +205,11 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive.DiskDriveContainerMenu,net.minecraft.world.entity.player.Inventory,net.minecraft.network.chat.Component)">
+<section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive.DiskDriveContainerMenu,net.minecraft.world.entity.player.Inventory,net.minecraft.network.chat.Component)">
 <h3>DiskDriveScreen</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveScreen</span><wbr><span class="parameters">(<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&nbsp;menu,
- net.minecraft.world.entity.player.Inventory&nbsp;inventory,
- net.minecraft.network.chat.Component&nbsp;title)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveScreen</span><wbr><span class="parameters">(<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&nbsp;menu,
+ net.minecraft.world.entity.player.Inventory&nbsp;playerInventory,
+ net.minecraft.network.chat.Component&nbsp;text)</span></div>
 </section>
 </li>
 </ul>
@@ -219,12 +221,12 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="init()">
-<h3>init</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">init</span>()</div>
+<section class="detail" id="isResourceFilterButtonActive()">
+<h3>isResourceFilterButtonActive</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isResourceFilterButtonActive</span>()</div>
 <dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="BaseScreen.html#init()">init</a></code>&nbsp;in class&nbsp;<code><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a>&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="StorageScreen.html#isResourceFilterButtonActive()">isResourceFilterButtonActive</a></code>&nbsp;in class&nbsp;<code><a href="StorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">StorageScreen</a>&lt;<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -237,7 +239,7 @@ loadScripts(document, 'script');</script>
  int&nbsp;mouseY)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="BaseScreen.html#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)">renderBg</a></code>&nbsp;in class&nbsp;<code><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a>&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
+<dd><code><a href="StorageScreen.html#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)">renderBg</a></code>&nbsp;in class&nbsp;<code><a href="StorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">StorageScreen</a>&lt;<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -249,22 +251,7 @@ loadScripts(document, 'script');</script>
  int&nbsp;mouseY)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>renderLabels</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="render(com.mojang.blaze3d.vertex.PoseStack,int,int,float)">
-<h3>render</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
- int&nbsp;mouseX,
- int&nbsp;mouseY,
- float&nbsp;delta)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>render</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.Widget</code></dd>
-<dt>Overrides:</dt>
-<dd><code>render</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;<a href="../containermenu/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
+<dd><code><a href="StorageScreen.html#renderLabels(com.mojang.blaze3d.vertex.PoseStack,int,int)">renderLabels</a></code>&nbsp;in class&nbsp;<code><a href="StorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">StorageScreen</a>&lt;<a href="../containermenu/storage/diskdrive/DiskDriveContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive">DiskDriveContainerMenu</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

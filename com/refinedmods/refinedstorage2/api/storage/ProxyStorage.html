@@ -84,12 +84,12 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="CappedStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">CappedStorage</a></code>, <code><a href="../network/node/diskdrive/DiskDriveStorage.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveStorage</a></code>, <code><a href="../../platform/api/storage/PlatformStorage.html" title="class in com.refinedmods.refinedstorage2.platform.api.storage">PlatformStorage</a></code></dd>
+<dd><code><a href="limited/LimitedStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.limited">LimitedStorageImpl</a></code>, <code><a href="../../platform/apiimpl/storage/PlatformStorage.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.storage">PlatformStorage</a></code>, <code><a href="tracked/TrackedStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorageImpl</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
      since="2.0.0-milestone.1.2")
-</span><span class="modifiers">public class </span><span class="element-name type-name-label">ProxyStorage&lt;T&gt;</span>
+</span><span class="modifiers">public abstract class </span><span class="element-name type-name-label">ProxyStorage&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</span></div>
 <div class="block">This is a utility class to easily decorate a <a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage"><code>Storage</code></a>.</div>
@@ -105,8 +105,8 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected <a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</code></div>
-<div class="col-second even-row-color"><code><a href="#parent" class="member-name-link">parent</a></code></div>
+<div class="col-first even-row-color"><code>protected final <a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#delegate" class="member-name-link">delegate</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -121,7 +121,7 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="table-header col-second">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>protected </code></div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">ProxyStorage</a><wbr>(<a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;&nbsp;parent)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">ProxyStorage</a><wbr>(<a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;&nbsp;delegate)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -138,9 +138,10 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">extract</a><wbr>(<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">extract</a><wbr>(<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Extracts a resource from a storage.</div>
 </div>
@@ -151,9 +152,10 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)" class="member-name-link">insert</a><wbr>(<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&nbsp;resource,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</code></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Inserts a resource into a storage.</div>
 </div>
@@ -175,9 +177,9 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="parent">
-<h3>parent</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</span>&nbsp;<span class="element-name">parent</span></div>
+<section class="detail" id="delegate">
+<h3>delegate</h3>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</span>&nbsp;<span class="element-name">delegate</span></div>
 </section>
 </li>
 </ul>
@@ -191,10 +193,10 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <li>
 <section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.api.storage.Storage)">
 <h3>ProxyStorage</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">ProxyStorage</span><wbr><span class="parameters">(<a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;&nbsp;parent)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">ProxyStorage</span><wbr><span class="parameters">(<a href="Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;&nbsp;delegate)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>parent</code> - the parent storage, may not be null</dd>
+<dd><code>delegate</code> - the storage to delegate operations to, may not be null</dd>
 </dl>
 </section>
 </li>
@@ -207,42 +209,46 @@ implements <a href="Storage.html" title="interface in com.refinedmods.refinedsto
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</h3>
+<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">ExtractableStorage</a></code></span></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">ExtractableStorage</a></code></span></div>
 <div class="block">Extracts a resource from a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</code></dd>
+<dd><code><a href="ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of extraction</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount extracted</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
- <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">InsertableStorage</a></code></span></div>
+ <a href="../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">InsertableStorage</a></code></span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</code></dd>
+<dd><code><a href="InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="ProxyStorage.html" title="type parameter in ProxyStorage">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
+<dd><code>source</code> - the source</dd>
 <dt>Returns:</dt>
-<dd>the remainder (the amount not inserted)</dd>
+<dd>the amount inserted</dd>
 </dl>
 </section>
 </li>

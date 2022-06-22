@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code>, <code><a href="../../../../../api/network/node/diskdrive/DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a></code>, <code><a href="../../../../abstractions/menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.abstractions.menu">ExtendedMenuProvider</a></code>, <code><a href="../BlockEntityWithDrops.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.entity">BlockEntityWithDrops</a></code>, <code>net.minecraft.world.inventory.MenuConstructor</code>, <code>net.minecraft.world.MenuProvider</code></dd>
+<dd><code><a href="../../../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code>, <code><a href="../../../../../api/network/node/diskdrive/DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a></code>, <code><a href="../BlockEntityWithDrops.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.entity">BlockEntityWithDrops</a></code>, <code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code>, <code><a href="../../../menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.menu">ExtendedMenuProvider</a></code>, <code>net.minecraft.world.inventory.MenuConstructor</code>, <code>net.minecraft.world.MenuProvider</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -91,7 +91,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">DiskDriveBlockEntity</span>
 <span class="extends-implements">extends <a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a>&lt;<a href="../../../../../api/network/node/diskdrive/DiskDriveNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveNetworkNode</a>&gt;
-implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.entity">BlockEntityWithDrops</a>, <a href="../../../../../api/network/node/diskdrive/DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a>, <a href="../../../../abstractions/menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.abstractions.menu">ExtendedMenuProvider</a></span></div>
+implements <a href="../BlockEntityWithDrops.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.entity">BlockEntityWithDrops</a>, <a href="../../../../../api/network/node/diskdrive/DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a>, <a href="../../../menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.menu">ExtendedMenuProvider</a>, <a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -172,32 +172,41 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.nbt.CompoundTag</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUpdateTag()" class="member-name-link">getUpdateTag</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isExactMode()" class="member-name-link">isExactMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasDisk(net.minecraft.nbt.CompoundTag,int)" class="member-name-link">hasDisk</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag,
+ int&nbsp;slot)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isExactMode()" class="member-name-link">isExactMode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDiskChanged()" class="member-name-link">onDiskChanged</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDriveStateUpdated()" class="member-name-link">onDriveStateUpdated</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDiskChanged()" class="member-name-link">onDiskChanged</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onNetworkInNodeInitialized()" class="member-name-link">onNetworkInNodeInitialized</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDriveStateUpdated()" class="member-name-link">onDriveStateUpdated</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onNetworkInNodeInitialized()" class="member-name-link">onNetworkInNodeInitialized</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serverTick(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive.DiskDriveBlockEntity)" class="member-name-link">serverTick</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serverTick(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive.DiskDriveBlockEntity)" class="member-name-link">serverTick</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
  net.minecraft.world.level.block.state.BlockState&nbsp;state,
  <a href="DiskDriveBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive">DiskDriveBlockEntity</a>&nbsp;blockEntity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)" class="member-name-link">setAccessMode</a><wbr>(<a href="../../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)" class="member-name-link">setAccessMode</a><wbr>(<a href="../../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setChanged()" class="member-name-link">setChanged</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">When loading a disk drive in a normal flow it is: #load(CompoundTag) -> #setLevel(Level).</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setExactMode(boolean)" class="member-name-link">setExactMode</a><wbr>(boolean&nbsp;exactMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -219,16 +228,19 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.entity.InternalNetworkNodeContainerBlockEntity">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.entity.<a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a></h3>
-<code><a href="../InternalNetworkNodeContainerBlockEntity.html#getRedstoneMode()">getRedstoneMode</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#serverTick(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.InternalNetworkNodeContainerBlockEntity)">serverTick</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.api.network.node.RedstoneMode)">setRedstoneMode</a></code></div>
+<code><a href="../InternalNetworkNodeContainerBlockEntity.html#getRedstoneMode()">getRedstoneMode</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#serverTick(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.InternalNetworkNodeContainerBlockEntity)">serverTick</a>, <a href="../InternalNetworkNodeContainerBlockEntity.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.api.blockentity.NetworkNodeContainerBlockEntity">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.api.blockentity.<a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.api.blockentity">NetworkNodeContainerBlockEntity</a></h3>
-<code><a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a></code></div>
+<code><a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a>, <a href="../../../../api/blockentity/NetworkNodeContainerBlockEntity.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.entity.BlockEntity">Methods inherited from class&nbsp;net.minecraft.world.level.block.entity.BlockEntity</h3>
-<code>addEntityType, fillCrashReportCategory, getBlockPos, getBlockState, getLevel, getPosFromTag, getType, hasLevel, isRemoved, loadStatic, onlyOpCanSetNbt, saveToItem, saveWithFullMetadata, saveWithId, saveWithoutMetadata, setBlockState, setChanged, setChanged, triggerEvent</code></div>
+<code>addEntityType, fillCrashReportCategory, getBlockPos, getBlockState, getLevel, getPosFromTag, getType, hasLevel, isRemoved, loadStatic, onlyOpCanSetNbt, saveToItem, saveWithFullMetadata, saveWithId, saveWithoutMetadata, setBlockState, setChanged, triggerEvent</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.storage.StorageSettingsProvider">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.storage.<a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></h3>
+<code><a href="../../../containermenu/storage/StorageSettingsProvider.html#getRedstoneMode()">getRedstoneMode</a>, <a href="../../../containermenu/storage/StorageSettingsProvider.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a></code></div>
 </section>
 </li>
 </ul>
@@ -278,6 +290,13 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
 </section>
 </li>
 <li>
+<section class="detail" id="hasDisk(net.minecraft.nbt.CompoundTag,int)">
+<h3>hasDisk</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDisk</span><wbr><span class="parameters">(net.minecraft.nbt.CompoundTag&nbsp;tag,
+ int&nbsp;slot)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="setLevel(net.minecraft.world.level.Level)">
 <h3>setLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLevel</span><wbr><span class="parameters">(net.minecraft.world.level.Level&nbsp;level)</span></div>
@@ -294,6 +313,22 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../InternalNetworkNodeContainerBlockEntity.html#activenessChanged(boolean)">activenessChanged</a></code>&nbsp;in class&nbsp;<code><a href="../InternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InternalNetworkNodeContainerBlockEntity</a>&lt;<a href="../../../../../api/network/node/diskdrive/DiskDriveNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveNetworkNode</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setChanged()">
+<h3>setChanged</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setChanged</span>()</div>
+<div class="block">When loading a disk drive in a normal flow it is: #load(CompoundTag) -> #setLevel(Level).
+ Network initialization happens in #setLevel(Level).
+ Loading data before network initialization ensures that all nbt is present (and thus disks are available).
+ However, when we place a block entity with nbt, the flow is different: #setLevel(Level) -> #load(CompoundTag) -> #setChanged().
+ #setLevel(Level) is called first (before #load(CompoundTag)) and initialization will happen BEFORE we load the tag!
+ That's why we need to override #setChanged() here, to ensure that the network and disks are still initialized correctly in that case.</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>setChanged</code>&nbsp;in class&nbsp;<code>net.minecraft.world.level.block.entity.BlockEntity</code></dd>
 </dl>
 </section>
 </li>
@@ -327,36 +362,80 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
 <section class="detail" id="getFilterMode()">
 <h3>getFilterMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../api/core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></span>&nbsp;<span class="element-name">getFilterMode</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#getFilterMode()">getFilterMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)">
 <h3>setFilterMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFilterMode</span><wbr><span class="parameters">(<a href="../../../../../api/core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a>&nbsp;mode)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)">setFilterMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isExactMode()">
 <h3>isExactMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isExactMode</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#isExactMode()">isExactMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setExactMode(boolean)">
 <h3>setExactMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setExactMode</span><wbr><span class="parameters">(boolean&nbsp;exactMode)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#setExactMode(boolean)">setExactMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getAccessMode()">
 <h3>getAccessMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a></span>&nbsp;<span class="element-name">getAccessMode</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#getAccessMode()">getAccessMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)">
 <h3>setAccessMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAccessMode</span><wbr><span class="parameters">(<a href="../../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)">setAccessMode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPriority()">
+<h3>getPriority</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPriority</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#getPriority()">getPriority</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPriority(int)">
+<h3>setPriority</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPriority</span><wbr><span class="parameters">(int&nbsp;priority)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../containermenu/storage/StorageSettingsProvider.html#setPriority(int)">setPriority</a></code>&nbsp;in interface&nbsp;<code><a href="../../../containermenu/storage/StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -428,18 +507,6 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
 </section>
 </li>
 <li>
-<section class="detail" id="getPriority()">
-<h3>getPriority</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPriority</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="setPriority(int)">
-<h3>setPriority</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPriority</span><wbr><span class="parameters">(int&nbsp;priority)</span></div>
-</section>
-</li>
-<li>
 <section class="detail" id="onDiskChanged()">
 <h3>onDiskChanged</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onDiskChanged</span>()</div>
@@ -456,7 +523,7 @@ implements net.minecraft.world.MenuProvider, <a href="../BlockEntityWithDrops.ht
  net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../abstractions/menu/ExtendedMenuProvider.html#writeScreenOpeningData(net.minecraft.server.level.ServerPlayer,net.minecraft.network.FriendlyByteBuf)">writeScreenOpeningData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../abstractions/menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.abstractions.menu">ExtendedMenuProvider</a></code></dd>
+<dd><code><a href="../../../menu/ExtendedMenuProvider.html#writeScreenOpeningData(net.minecraft.server.level.ServerPlayer,net.minecraft.network.FriendlyByteBuf)">writeScreenOpeningData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../menu/ExtendedMenuProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.menu">ExtendedMenuProvider</a></code></dd>
 </dl>
 </section>
 </li>

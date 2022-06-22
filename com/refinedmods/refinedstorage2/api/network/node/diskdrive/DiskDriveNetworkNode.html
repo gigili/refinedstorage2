@@ -78,12 +78,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node">NetworkNode</a></code>, <code><a href="../../../storage/StorageSource.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageSource</a></code></dd>
+<dd><code><a href="../../component/StorageProvider.html" title="interface in com.refinedmods.refinedstorage2.api.network.component">StorageProvider</a></code>, <code><a href="../NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node">NetworkNode</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveNetworkNode</span>
 <span class="extends-implements">extends <a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a>
-implements <a href="../../../storage/StorageSource.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageSource</a></span></div>
+implements <a href="../../component/StorageProvider.html" title="interface in com.refinedmods.refinedstorage2.api.network.component">StorageProvider</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -148,7 +148,9 @@ implements <a href="../../../storage/StorageSource.html" title="interface in com
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)" class="member-name-link">getStorageForChannel</a><wbr>(<a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns an optional storage for the given storage channel type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize(com.refinedmods.refinedstorage2.api.storage.StorageRepository)" class="member-name-link">initialize</a><wbr>(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;storageRepository)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -339,9 +341,13 @@ implements <a href="../../../storage/StorageSource.html" title="interface in com
 <section class="detail" id="getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">
 <h3>getStorageForChannel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;&gt;</span>&nbsp;<span class="element-name">getStorageForChannel</span><wbr><span class="parameters">(<a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../component/StorageProvider.html#getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">StorageProvider</a></code></span></div>
+<div class="block">Returns an optional storage for the given storage channel type.
+ This method is called when a <a href="../NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node"><code>NetworkNode</code></a> is added or
+ removed from a network.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../storage/StorageSource.html#getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">getStorageForChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../storage/StorageSource.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageSource</a></code></dd>
+<dd><code><a href="../../component/StorageProvider.html#getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">getStorageForChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../component/StorageProvider.html" title="interface in com.refinedmods.refinedstorage2.api.network.component">StorageProvider</a></code></dd>
 <dt>Type Parameters:</dt>
 <dd><code>T</code> - the type of resource</dd>
 <dt>Parameters:</dt>

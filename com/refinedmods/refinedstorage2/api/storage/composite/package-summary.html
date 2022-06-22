@@ -75,6 +75,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="../channel/package-summary.html">com.refinedmods.refinedstorage2.api.storage.channel</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="../limited/package-summary.html">com.refinedmods.refinedstorage2.api.storage.limited</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="../tracked/package-summary.html">com.refinedmods.refinedstorage2.api.storage.tracked</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </div>
 </li>
@@ -85,13 +89,26 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary" aria-labelledby="class-summary-tab0">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CompositeStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorage</a>&lt;T&gt;</div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">CompositeAwareChild</a>&lt;T&gt;</div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Implement this on storages that need to be aware of the fact that they are contained in a <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorage</a>&lt;T&gt;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">This represents a single storage that can be backed by multiple storages.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Priority.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">Priority</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CompositeStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorageImpl</a>&lt;T&gt;</div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">An implementation of <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a> that can be contained into other <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a>s.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;T&gt;</div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Implement this on storages that can be prioritized.</div>
+<div class="block">Represents the parent storage that a <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> can use to propagate changes to.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Priority.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">Priority</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Implement this on <a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage"><code>Storage</code></a>s that have a priority that
+ are contained in an <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a>.</div>
 </div>
 </div>
 </div>

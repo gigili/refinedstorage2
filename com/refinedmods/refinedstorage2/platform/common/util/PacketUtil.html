@@ -103,8 +103,8 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="../../api/resource/ItemResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">ItemResource</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#readItemResourceAmount(net.minecraft.network.FriendlyByteBuf)" class="member-name-link">readItemResourceAmount</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../../api/storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#readTrackerEntry(net.minecraft.network.FriendlyByteBuf)" class="member-name-link">readTrackerEntry</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#readTrackedResource(net.minecraft.network.FriendlyByteBuf)" class="member-name-link">readTrackedResource</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeFluidResource(net.minecraft.network.FriendlyByteBuf,com.refinedmods.refinedstorage2.platform.api.resource.FluidResource)" class="member-name-link">writeFluidResource</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
@@ -123,8 +123,8 @@ loadScripts(document, 'script');</script>
  <a href="../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="../../api/resource/ItemResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">ItemResource</a>&gt;&nbsp;resourceAmount)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeTrackerEntry(net.minecraft.network.FriendlyByteBuf,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)" class="member-name-link">writeTrackerEntry</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
- <a href="../../../api/storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&nbsp;entry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeTrackedResource(net.minecraft.network.FriendlyByteBuf,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)" class="member-name-link">writeTrackedResource</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
+ <a href="../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -196,16 +196,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="writeTrackerEntry(net.minecraft.network.FriendlyByteBuf,com.refinedmods.refinedstorage2.api.storage.channel.StorageTracker.Entry)">
-<h3>writeTrackerEntry</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeTrackerEntry</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
- <a href="../../../api/storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a>&nbsp;entry)</span></div>
+<section class="detail" id="writeTrackedResource(net.minecraft.network.FriendlyByteBuf,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">
+<h3>writeTrackedResource</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeTrackedResource</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf,
+ <a href="../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="readTrackerEntry(net.minecraft.network.FriendlyByteBuf)">
-<h3>readTrackerEntry</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../api/storage/channel/StorageTracker.Entry.html" title="class in com.refinedmods.refinedstorage2.api.storage.channel">StorageTracker.Entry</a></span>&nbsp;<span class="element-name">readTrackerEntry</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
+<section class="detail" id="readTrackedResource(net.minecraft.network.FriendlyByteBuf)">
+<h3>readTrackedResource</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a></span>&nbsp;<span class="element-name">readTrackedResource</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
 </section>
 </li>
 </ul>

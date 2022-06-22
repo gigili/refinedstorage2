@@ -115,6 +115,9 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.client.gui.GuiComponent">Fields inherited from class&nbsp;net.minecraft.client.gui.GuiComponent</h3>
 <code>BACKGROUND_LOCATION, GUI_ICONS_LOCATION, STATS_ICON_LOCATION</code></div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-net.minecraft.client.gui.components.events.GuiEventListener">Fields inherited from interface&nbsp;net.minecraft.client.gui.components.events.GuiEventListener</h3>
+<code>DOUBLE_CLICK_THRESHOLD_MS</code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -125,11 +128,14 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter)" class="member-name-link">GridSearchBoxWidget</a><wbr>(net.minecraft.client.gui.Font&nbsp;textRenderer,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter,com.refinedmods.refinedstorage2.api.grid.view.GridView,com.refinedmods.refinedstorage2.api.grid.query.GridQueryParser,java.util.List)" class="member-name-link">GridSearchBoxWidget</a><wbr>(net.minecraft.client.gui.Font&nbsp;textRenderer,
  int&nbsp;x,
  int&nbsp;y,
  int&nbsp;width,
- <a href="../../../../query/lexer/SyntaxHighlighter.html" title="class in com.refinedmods.refinedstorage2.query.lexer">SyntaxHighlighter</a>&nbsp;syntaxHighlighter)</code></div>
+ <a href="../../../../query/lexer/SyntaxHighlighter.html" title="class in com.refinedmods.refinedstorage2.query.lexer">SyntaxHighlighter</a>&nbsp;syntaxHighlighter,
+ <a href="../../../../api/grid/view/GridView.html" title="interface in com.refinedmods.refinedstorage2.api.grid.view">GridView</a>&lt;?&gt;&nbsp;view,
+ <a href="../../../../api/grid/query/GridQueryParser.html" title="interface in com.refinedmods.refinedstorage2.api.grid.query">GridQueryParser</a>&nbsp;queryParser,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;history)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -146,14 +152,11 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAutoSelected(boolean)" class="member-name-link">setAutoSelected</a><wbr>(boolean&nbsp;autoSelected)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addListener(java.util.function.Consumer)" class="member-name-link">addListener</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvalid(boolean)" class="member-name-link">setInvalid</a><wbr>(boolean&nbsp;invalid)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAutoSelected(boolean)" class="member-name-link">setAutoSelected</a><wbr>(boolean&nbsp;autoSelected)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setListener(java.util.function.Consumer)" class="member-name-link">setListener</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;listener)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -193,13 +196,16 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter,com.refinedmods.refinedstorage2.api.grid.view.GridView,com.refinedmods.refinedstorage2.api.grid.query.GridQueryParser,java.util.List)">
 <h3>GridSearchBoxWidget</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">GridSearchBoxWidget</span><wbr><span class="parameters">(net.minecraft.client.gui.Font&nbsp;textRenderer,
  int&nbsp;x,
  int&nbsp;y,
  int&nbsp;width,
- <a href="../../../../query/lexer/SyntaxHighlighter.html" title="class in com.refinedmods.refinedstorage2.query.lexer">SyntaxHighlighter</a>&nbsp;syntaxHighlighter)</span></div>
+ <a href="../../../../query/lexer/SyntaxHighlighter.html" title="class in com.refinedmods.refinedstorage2.query.lexer">SyntaxHighlighter</a>&nbsp;syntaxHighlighter,
+ <a href="../../../../api/grid/view/GridView.html" title="interface in com.refinedmods.refinedstorage2.api.grid.view">GridView</a>&lt;?&gt;&nbsp;view,
+ <a href="../../../../api/grid/query/GridQueryParser.html" title="interface in com.refinedmods.refinedstorage2.api.grid.query">GridQueryParser</a>&nbsp;queryParser,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;history)</span></div>
 </section>
 </li>
 </ul>
@@ -221,22 +227,12 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 </section>
 </li>
 <li>
-<section class="detail" id="setListener(java.util.function.Consumer)">
-<h3>setListener</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;listener)</span></div>
+<section class="detail" id="addListener(java.util.function.Consumer)">
+<h3>addListener</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;listener)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="GridSearchBox.html#setListener(java.util.function.Consumer)">setListener</a></code>&nbsp;in interface&nbsp;<code><a href="GridSearchBox.html" title="interface in com.refinedmods.refinedstorage2.platform.common.screen.grid">GridSearchBox</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setInvalid(boolean)">
-<h3>setInvalid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInvalid</span><wbr><span class="parameters">(boolean&nbsp;invalid)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="GridSearchBox.html#setInvalid(boolean)">setInvalid</a></code>&nbsp;in interface&nbsp;<code><a href="GridSearchBox.html" title="interface in com.refinedmods.refinedstorage2.platform.common.screen.grid">GridSearchBox</a></code></dd>
+<dd><code><a href="GridSearchBox.html#addListener(java.util.function.Consumer)">addListener</a></code>&nbsp;in interface&nbsp;<code><a href="GridSearchBox.html" title="interface in com.refinedmods.refinedstorage2.platform.common.screen.grid">GridSearchBox</a></code></dd>
 </dl>
 </section>
 </li>
