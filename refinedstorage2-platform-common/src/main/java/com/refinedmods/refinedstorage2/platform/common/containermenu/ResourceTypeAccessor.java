@@ -1,9 +1,12 @@
 package com.refinedmods.refinedstorage2.platform.common.containermenu;
 
-import net.minecraft.network.chat.Component;
+import com.refinedmods.refinedstorage2.platform.api.resource.filter.ResourceType;
+
+import javax.annotation.Nullable;
 
 public interface ResourceTypeAccessor {
-    Component getCurrentResourceTypeName();
+    @Nullable
+    ResourceType getCurrentResourceType();
 
-    void toggleResourceType();
+    ResourceType toggleResourceType();
 }

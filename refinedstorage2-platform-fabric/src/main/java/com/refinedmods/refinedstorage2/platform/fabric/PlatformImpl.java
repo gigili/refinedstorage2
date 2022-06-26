@@ -33,6 +33,7 @@ import java.util.Optional;
 import java.util.function.Function;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import mezz.jei.api.fabric.ingredients.fluids.IJeiFluidIngredient;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
@@ -126,6 +127,17 @@ public final class PlatformImpl extends AbstractPlatform {
             return Optional.empty();
         }
         return convertNonEmptyToFluid(stack);
+    }
+
+    @Override
+    public Optional<FluidResource> convertToFluid(final Object value) {
+        if (value instanceof FluidVariant fluidVariant) {
+            return Optional.of(VariantUtil.ofFluidVariant(fluidVariant));
+        }
+        if (value instanceof IJeiFluidIngredient fluidIngredient) {
+            return Optional.of(new FluidResource(fluidIngredient.getFluid(), fluidIngredient.getTag().orElse(null)));
+        }
+        return Optional.empty();
     }
 
     @Override

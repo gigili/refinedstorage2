@@ -1,10 +1,14 @@
 package com.refinedmods.refinedstorage2.platform.forge.integration.jei;
 
+import com.refinedmods.refinedstorage2.platform.common.screen.AbstractBaseScreen;
+
 import javax.annotation.Nullable;
 
 import mezz.jei.api.IModPlugin;
+import mezz.jei.api.registration.IGuiHandlerRegistration;
 import mezz.jei.api.runtime.IJeiRuntime;
 import net.minecraft.resources.ResourceLocation;
+import org.jetbrains.annotations.NotNull;
 
 import static com.refinedmods.refinedstorage2.platform.common.util.IdentifierUtil.createIdentifier;
 
@@ -16,13 +20,22 @@ public class JeiPlugin implements IModPlugin {
     private static IJeiRuntime runtime;
 
     @Override
-    public ResourceLocation getPluginUid() {
+    public @NotNull ResourceLocation getPluginUid() {
         return ID;
     }
 
     @Override
     public void onRuntimeAvailable(final IJeiRuntime newRuntime) {
-        JeiPlugin.runtime = newRuntime;
+        setRuntime(newRuntime);
+    }
+
+    @Override
+    public void registerGuiHandlers(final IGuiHandlerRegistration registration) {
+        registration.addGhostIngredientHandler(AbstractBaseScreen.class, new GhostIngredientHandler());
+    }
+
+    private static void setRuntime(final IJeiRuntime runtime) {
+        JeiPlugin.runtime = runtime;
     }
 
     @Nullable

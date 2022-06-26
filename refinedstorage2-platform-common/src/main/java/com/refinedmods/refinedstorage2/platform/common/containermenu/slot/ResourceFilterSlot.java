@@ -58,7 +58,7 @@ public class ResourceFilterSlot extends Slot {
 
     public void change(final ItemStack stack, final ResourceType type) {
         type.translate(stack).ifPresentOrElse(
-            resource -> resourceFilterContainer.set(containerIndex, resource),
+            this::change,
             () -> resourceFilterContainer.remove(containerIndex)
         );
     }
@@ -76,6 +76,10 @@ public class ResourceFilterSlot extends Slot {
         final Optional<FilteredResource> translated = type.translate(stack);
         final Optional<FilteredResource> current = Optional.ofNullable(resourceFilterContainer.get(containerIndex));
         return translated.equals(current);
+    }
+
+    public void change(final FilteredResource filteredResource) {
+        resourceFilterContainer.set(containerIndex, filteredResource);
     }
 
     public void broadcastChanges(final Player player) {

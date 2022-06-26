@@ -4,6 +4,7 @@ import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.GridExtractPack
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.GridInsertPacket;
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.GridScrollPacket;
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.PropertyChangePacket;
+import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.ResourceFilterSlotChangePacket;
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.ResourceFilterSlotAmountChangePacket;
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.ResourceTypeChangePacket;
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.StorageInfoRequestPacket;
@@ -125,6 +126,13 @@ public class NetworkManager {
             ResourceFilterSlotAmountChangePacket::encode,
             ResourceFilterSlotAmountChangePacket::decode,
             ResourceFilterSlotAmountChangePacket::handle
+        );
+        handler.registerMessage(
+            id++,
+            ResourceFilterSlotChangePacket.class,
+            ResourceFilterSlotChangePacket::encode,
+            ResourceFilterSlotChangePacket::decode,
+            ResourceFilterSlotChangePacket::handle
         );
     }
 

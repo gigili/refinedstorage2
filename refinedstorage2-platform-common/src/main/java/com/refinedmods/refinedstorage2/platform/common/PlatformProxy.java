@@ -121,6 +121,11 @@ public class PlatformProxy implements Platform {
     }
 
     @Override
+    public Optional<FluidResource> convertToFluid(final Object value) {
+        return ensureLoaded().convertToFluid(value);
+    }
+
+    @Override
     public EnergyStorage createEnergyStorage(final ControllerType controllerType, final Runnable listener) {
         return ensureLoaded().createEnergyStorage(controllerType, listener);
     }

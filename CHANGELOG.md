@@ -95,6 +95,7 @@ Device inventories and disks created in v2.0.0-milestone.1.4 will be lost.
 
 - Added JEI support to Fabric.
 - Added REI support to Forge.
+- Added JEI ghost ingredient dragging support.
 
 ### Fixed
 

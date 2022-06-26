@@ -38,6 +38,11 @@ public class FluidResourceType implements ResourceType {
     }
 
     @Override
+    public Optional<FilteredResource> translate(final Object value) {
+        return Platform.INSTANCE.convertToFluid(value).map(FluidFilteredResource::new);
+    }
+
+    @Override
     public FilteredResource fromPacket(final FriendlyByteBuf buf) {
         return new FluidFilteredResource(PacketUtil.readFluidResource(buf), buf.readLong());
     }

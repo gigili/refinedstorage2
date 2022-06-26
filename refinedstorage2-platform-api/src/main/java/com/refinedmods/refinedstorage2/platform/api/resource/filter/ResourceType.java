@@ -12,6 +12,8 @@ public interface ResourceType {
 
     Optional<FilteredResource> translate(ItemStack stack);
 
+    Optional<FilteredResource> translate(Object value);
+
     Optional<FilteredResource> fromTag(CompoundTag tag);
 
     FilteredResource fromPacket(FriendlyByteBuf buf);

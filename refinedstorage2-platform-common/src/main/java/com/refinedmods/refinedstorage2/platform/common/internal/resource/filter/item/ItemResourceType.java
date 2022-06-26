@@ -43,6 +43,14 @@ public class ItemResourceType implements ResourceType {
     }
 
     @Override
+    public Optional<FilteredResource> translate(final Object value) {
+        if (value instanceof ItemStack stack) {
+            return translate(stack);
+        }
+        return Optional.empty();
+    }
+
+    @Override
     public FilteredResource fromPacket(final FriendlyByteBuf buf) {
         return new ItemFilteredResource(PacketUtil.readItemResource(buf), buf.readLong());
     }

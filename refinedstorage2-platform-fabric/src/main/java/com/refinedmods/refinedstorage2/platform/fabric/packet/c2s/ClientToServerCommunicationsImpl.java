@@ -6,6 +6,7 @@ import com.refinedmods.refinedstorage2.platform.api.PlatformApi;
 import com.refinedmods.refinedstorage2.platform.api.grid.GridScrollMode;
 import com.refinedmods.refinedstorage2.platform.api.resource.FluidResource;
 import com.refinedmods.refinedstorage2.platform.api.resource.ItemResource;
+import com.refinedmods.refinedstorage2.platform.api.resource.filter.FilteredResource;
 import com.refinedmods.refinedstorage2.platform.api.resource.filter.ResourceType;
 import com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType;
 import com.refinedmods.refinedstorage2.platform.common.internal.grid.GridScrollModeUtil;
@@ -69,6 +70,14 @@ public class ClientToServerCommunicationsImpl implements ClientToServerCommunica
         PlatformApi.INSTANCE.getResourceTypeRegistry()
             .getId(type)
             .ifPresent(id -> sendToServer(PacketIds.RESOURCE_TYPE_CHANGE, buf -> buf.writeResourceLocation(id)));
+    }
+
+    @Override
+    public void sendResourceFilterSlotChange(final int slotIndex, final FilteredResource filteredResource) {
+        sendToServer(PacketIds.RESOURCE_FILTER_SLOT_CHANGE, buf -> {
+            buf.writeInt(slotIndex);
+            filteredResource.writeToPacket(buf);
+        });
     }
 
     @Override

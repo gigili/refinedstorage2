@@ -34,6 +34,14 @@ public abstract class AbstractBaseScreen<T extends AbstractContainerMenu> extend
         this.inventoryLabelX = 7;
     }
 
+    public int getLeftPos() {
+        return this.leftPos;
+    }
+
+    public int getTopPos() {
+        return this.topPos;
+    }
+
     @Override
     protected void init() {
         clearWidgets();

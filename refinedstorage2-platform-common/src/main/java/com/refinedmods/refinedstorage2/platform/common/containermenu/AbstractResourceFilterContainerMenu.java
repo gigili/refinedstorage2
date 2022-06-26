@@ -12,7 +12,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickType;
@@ -126,21 +125,30 @@ public abstract class AbstractResourceFilterContainerMenu extends AbstractBaseCo
     }
 
     @Override
-    public Component getCurrentResourceTypeName() {
-        return currentResourceType != null ? currentResourceType.getName() : Component.empty();
+    public ResourceType getCurrentResourceType() {
+        return currentResourceType;
     }
 
     public void setCurrentResourceType(final ResourceLocation id) {
         this.currentResourceType = resourceTypeRegistry.getOrElseDefault(id);
     }
 
-    @Override
-    public void toggleResourceType() {
-        if (currentResourceType == null) {
+    public void setFilteredResource(final int slotIndex, final FriendlyByteBuf buf) {
+        if (slotIndex < 0 || slotIndex >= slots.size() || currentResourceType == null) {
             return;
         }
-        this.currentResourceType = resourceTypeRegistry.next(currentResourceType);
+        if (slots.get(slotIndex) instanceof ResourceFilterSlot resourceFilterSlot) {
+            resourceFilterSlot.change(currentResourceType.fromPacket(buf));
+        }
+    }
+
+    @Override
+    public ResourceType toggleResourceType() {
+        this.currentResourceType = currentResourceType == null
+            ? resourceTypeRegistry.getDefault()
+            : resourceTypeRegistry.next(currentResourceType);
         Platform.INSTANCE.getClientToServerCommunications().sendResourceTypeChange(this.currentResourceType);
+        return currentResourceType;
     }
 
     @Override

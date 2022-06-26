@@ -26,6 +26,7 @@ import com.refinedmods.refinedstorage2.platform.forge.packet.NetworkManager;
 import com.refinedmods.refinedstorage2.platform.forge.packet.c2s.ClientToServerCommunicationsImpl;
 import com.refinedmods.refinedstorage2.platform.forge.packet.s2c.ServerToClientCommunicationsImpl;
 import com.refinedmods.refinedstorage2.platform.forge.render.FluidStackFluidRenderer;
+import com.refinedmods.refinedstorage2.platform.forge.util.VariantUtil;
 
 import java.util.Optional;
 import java.util.function.Function;
@@ -41,6 +42,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
@@ -124,6 +126,14 @@ public final class PlatformImpl extends AbstractPlatform {
             .getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM, null)
             .map(handler -> handler.getFluidInTank(0))
             .map(contents -> contents.isEmpty() ? null : new FluidResource(contents.getFluid(), contents.getTag()));
+    }
+
+    @Override
+    public Optional<FluidResource> convertToFluid(final Object value) {
+        if (value instanceof FluidStack fluidStack) {
+            return Optional.of(VariantUtil.ofFluidStack(fluidStack));
+        }
+        return Optional.empty();
     }
 
     @Override

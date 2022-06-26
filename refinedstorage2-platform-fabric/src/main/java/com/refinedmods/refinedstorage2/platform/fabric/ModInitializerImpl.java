@@ -70,6 +70,7 @@ import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.GridExtractPac
 import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.GridInsertPacket;
 import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.GridScrollPacket;
 import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.PropertyChangePacket;
+import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.ResourceFilterSlotChangePacket;
 import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.ResourceFilterSlotAmountChangePacket;
 import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.ResourceTypeChangePacket;
 import com.refinedmods.refinedstorage2.platform.fabric.packet.c2s.StorageInfoRequestPacket;
@@ -693,6 +694,8 @@ public class ModInitializerImpl extends AbstractModInitializer implements ModIni
             PacketIds.RESOURCE_FILTER_SLOT_AMOUNT_CHANGE,
             new ResourceFilterSlotAmountChangePacket()
         );
+        ServerPlayNetworking.registerGlobalReceiver(PacketIds.RESOURCE_FILTER_SLOT_CHANGE,
+            new ResourceFilterSlotChangePacket());
     }
 
     private void registerSounds() {
