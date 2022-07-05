@@ -131,9 +131,10 @@ implements <a href="../../../common/packet/ServerToClientCommunications.html" ti
  <a href="../../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackerEntry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendResourceFilterSlotUpdate(net.minecraft.server.level.ServerPlayer,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer,int)" class="member-name-link">sendResourceFilterSlotUpdate</a><wbr>(net.minecraft.server.level.ServerPlayer&nbsp;player,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendResourceFilterSlotUpdate(net.minecraft.server.level.ServerPlayer,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer,int,int)" class="member-name-link">sendResourceFilterSlotUpdate</a><wbr>(net.minecraft.server.level.ServerPlayer&nbsp;player,
  <a href="../../../apiimpl/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter">ResourceFilterContainer</a>&nbsp;resourceFilterContainer,
- int&nbsp;slotIndex)</code></div>
+ int&nbsp;slotIndex,
+ int&nbsp;containerIndex)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sendStorageInfoResponse(net.minecraft.server.level.ServerPlayer,java.util.UUID,com.refinedmods.refinedstorage2.api.storage.StorageInfo)" class="member-name-link">sendStorageInfoResponse</a><wbr>(net.minecraft.server.level.ServerPlayer&nbsp;player,
@@ -200,6 +201,7 @@ implements <a href="../../../common/packet/ServerToClientCommunications.html" ti
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendGridFluidUpdate</span><wbr><span class="parameters">(net.minecraft.server.level.ServerPlayer&nbsp;player,
  <a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&nbsp;fluidResource,
  long&nbsp;change,
+ @Nullable
  <a href="../../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackerEntry)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -213,6 +215,7 @@ implements <a href="../../../common/packet/ServerToClientCommunications.html" ti
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendGridItemUpdate</span><wbr><span class="parameters">(net.minecraft.server.level.ServerPlayer&nbsp;player,
  <a href="../../../api/resource/ItemResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">ItemResource</a>&nbsp;itemResource,
  long&nbsp;change,
+ @Nullable
  <a href="../../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackerEntry)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -221,14 +224,15 @@ implements <a href="../../../common/packet/ServerToClientCommunications.html" ti
 </section>
 </li>
 <li>
-<section class="detail" id="sendResourceFilterSlotUpdate(net.minecraft.server.level.ServerPlayer,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer,int)">
+<section class="detail" id="sendResourceFilterSlotUpdate(net.minecraft.server.level.ServerPlayer,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer,int,int)">
 <h3>sendResourceFilterSlotUpdate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sendResourceFilterSlotUpdate</span><wbr><span class="parameters">(net.minecraft.server.level.ServerPlayer&nbsp;player,
  <a href="../../../apiimpl/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter">ResourceFilterContainer</a>&nbsp;resourceFilterContainer,
- int&nbsp;slotIndex)</span></div>
+ int&nbsp;slotIndex,
+ int&nbsp;containerIndex)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../common/packet/ServerToClientCommunications.html#sendResourceFilterSlotUpdate(net.minecraft.server.level.ServerPlayer,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer,int)">sendResourceFilterSlotUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../common/packet/ServerToClientCommunications.html" title="interface in com.refinedmods.refinedstorage2.platform.common.packet">ServerToClientCommunications</a></code></dd>
+<dd><code><a href="../../../common/packet/ServerToClientCommunications.html#sendResourceFilterSlotUpdate(net.minecraft.server.level.ServerPlayer,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer,int,int)">sendResourceFilterSlotUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../common/packet/ServerToClientCommunications.html" title="interface in com.refinedmods.refinedstorage2.platform.common.packet">ServerToClientCommunications</a></code></dd>
 </dl>
 </section>
 </li>

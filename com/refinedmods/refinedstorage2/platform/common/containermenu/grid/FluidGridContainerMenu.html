@@ -72,8 +72,8 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">net.minecraft.world.inventory.AbstractContainerMenu
-<div class="inheritance"><a href="../BaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">com.refinedmods.refinedstorage2.platform.common.containermenu.BaseContainerMenu</a>
-<div class="inheritance"><a href="GridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">com.refinedmods.refinedstorage2.platform.common.containermenu.grid.GridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;
+<div class="inheritance"><a href="../AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu</a>
+<div class="inheritance"><a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">com.refinedmods.refinedstorage2.platform.common.containermenu.grid.AbstractGridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.common.containermenu.grid.FluidGridContainerMenu</div>
 </div>
 </div>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">FluidGridContainerMenu</span>
-<span class="extends-implements">extends <a href="GridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">GridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;
+<span class="extends-implements">extends <a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;
 implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">FluidGridEventHandler</a></span></div>
 </section>
 <section class="summary">
@@ -96,8 +96,8 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.grid.GridContainerMenu">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.grid.<a href="GridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">GridContainerMenu</a></h3>
-<code><a href="GridContainerMenu.html#grid">grid</a>, <a href="GridContainerMenu.html#playerInventory">playerInventory</a>, <a href="GridContainerMenu.html#storageChannel">storageChannel</a>, <a href="GridContainerMenu.html#view">view</a></code></div>
+<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.grid.AbstractGridContainerMenu">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.grid.<a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a></h3>
+<code><a href="AbstractGridContainerMenu.html#grid">grid</a>, <a href="AbstractGridContainerMenu.html#playerInventory">playerInventory</a>, <a href="AbstractGridContainerMenu.html#storageChannel">storageChannel</a>, <a href="AbstractGridContainerMenu.html#view">view</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Fields inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>CARRIED_SLOT_SIZE, containerId, QUICKCRAFT_HEADER_CONTINUE, QUICKCRAFT_HEADER_END, QUICKCRAFT_HEADER_START, QUICKCRAFT_TYPE_CHARITABLE, QUICKCRAFT_TYPE_CLONE, QUICKCRAFT_TYPE_GREEDY, SLOT_CLICKED_OUTSIDE, slots</code></div>
@@ -164,11 +164,11 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.grid.GridContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.grid.<a href="GridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">GridContainerMenu</a></h3>
-<code><a href="GridContainerMenu.html#addSlots(int)">addSlots</a>, <a href="GridContainerMenu.html#getRedstoneMode()">getRedstoneMode</a>, <a href="GridContainerMenu.html#getSize()">getSize</a>, <a href="GridContainerMenu.html#getSortingDirection()">getSortingDirection</a>, <a href="GridContainerMenu.html#getSortingType()">getSortingType</a>, <a href="GridContainerMenu.html#getSynchronizationType()">getSynchronizationType</a>, <a href="GridContainerMenu.html#getView()">getView</a>, <a href="GridContainerMenu.html#isActive()">isActive</a>, <a href="GridContainerMenu.html#isAutoSelected()">isAutoSelected</a>, <a href="GridContainerMenu.html#onActiveChanged(boolean)">onActiveChanged</a>, <a href="GridContainerMenu.html#onResourceUpdate(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onResourceUpdate</a>, <a href="GridContainerMenu.html#setAutoSelected(boolean)">setAutoSelected</a>, <a href="GridContainerMenu.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a>, <a href="GridContainerMenu.html#setSearchBox(com.refinedmods.refinedstorage2.platform.common.screen.grid.GridSearchBox)">setSearchBox</a>, <a href="GridContainerMenu.html#setSize(com.refinedmods.refinedstorage2.platform.apiimpl.grid.GridSize)">setSize</a>, <a href="GridContainerMenu.html#setSizeChangedListener(java.lang.Runnable)">setSizeChangedListener</a>, <a href="GridContainerMenu.html#setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">setSortingDirection</a>, <a href="GridContainerMenu.html#setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)">setSortingType</a>, <a href="GridContainerMenu.html#setSynchronizationType(com.refinedmods.refinedstorage2.platform.apiimpl.grid.GridSynchronizationType)">setSynchronizationType</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.grid.AbstractGridContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.grid.<a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a></h3>
+<code><a href="AbstractGridContainerMenu.html#addSlots(int)">addSlots</a>, <a href="AbstractGridContainerMenu.html#getRedstoneMode()">getRedstoneMode</a>, <a href="AbstractGridContainerMenu.html#getSize()">getSize</a>, <a href="AbstractGridContainerMenu.html#getSortingDirection()">getSortingDirection</a>, <a href="AbstractGridContainerMenu.html#getSortingType()">getSortingType</a>, <a href="AbstractGridContainerMenu.html#getSynchronizer()">getSynchronizer</a>, <a href="AbstractGridContainerMenu.html#getView()">getView</a>, <a href="AbstractGridContainerMenu.html#isActive()">isActive</a>, <a href="AbstractGridContainerMenu.html#isAutoSelected()">isAutoSelected</a>, <a href="AbstractGridContainerMenu.html#onActiveChanged(boolean)">onActiveChanged</a>, <a href="AbstractGridContainerMenu.html#onResourceUpdate(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onResourceUpdate</a>, <a href="AbstractGridContainerMenu.html#setAutoSelected(boolean)">setAutoSelected</a>, <a href="AbstractGridContainerMenu.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a>, <a href="AbstractGridContainerMenu.html#setSearchBox(com.refinedmods.refinedstorage2.platform.common.screen.grid.GridSearchBox)">setSearchBox</a>, <a href="AbstractGridContainerMenu.html#setSize(com.refinedmods.refinedstorage2.platform.apiimpl.grid.GridSize)">setSize</a>, <a href="AbstractGridContainerMenu.html#setSizeChangedListener(java.lang.Runnable)">setSizeChangedListener</a>, <a href="AbstractGridContainerMenu.html#setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">setSortingDirection</a>, <a href="AbstractGridContainerMenu.html#setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)">setSortingType</a>, <a href="AbstractGridContainerMenu.html#toggleSynchronizer()">toggleSynchronizer</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.BaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="../BaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">BaseContainerMenu</a></h3>
-<code><a href="../BaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="../BaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="../BaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="../AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
+<code><a href="../AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="../AbstractBaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="../AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Methods inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>addDataSlot, addDataSlots, addSlot, addSlotListener, broadcastChanges, broadcastFullState, canDragTo, canItemQuickReplace, canTakeItemForPickAll, checkContainerDataCount, checkContainerSize, clearContainer, clicked, clickMenuButton, findSlot, getCarried, getItems, getQuickcraftHeader, getQuickcraftMask, getQuickCraftSlotCount, getQuickcraftType, getRedstoneSignalFromBlockEntity, getRedstoneSignalFromContainer, getSlot, getStateId, getType, incrementStateId, initializeContents, isValidQuickcraftType, isValidSlotIndex, moveItemStackTo, removeSlotListener, resetQuickCraft, resumeRemoteUpdates, sendAllDataToRemote, setCarried, setData, setItem, setRemoteCarried, setRemoteSlot, setRemoteSlotNoCopy, setSynchronizer, slotsChanged, stillValid, suppressRemoteUpdates, transferState</code></div>
@@ -212,22 +212,22 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="readResourceAmount(net.minecraft.network.FriendlyByteBuf)">
-<h3>readResourceAmount</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</span>&nbsp;<span class="element-name">readResourceAmount</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="GridContainerMenu.html#readResourceAmount(net.minecraft.network.FriendlyByteBuf)">readResourceAmount</a></code>&nbsp;in class&nbsp;<code><a href="GridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">GridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="removed(net.minecraft.world.entity.player.Player)">
 <h3>removed</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removed</span><wbr><span class="parameters">(net.minecraft.world.entity.player.Player&nbsp;playerEntity)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="GridContainerMenu.html#removed(net.minecraft.world.entity.player.Player)">removed</a></code>&nbsp;in class&nbsp;<code><a href="GridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">GridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
+<dd><code><a href="AbstractGridContainerMenu.html#removed(net.minecraft.world.entity.player.Player)">removed</a></code>&nbsp;in class&nbsp;<code><a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="readResourceAmount(net.minecraft.network.FriendlyByteBuf)">
+<h3>readResourceAmount</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</span>&nbsp;<span class="element-name">readResourceAmount</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractGridContainerMenu.html#readResourceAmount(net.minecraft.network.FriendlyByteBuf)">readResourceAmount</a></code>&nbsp;in class&nbsp;<code><a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -252,7 +252,7 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
  int&nbsp;slotIndex)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="../BaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a></code>&nbsp;in class&nbsp;<code><a href="../BaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">BaseContainerMenu</a></code></dd>
+<dd><code><a href="../AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></code></dd>
 </dl>
 </section>
 </li>

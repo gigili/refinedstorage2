@@ -75,7 +75,7 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.client.gui.components.events.AbstractContainerEventHandler
 <div class="inheritance">net.minecraft.client.gui.screens.Screen
 <div class="inheritance">net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;T&gt;
-<div class="inheritance"><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">com.refinedmods.refinedstorage2.platform.common.screen.BaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;
+<div class="inheritance"><a href="AbstractBaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">com.refinedmods.refinedstorage2.platform.common.screen.AbstractBaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.common.screen.ControllerScreen</div>
 </div>
 </div>
@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ControllerScreen</span>
-<span class="extends-implements">extends <a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="AbstractBaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">AbstractBaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,14 +171,14 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.screen.BaseScreen">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.screen.<a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a></h3>
-<code><a href="BaseScreen.html#addSideButton(com.refinedmods.refinedstorage2.platform.common.screen.widget.SideButtonWidget)">addSideButton</a>, <a href="BaseScreen.html#disableScissor()">disableScissor</a>, <a href="BaseScreen.html#renderResourceFilterSlots(com.mojang.blaze3d.vertex.PoseStack)">renderResourceFilterSlots</a>, <a href="BaseScreen.html#renderTooltip(com.mojang.blaze3d.vertex.PoseStack,int,int)">renderTooltip</a>, <a href="BaseScreen.html#setScissor(int,int,int,int)">setScissor</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.screen.AbstractBaseScreen">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.screen.<a href="AbstractBaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">AbstractBaseScreen</a></h3>
+<code><a href="AbstractBaseScreen.html#addSideButton(com.refinedmods.refinedstorage2.platform.common.screen.widget.AbstractSideButtonWidget)">addSideButton</a>, <a href="AbstractBaseScreen.html#disableScissor()">disableScissor</a>, <a href="AbstractBaseScreen.html#renderResourceFilterSlots(com.mojang.blaze3d.vertex.PoseStack)">renderResourceFilterSlots</a>, <a href="AbstractBaseScreen.html#renderTooltip(com.mojang.blaze3d.vertex.PoseStack,int,int)">renderTooltip</a>, <a href="AbstractBaseScreen.html#setScissor(int,int,int,int)">setScissor</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.inventory.AbstractContainerScreen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.inventory.AbstractContainerScreen</h3>
-<code>checkHotbarKeyPressed, containerTick, getMenu, hasClickedOutside, isHovering, isPauseScreen, keyPressed, mouseClicked, mouseDragged, mouseReleased, onClose, removed, renderSlotHighlight, slotClicked, tick</code></div>
+<code>checkHotbarKeyPressed, clearDraggingState, containerTick, getMenu, hasClickedOutside, isHovering, isPauseScreen, keyPressed, mouseClicked, mouseDragged, mouseReleased, onClose, removed, renderSlotHighlight, slotClicked, tick</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.Screen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.Screen</h3>
-<code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, hideWidgets, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, sendMessage, sendMessage, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
+<code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, hideWidgets, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, rebuildWidgets, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.components.events.AbstractContainerEventHandler">Methods inherited from class&nbsp;net.minecraft.client.gui.components.events.AbstractContainerEventHandler</h3>
 <code>getFocused, isDragging, setDragging, setFocused</code></div>
@@ -227,7 +227,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">init</span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="BaseScreen.html#init()">init</a></code>&nbsp;in class&nbsp;<code><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;</code></dd>
+<dd><code><a href="AbstractBaseScreen.html#init()">init</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">AbstractBaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -240,7 +240,7 @@ loadScripts(document, 'script');</script>
  int&nbsp;mouseY)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="BaseScreen.html#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)">renderBg</a></code>&nbsp;in class&nbsp;<code><a href="BaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">BaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;</code></dd>
+<dd><code><a href="AbstractBaseScreen.html#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)">renderBg</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBaseScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">AbstractBaseScreen</a>&lt;<a href="../containermenu/ControllerContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">ControllerContainerMenu</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

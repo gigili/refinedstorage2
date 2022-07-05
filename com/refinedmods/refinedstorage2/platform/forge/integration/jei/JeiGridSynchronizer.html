@@ -71,7 +71,9 @@ loadScripts(document, 'script');</script>
 <h1 title="Class JeiGridSynchronizer" class="title">Class JeiGridSynchronizer</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance"><a href="../../../apiimpl/grid/AbstractGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.grid">com.refinedmods.refinedstorage2.platform.apiimpl.grid.AbstractGridSynchronizer</a>
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.forge.integration.jei.JeiGridSynchronizer</div>
+</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -80,8 +82,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">JeiGridSynchronizer</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../../../api/grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a></span></div>
+<span class="extends-implements">extends <a href="../../../apiimpl/grid/AbstractGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.grid">AbstractGridSynchronizer</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -93,7 +94,8 @@ implements <a href="../../../api/grid/GridSynchronizer.html" title="interface in
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.platform.forge.integration.jei.JeiProxy)" class="member-name-link">JeiGridSynchronizer</a><wbr>(<a href="JeiProxy.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.jei">JeiProxy</a>&nbsp;jeiProxy)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.platform.forge.integration.jei.JeiProxy,boolean)" class="member-name-link">JeiGridSynchronizer</a><wbr>(<a href="JeiProxy.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.jei">JeiProxy</a>&nbsp;jeiProxy,
+ boolean&nbsp;twoWay)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -112,15 +114,21 @@ implements <a href="../../../api/grid/GridSynchronizer.html" title="interface in
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTextToSynchronizeToGrid()" class="member-name-link">getTextToSynchronizeToGrid</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.chat.Component</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.chat.MutableComponent</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#synchronizeFromGrid(java.lang.String)" class="member-name-link">synchronizeFromGrid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXTexture()" class="member-name-link">getXTexture</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#synchronizeFromGrid(java.lang.String)" class="member-name-link">synchronizeFromGrid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.apiimpl.grid.AbstractGridSynchronizer">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.apiimpl.grid.<a href="../../../apiimpl/grid/AbstractGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.grid">AbstractGridSynchronizer</a></h3>
+<code><a href="../../../apiimpl/grid/AbstractGridSynchronizer.html#getTextureIdentifier()">getTextureIdentifier</a>, <a href="../../../apiimpl/grid/AbstractGridSynchronizer.html#getYTexture()">getYTexture</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -136,9 +144,10 @@ implements <a href="../../../api/grid/GridSynchronizer.html" title="interface in
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.platform.forge.integration.jei.JeiProxy)">
+<section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.platform.forge.integration.jei.JeiProxy,boolean)">
 <h3>JeiGridSynchronizer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">JeiGridSynchronizer</span><wbr><span class="parameters">(<a href="JeiProxy.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.jei">JeiProxy</a>&nbsp;jeiProxy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">JeiGridSynchronizer</span><wbr><span class="parameters">(<a href="JeiProxy.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.jei">JeiProxy</a>&nbsp;jeiProxy,
+ boolean&nbsp;twoWay)</span></div>
 </section>
 </li>
 </ul>
@@ -152,31 +161,26 @@ implements <a href="../../../api/grid/GridSynchronizer.html" title="interface in
 <li>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.network.chat.Component</span>&nbsp;<span class="element-name">getTitle</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../api/grid/GridSynchronizer.html#getTitle()">getTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a></code></dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.network.chat.MutableComponent</span>&nbsp;<span class="element-name">getTitle</span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="synchronizeFromGrid(java.lang.String)">
 <h3>synchronizeFromGrid</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">synchronizeFromGrid</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../api/grid/GridSynchronizer.html#synchronizeFromGrid(java.lang.String)">synchronizeFromGrid</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a></code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getTextToSynchronizeToGrid()">
 <h3>getTextToSynchronizeToGrid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextToSynchronizeToGrid</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../api/grid/GridSynchronizer.html#getTextToSynchronizeToGrid()">getTextToSynchronizeToGrid</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a></code></dd>
-</dl>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextToSynchronizeToGrid</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getXTexture()">
+<h3>getXTexture</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getXTexture</span>()</div>
 </section>
 </li>
 </ul>

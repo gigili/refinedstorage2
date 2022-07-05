@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="../../forge/integration/jei/JeiGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.jei">JeiGridSynchronizer</a></code>, <code><a href="../../fabric/integration/rei/ReiGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.fabric.integration.rei">ReiGridSynchronizer</a></code></dd>
+<dd><code><a href="../../apiimpl/grid/AbstractGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.grid">AbstractGridSynchronizer</a></code>, <code><a href="../../fabric/integration/jei/JeiGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.fabric.integration.jei">JeiGridSynchronizer</a></code>, <code><a href="../../forge/integration/jei/JeiGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.jei">JeiGridSynchronizer</a></code>, <code><a href="../../apiimpl/grid/NoOpGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.grid">NoOpGridSynchronizer</a></code>, <code><a href="../../fabric/integration/rei/ReiGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.fabric.integration.rei">ReiGridSynchronizer</a></code>, <code><a href="../../forge/integration/rei/ReiGridSynchronizer.html" title="class in com.refinedmods.refinedstorage2.platform.forge.integration.rei">ReiGridSynchronizer</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GridSynchronizer</span></div>
@@ -94,12 +94,21 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextToSynchronizeToGrid()" class="member-name-link">getTextToSynchronizeToGrid</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.minecraft.network.chat.Component</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.minecraft.resources.ResourceLocation</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextureIdentifier()" class="member-name-link">getTextureIdentifier</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#synchronizeFromGrid(java.lang.String)" class="member-name-link">synchronizeFromGrid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>net.minecraft.network.chat.MutableComponent</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getXTexture()" class="member-name-link">getXTexture</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getYTexture()" class="member-name-link">getYTexture</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#synchronizeFromGrid(java.lang.String)" class="member-name-link">synchronizeFromGrid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -117,7 +126,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
-<div class="member-signature"><span class="return-type">net.minecraft.network.chat.Component</span>&nbsp;<span class="element-name">getTitle</span>()</div>
+<div class="member-signature"><span class="return-type">net.minecraft.network.chat.MutableComponent</span>&nbsp;<span class="element-name">getTitle</span>()</div>
 </section>
 </li>
 <li>
@@ -129,7 +138,26 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getTextToSynchronizeToGrid()">
 <h3>getTextToSynchronizeToGrid</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextToSynchronizeToGrid</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextToSynchronizeToGrid</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getTextureIdentifier()">
+<h3>getTextureIdentifier</h3>
+<div class="member-signature"><span class="return-type">net.minecraft.resources.ResourceLocation</span>&nbsp;<span class="element-name">getTextureIdentifier</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getXTexture()">
+<h3>getXTexture</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getXTexture</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getYTexture()">
+<h3>getYTexture</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getYTexture</span>()</div>
 </section>
 </li>
 </ul>

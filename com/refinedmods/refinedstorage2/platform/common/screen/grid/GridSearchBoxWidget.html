@@ -68,14 +68,14 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.refinedmods.refinedstorage2.platform.common.screen.grid</a></div>
-<h1 title="Class GridSearchBoxWidget" class="title">Class GridSearchBoxWidget</h1>
+<h1 title="Class GridSearchBoxWidget" class="title">Class GridSearchBoxWidget&lt;T&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">net.minecraft.client.gui.GuiComponent
 <div class="inheritance">net.minecraft.client.gui.components.AbstractWidget
 <div class="inheritance">net.minecraft.client.gui.components.EditBox
 <div class="inheritance"><a href="../widget/SearchFieldWidget.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen.widget">com.refinedmods.refinedstorage2.platform.common.screen.widget.SearchFieldWidget</a>
-<div class="inheritance">com.refinedmods.refinedstorage2.platform.common.screen.grid.GridSearchBoxWidget</div>
+<div class="inheritance">com.refinedmods.refinedstorage2.platform.common.screen.grid.GridSearchBoxWidget&lt;T&gt;</div>
 </div>
 </div>
 </div>
@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="GridSearchBox.html" title="interface in com.refinedmods.refinedstorage2.platform.common.screen.grid">GridSearchBox</a></code>, <code>net.minecraft.client.gui.components.events.GuiEventListener</code>, <code>net.minecraft.client.gui.components.Widget</code>, <code>net.minecraft.client.gui.narration.NarratableEntry</code>, <code>net.minecraft.client.gui.narration.NarrationSupplier</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GridSearchBoxWidget</span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GridSearchBoxWidget&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="../widget/SearchFieldWidget.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen.widget">SearchFieldWidget</a>
 implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refinedstorage2.platform.common.screen.grid">GridSearchBox</a></span></div>
 </section>
@@ -128,14 +128,14 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter,com.refinedmods.refinedstorage2.api.grid.view.GridView,com.refinedmods.refinedstorage2.api.grid.query.GridQueryParser,java.util.List)" class="member-name-link">GridSearchBoxWidget</a><wbr>(net.minecraft.client.gui.Font&nbsp;textRenderer,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter,com.refinedmods.refinedstorage2.api.grid.view.GridView,com.refinedmods.refinedstorage2.api.grid.query.GridQueryParser,com.refinedmods.refinedstorage2.api.core.History)" class="member-name-link">GridSearchBoxWidget</a><wbr>(net.minecraft.client.gui.Font&nbsp;textRenderer,
  int&nbsp;x,
  int&nbsp;y,
  int&nbsp;width,
  <a href="../../../../query/lexer/SyntaxHighlighter.html" title="class in com.refinedmods.refinedstorage2.query.lexer">SyntaxHighlighter</a>&nbsp;syntaxHighlighter,
- <a href="../../../../api/grid/view/GridView.html" title="interface in com.refinedmods.refinedstorage2.api.grid.view">GridView</a>&lt;?&gt;&nbsp;view,
- <a href="../../../../api/grid/query/GridQueryParser.html" title="interface in com.refinedmods.refinedstorage2.api.grid.query">GridQueryParser</a>&nbsp;queryParser,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;history)</code></div>
+ <a href="../../../../api/grid/view/GridView.html" title="interface in com.refinedmods.refinedstorage2.api.grid.view">GridView</a>&lt;<a href="GridSearchBoxWidget.html" title="type parameter in GridSearchBoxWidget">T</a>&gt;&nbsp;view,
+ <a href="../../../../api/grid/query/GridQueryParser.html" title="interface in com.refinedmods.refinedstorage2.api.grid.query">GridQueryParser</a>&lt;<a href="GridSearchBoxWidget.html" title="type parameter in GridSearchBoxWidget">T</a>&gt;&nbsp;queryParser,
+ <a href="../../../../api/core/History.html" title="class in com.refinedmods.refinedstorage2.api.core">History</a>&nbsp;history)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -196,16 +196,16 @@ implements <a href="GridSearchBox.html" title="interface in com.refinedmods.refi
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter,com.refinedmods.refinedstorage2.api.grid.view.GridView,com.refinedmods.refinedstorage2.api.grid.query.GridQueryParser,java.util.List)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.client.gui.Font,int,int,int,com.refinedmods.refinedstorage2.query.lexer.SyntaxHighlighter,com.refinedmods.refinedstorage2.api.grid.view.GridView,com.refinedmods.refinedstorage2.api.grid.query.GridQueryParser,com.refinedmods.refinedstorage2.api.core.History)">
 <h3>GridSearchBoxWidget</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">GridSearchBoxWidget</span><wbr><span class="parameters">(net.minecraft.client.gui.Font&nbsp;textRenderer,
  int&nbsp;x,
  int&nbsp;y,
  int&nbsp;width,
  <a href="../../../../query/lexer/SyntaxHighlighter.html" title="class in com.refinedmods.refinedstorage2.query.lexer">SyntaxHighlighter</a>&nbsp;syntaxHighlighter,
- <a href="../../../../api/grid/view/GridView.html" title="interface in com.refinedmods.refinedstorage2.api.grid.view">GridView</a>&lt;?&gt;&nbsp;view,
- <a href="../../../../api/grid/query/GridQueryParser.html" title="interface in com.refinedmods.refinedstorage2.api.grid.query">GridQueryParser</a>&nbsp;queryParser,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;history)</span></div>
+ <a href="../../../../api/grid/view/GridView.html" title="interface in com.refinedmods.refinedstorage2.api.grid.view">GridView</a>&lt;<a href="GridSearchBoxWidget.html" title="type parameter in GridSearchBoxWidget">T</a>&gt;&nbsp;view,
+ <a href="../../../../api/grid/query/GridQueryParser.html" title="interface in com.refinedmods.refinedstorage2.api.grid.query">GridQueryParser</a>&lt;<a href="GridSearchBoxWidget.html" title="type parameter in GridSearchBoxWidget">T</a>&gt;&nbsp;queryParser,
+ <a href="../../../../api/core/History.html" title="class in com.refinedmods.refinedstorage2.api.core">History</a>&nbsp;history)</span></div>
 </section>
 </li>
 </ul>

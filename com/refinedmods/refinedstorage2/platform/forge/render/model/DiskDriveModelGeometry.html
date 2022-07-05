@@ -71,7 +71,7 @@ loadScripts(document, 'script');</script>
 <h1 title="Class DiskDriveModelGeometry" class="title">Class DiskDriveModelGeometry</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="BasicModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">com.refinedmods.refinedstorage2.platform.forge.render.model.BasicModelGeometry</a>&lt;<a href="DiskDriveModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">DiskDriveModelGeometry</a>&gt;
+<div class="inheritance"><a href="AbstractModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">com.refinedmods.refinedstorage2.platform.forge.render.model.AbstractModelGeometry</a>&lt;<a href="DiskDriveModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">DiskDriveModelGeometry</a>&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.forge.render.model.DiskDriveModelGeometry</div>
 </div>
 </div>
@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveModelGeometry</span>
-<span class="extends-implements">extends <a href="BasicModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">BasicModelGeometry</a>&lt;<a href="DiskDriveModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">DiskDriveModelGeometry</a>&gt;</span></div>
+<span class="extends-implements">extends <a href="AbstractModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">AbstractModelGeometry</a>&lt;<a href="DiskDriveModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">DiskDriveModelGeometry</a>&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -125,8 +125,8 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.forge.render.model.BasicModelGeometry">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.forge.render.model.<a href="BasicModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">BasicModelGeometry</a></h3>
-<code><a href="BasicModelGeometry.html#getTextures(net.minecraftforge.client.model.IModelConfiguration,java.util.function.Function,java.util.Set)">getTextures</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.forge.render.model.AbstractModelGeometry">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.forge.render.model.<a href="AbstractModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">AbstractModelGeometry</a></h3>
+<code><a href="AbstractModelGeometry.html#getTextures(net.minecraftforge.client.model.IModelConfiguration,java.util.function.Function,java.util.Set)">getTextures</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -164,7 +164,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;net.minecraft.resources.ResourceLocation&gt;</span>&nbsp;<span class="element-name">getModels</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="BasicModelGeometry.html#getModels()">getModels</a></code>&nbsp;in class&nbsp;<code><a href="BasicModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">BasicModelGeometry</a>&lt;<a href="DiskDriveModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">DiskDriveModelGeometry</a>&gt;</code></dd>
+<dd><code><a href="AbstractModelGeometry.html#getModels()">getModels</a></code>&nbsp;in class&nbsp;<code><a href="AbstractModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">AbstractModelGeometry</a>&lt;<a href="DiskDriveModelGeometry.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model">DiskDriveModelGeometry</a>&gt;</code></dd>
 </dl>
 </section>
 </li>

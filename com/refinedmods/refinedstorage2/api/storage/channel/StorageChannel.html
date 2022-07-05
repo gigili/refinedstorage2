@@ -89,7 +89,8 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public interface </span><span class="element-name type-name-label">StorageChannel&lt;T&gt;</span><span class="extends-implements">
 extends <a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;, <a href="../tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;T&gt;</span></div>
 <div class="block">A storage channel is the entry-point for various storage operations for a given resource type.
- It acts as a storage, and is usually backed by a <a href="../composite/CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a>.</div>
+ It acts as a storage, and is usually backed by a
+ <a href="../composite/CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a>.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -110,7 +111,7 @@ extends <a href="../Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="block">Adds a listener to the storage channel.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">addSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">addSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="StorageChannel.html" title="type parameter in StorageChannel">T</a>&gt;&nbsp;source)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Adds a source to the channel.</div>
 </div>
@@ -123,7 +124,7 @@ extends <a href="../Storage.html" title="interface in com.refinedmods.refinedsto
 <div class="block">Removes a listener from the storage channel.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">removeSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">removeSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="StorageChannel.html" title="type parameter in StorageChannel">T</a>&gt;&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Removes a source from the channel.</div>
 </div>
@@ -202,7 +203,7 @@ extends <a href="../Storage.html" title="interface in com.refinedmods.refinedsto
 <li>
 <section class="detail" id="addSource(com.refinedmods.refinedstorage2.api.storage.Storage)">
 <h3>addSource</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addSource</span><wbr><span class="parameters">(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addSource</span><wbr><span class="parameters">(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="StorageChannel.html" title="type parameter in StorageChannel">T</a>&gt;&nbsp;source)</span></div>
 <div class="block">Adds a source to the channel.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -213,7 +214,7 @@ extends <a href="../Storage.html" title="interface in com.refinedmods.refinedsto
 <li>
 <section class="detail" id="removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)">
 <h3>removeSource</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">removeSource</span><wbr><span class="parameters">(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;?&gt;&nbsp;source)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">removeSource</span><wbr><span class="parameters">(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="StorageChannel.html" title="type parameter in StorageChannel">T</a>&gt;&nbsp;source)</span></div>
 <div class="block">Removes a source from the channel.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

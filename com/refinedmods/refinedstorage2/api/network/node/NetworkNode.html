@@ -73,10 +73,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="CableNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">CableNetworkNode</a></code>, <code><a href="controller/ControllerNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.controller">ControllerNetworkNode</a></code>, <code><a href="diskdrive/DiskDriveNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveNetworkNode</a></code>, <code><a href="grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a></code>, <code><a href="NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a></code>, <code><a href="storage/StorageNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.storage">StorageNetworkNode</a></code></dd>
+<dd><code><a href="AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code>, <code><a href="CableNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">CableNetworkNode</a></code>, <code><a href="controller/ControllerNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.controller">ControllerNetworkNode</a></code>, <code><a href="diskdrive/DiskDriveNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveNetworkNode</a></code>, <code><a href="grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a></code>, <code><a href="storage/StorageNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.storage">StorageNetworkNode</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">NetworkNode</span></div>
+<div class="type-signature"><span class="annotations">@API(status=STABLE,
+     since="2.0.0-milestone.1.0")
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">NetworkNode</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -120,13 +122,15 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getNetwork()">
 <h3>getNetwork</h3>
-<div class="member-signature"><span class="return-type"><a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></span>&nbsp;<span class="element-name">getNetwork</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type"><a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></span>&nbsp;<span class="element-name">getNetwork</span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">
 <h3>setNetwork</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNetwork</span><wbr><span class="parameters">(<a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a>&nbsp;network)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setNetwork</span><wbr><span class="parameters">(@Nullable
+ <a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a>&nbsp;network)</span></div>
 </section>
 </li>
 <li>

@@ -76,13 +76,18 @@ loadScripts(document, 'script');</script>
 <dd><code>T</code> - the type of resource</dd>
 </dl>
 <dl class="notes">
+<dt>All Superinterfaces:</dt>
+<dd><code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;</code>, <code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</code>, <code><a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</code>, <code><a href="../StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a>&lt;T&gt;</code></dd>
+</dl>
+<dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="CompositeStorageImpl.html" title="class in com.refinedmods.refinedstorage2.api.storage.composite">CompositeStorageImpl</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
      since="2.0.0-milestone.1.4")
-</span><span class="modifiers">public interface </span><span class="element-name type-name-label">CompositeAwareChild&lt;T&gt;</span></div>
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">CompositeAwareChild&lt;T&gt;</span><span class="extends-implements">
+extends <a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;</span></div>
 <div class="block">Implement this on storages that need to be aware of the fact that they are contained in a <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a>.
  Typically, this is needed so that storages that dynamically modify their underlying storage sources, can propagate
  the changes to the parent composite list.</div>
@@ -113,6 +118,15 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.ExtractableStorage">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a></h3>
+<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.InsertableStorage">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a></h3>
+<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.StorageView">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a></h3>
+<code><a href="../StorageView.html#getAll()">getAll</a>, <a href="../StorageView.html#getStored()">getStored</a></code></div>
 </section>
 </li>
 </ul>

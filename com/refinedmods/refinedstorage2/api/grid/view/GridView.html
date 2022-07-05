@@ -86,8 +86,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Represents a grid view.
  The grid view internally has a backing list and a view list.
  The backing list is the logical view of the grid without any filtering or sorting applied. It's the source of truth.
- The view list has filtering and sorting rules applied and is semi in sync with the backing list (depending if the view
- is in "prevent sorting" mode).</div>
+ The view list has filtering and sorting rules applied and is semi in sync with the backing list (depending if the
+ view is in "prevent sorting" mode).</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -102,14 +102,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">GridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AbstractGridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">AbstractGridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAll()" class="member-name-link">getAll</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSortingDirection()" class="member-name-link">getSortingDirection</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSortingType()" class="member-name-link">getSortingType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTrackedResource(T)" class="member-name-link">getTrackedResource</a><wbr>(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource)</code></div>
@@ -132,10 +126,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Applies a change to a resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFilter(java.util.function.Predicate)" class="member-name-link">setFilter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="GridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">GridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;&nbsp;filter)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Changing the filter still requires a call to <a href="#sort()"><code>sort()</code></a>.</div>
-</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFilterAndSort(java.util.function.Predicate)" class="member-name-link">setFilterAndSort</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="AbstractGridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">AbstractGridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;&nbsp;predicate)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setListener(java.lang.Runnable)" class="member-name-link">setListener</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -180,21 +172,12 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setListener(java.lang.Runnable)">
 <h3>setListener</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;listener)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setListener</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;listener)</span></div>
 <div class="block">Sets a listener that is called when the grid view changes.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>listener</code> - the listener</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getSortingType()">
-<h3>getSortingType</h3>
-<div class="member-signature"><span class="return-type"><a href="GridSortingType.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingType</a></span>&nbsp;<span class="element-name">getSortingType</span>()</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the sorting type</dd>
+<dd><code>listener</code> - the listener, can be null</dd>
 </dl>
 </section>
 </li>
@@ -210,13 +193,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setFilter(java.util.function.Predicate)">
-<h3>setFilter</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFilter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="GridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">GridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;&nbsp;filter)</span></div>
-<div class="block">Changing the filter still requires a call to <a href="#sort()"><code>sort()</code></a>.</div>
+<section class="detail" id="setFilterAndSort(java.util.function.Predicate)">
+<h3>setFilterAndSort</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFilterAndSort</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="AbstractGridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">AbstractGridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;&nbsp;predicate)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>filter</code> - the filter</dd>
+<dd><code>predicate</code> - the filter</dd>
 </dl>
 </section>
 </li>
@@ -245,16 +227,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getSortingDirection()">
-<h3>getSortingDirection</h3>
-<div class="member-signature"><span class="return-type"><a href="GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a></span>&nbsp;<span class="element-name">getSortingDirection</span>()</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the sorting direction</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">
 <h3>setSortingDirection</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSortingDirection</span><wbr><span class="parameters">(<a href="GridSortingDirection.html" title="enum class in com.refinedmods.refinedstorage2.api.grid.view">GridSortingDirection</a>&nbsp;sortingDirection)</span></div>
@@ -270,6 +242,7 @@ loadScripts(document, 'script');</script>
 <h3 id="loadResource(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">loadResource</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">loadResource</span><wbr><span class="parameters">(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
  long&nbsp;amount,
+ @Nullable
  <a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
 <div class="block">Loads a resource in the backing list. The resource still won't be visible in the view list,
  call <a href="#sort()"><code>sort()</code></a> for that.</div>
@@ -306,6 +279,7 @@ loadScripts(document, 'script');</script>
 <h3 id="onChange(java.lang.Object,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onChange</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onChange</span><wbr><span class="parameters">(<a href="GridView.html" title="type parameter in GridView">T</a>&nbsp;resource,
  long&nbsp;amount,
+ @Nullable
  <a href="../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
 <div class="block">Applies a change to a resource. Will update the backing list, and will also update the view list (depending
  if the view is preventing sorting).</div>
@@ -320,7 +294,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getAll()">
 <h3>getAll</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">GridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;</span>&nbsp;<span class="element-name">getAll</span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AbstractGridResource.html" title="class in com.refinedmods.refinedstorage2.api.grid.view">AbstractGridResource</a>&lt;<a href="GridView.html" title="type parameter in GridView">T</a>&gt;&gt;</span>&nbsp;<span class="element-name">getAll</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the view list</dd>

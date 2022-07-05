@@ -71,7 +71,7 @@ loadScripts(document, 'script');</script>
 <h1 title="Class DiskDriveNetworkNode" class="title">Class DiskDriveNetworkNode</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">com.refinedmods.refinedstorage2.api.network.node.NetworkNodeImpl</a>
+<div class="inheritance"><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode</a>
 <div class="inheritance">com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveNetworkNode</div>
 </div>
 </div>
@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveNetworkNode</span>
-<span class="extends-implements">extends <a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a>
+<span class="extends-implements">extends <a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a>
 implements <a href="../../component/StorageProvider.html" title="interface in com.refinedmods.refinedstorage2.api.network.component">StorageProvider</a></span></div>
 </section>
 <section class="summary">
@@ -101,8 +101,8 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.NetworkNodeImpl">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a></h3>
-<code><a href="../NetworkNodeImpl.html#activenessProvider">activenessProvider</a>, <a href="../NetworkNodeImpl.html#network">network</a></code></div>
+<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
+<code><a href="../AbstractNetworkNode.html#activenessProvider">activenessProvider</a>, <a href="../AbstractNetworkNode.html#network">network</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -113,9 +113,9 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelTypeRegistry)" class="member-name-link">DiskDriveNetworkNode</a><wbr>(long&nbsp;energyUsage,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry)" class="member-name-link">DiskDriveNetworkNode</a><wbr>(long&nbsp;energyUsage,
  long&nbsp;energyUsagePerDisk,
- <a href="../../../storage/channel/StorageChannelTypeRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelTypeRegistry</a>&nbsp;storageChannelTypeRegistry)</code></div>
+ <a href="../../../core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;?,<wbr><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;?&gt;&gt;&nbsp;storageChannelTypeRegistry)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -152,10 +152,10 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="block">Returns an optional storage for the given storage channel type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize(com.refinedmods.refinedstorage2.api.storage.StorageRepository)" class="member-name-link">initialize</a><wbr>(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;storageRepository)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize(com.refinedmods.refinedstorage2.api.storage.StorageRepository)" class="member-name-link">initialize</a><wbr>(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;newStorageRepository)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;active)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDiskChanged(int)" class="member-name-link">onDiskChanged</a><wbr>(int&nbsp;slot)</code></div>
@@ -185,8 +185,8 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.NetworkNodeImpl">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a></h3>
-<code><a href="../NetworkNodeImpl.html#getNetwork()">getNetwork</a>, <a href="../NetworkNodeImpl.html#isActive()">isActive</a>, <a href="../NetworkNodeImpl.html#setActivenessProvider(java.util.function.BooleanSupplier)">setActivenessProvider</a>, <a href="../NetworkNodeImpl.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a>, <a href="../NetworkNodeImpl.html#update()">update</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
+<code><a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActivenessProvider(java.util.function.BooleanSupplier)">setActivenessProvider</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a>, <a href="../AbstractNetworkNode.html#update()">update</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -224,11 +224,11 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(long,long,com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelTypeRegistry)">
+<section class="detail" id="&lt;init&gt;(long,long,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry)">
 <h3>DiskDriveNetworkNode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveNetworkNode</span><wbr><span class="parameters">(long&nbsp;energyUsage,
  long&nbsp;energyUsagePerDisk,
- <a href="../../../storage/channel/StorageChannelTypeRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelTypeRegistry</a>&nbsp;storageChannelTypeRegistry)</span></div>
+ <a href="../../../core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;?,<wbr><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;?&gt;&gt;&nbsp;storageChannelTypeRegistry)</span></div>
 </section>
 </li>
 </ul>
@@ -242,7 +242,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <li>
 <section class="detail" id="initialize(com.refinedmods.refinedstorage2.api.storage.StorageRepository)">
 <h3>initialize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span><wbr><span class="parameters">(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;storageRepository)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span><wbr><span class="parameters">(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;newStorageRepository)</span></div>
 </section>
 </li>
 <li>
@@ -254,10 +254,10 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <li>
 <section class="detail" id="onActiveChanged(boolean)">
 <h3>onActiveChanged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;active)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="../NetworkNodeImpl.html#onActiveChanged(boolean)">onActiveChanged</a></code>&nbsp;in class&nbsp;<code><a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a></code></dd>
+<dd><code><a href="../AbstractNetworkNode.html#onActiveChanged(boolean)">onActiveChanged</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>
 </dl>
 </section>
 </li>
@@ -303,7 +303,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getEnergyUsage</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../NetworkNodeImpl.html#getEnergyUsage()">getEnergyUsage</a></code>&nbsp;in class&nbsp;<code><a href="../NetworkNodeImpl.html" title="class in com.refinedmods.refinedstorage2.api.network.node">NetworkNodeImpl</a></code></dd>
+<dd><code><a href="../AbstractNetworkNode.html#getEnergyUsage()">getEnergyUsage</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>
 </dl>
 </section>
 </li>

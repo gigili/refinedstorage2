@@ -71,7 +71,7 @@ loadScripts(document, 'script');</script>
 <h1 title="Class PlatformStorage" class="title">Class PlatformStorage&lt;T&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="../../../api/storage/ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">com.refinedmods.refinedstorage2.api.storage.ProxyStorage</a>&lt;T&gt;
+<div class="inheritance"><a href="../../../api/storage/AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">com.refinedmods.refinedstorage2.api.storage.AbstractProxyStorage</a>&lt;T&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.apiimpl.storage.PlatformStorage&lt;T&gt;</div>
 </div>
 </div>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">PlatformStorage&lt;T&gt;</span>
-<span class="extends-implements">extends <a href="../../../api/storage/ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a>&lt;T&gt;
+<span class="extends-implements">extends <a href="../../../api/storage/AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a>&lt;T&gt;
 implements <a href="../../api/storage/SerializableStorage.html" title="interface in com.refinedmods.refinedstorage2.platform.api.storage">SerializableStorage</a>&lt;T&gt;, <a href="../../../api/storage/tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;T&gt;</span></div>
 </section>
 <section class="summary">
@@ -96,8 +96,8 @@ implements <a href="../../api/storage/SerializableStorage.html" title="interface
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.ProxyStorage">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../../../api/storage/ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a></h3>
-<code><a href="../../../api/storage/ProxyStorage.html#delegate">delegate</a></code></div>
+<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.AbstractProxyStorage">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../../../api/storage/AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a></h3>
+<code><a href="../../../api/storage/AbstractProxyStorage.html#delegate">delegate</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -162,8 +162,8 @@ implements <a href="../../api/storage/SerializableStorage.html" title="interface
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.ProxyStorage">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../../../api/storage/ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a></h3>
-<code><a href="../../../api/storage/ProxyStorage.html#getAll()">getAll</a>, <a href="../../../api/storage/ProxyStorage.html#getStored()">getStored</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.AbstractProxyStorage">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../../../api/storage/AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a></h3>
+<code><a href="../../../api/storage/AbstractProxyStorage.html#getAll()">getAll</a>, <a href="../../../api/storage/AbstractProxyStorage.html#getStored()">getStored</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -203,6 +203,7 @@ implements <a href="../../api/storage/SerializableStorage.html" title="interface
 <h3 id="load(java.lang.Object,long,java.lang.String,long)">load</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">load</span><wbr><span class="parameters">(<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&nbsp;resource,
  long&nbsp;amount,
+ @Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;changedBy,
  long&nbsp;changedAt)</span></div>
 </section>
@@ -220,7 +221,7 @@ implements <a href="../../api/storage/SerializableStorage.html" title="interface
 <dt>Specified by:</dt>
 <dd><code><a href="../../../api/storage/ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&gt;</code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="../../../api/storage/ProxyStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in class&nbsp;<code><a href="../../../api/storage/ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a>&lt;<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&gt;</code></dd>
+<dd><code><a href="../../../api/storage/AbstractProxyStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in class&nbsp;<code><a href="../../../api/storage/AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a>&lt;<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
@@ -244,7 +245,7 @@ implements <a href="../../api/storage/SerializableStorage.html" title="interface
 <dt>Specified by:</dt>
 <dd><code><a href="../../../api/storage/InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&gt;</code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="../../../api/storage/ProxyStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in class&nbsp;<code><a href="../../../api/storage/ProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">ProxyStorage</a>&lt;<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&gt;</code></dd>
+<dd><code><a href="../../../api/storage/AbstractProxyStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in class&nbsp;<code><a href="../../../api/storage/AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a>&lt;<a href="PlatformStorage.html" title="type parameter in PlatformStorage">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>

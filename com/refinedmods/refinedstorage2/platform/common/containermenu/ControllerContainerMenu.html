@@ -72,7 +72,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">net.minecraft.world.inventory.AbstractContainerMenu
-<div class="inheritance"><a href="BaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">com.refinedmods.refinedstorage2.platform.common.containermenu.BaseContainerMenu</a>
+<div class="inheritance"><a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu</a>
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.common.containermenu.ControllerContainerMenu</div>
 </div>
 </div>
@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ControllerContainerMenu</span>
-<span class="extends-implements">extends <a href="BaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">BaseContainerMenu</a>
+<span class="extends-implements">extends <a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a>
 implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></span></div>
 </section>
 <section class="summary">
@@ -142,8 +142,8 @@ implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmo
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnergy(long,long)" class="member-name-link">setEnergy</a><wbr>(long&nbsp;stored,
- long&nbsp;capacity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnergy(long,long)" class="member-name-link">setEnergy</a><wbr>(long&nbsp;newStored,
+ long&nbsp;newCapacity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
@@ -152,8 +152,8 @@ implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmo
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.BaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="BaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">BaseContainerMenu</a></h3>
-<code><a href="BaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="BaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="BaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="BaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
+<code><a href="AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="AbstractBaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Methods inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>addDataSlot, addDataSlots, addSlot, addSlotListener, broadcastFullState, canDragTo, canItemQuickReplace, canTakeItemForPickAll, checkContainerDataCount, checkContainerSize, clearContainer, clicked, clickMenuButton, findSlot, getCarried, getItems, getQuickcraftHeader, getQuickcraftMask, getQuickCraftSlotCount, getQuickcraftType, getRedstoneSignalFromBlockEntity, getRedstoneSignalFromContainer, getSlot, getStateId, getType, incrementStateId, initializeContents, isValidQuickcraftType, isValidSlotIndex, moveItemStackTo, removed, removeSlotListener, resetQuickCraft, resumeRemoteUpdates, sendAllDataToRemote, setCarried, setData, setItem, setRemoteCarried, setRemoteSlot, setRemoteSlotNoCopy, setSynchronizer, slotsChanged, stillValid, suppressRemoteUpdates, transferState</code></div>
@@ -209,8 +209,8 @@ implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmo
 <li>
 <section class="detail" id="setEnergy(long,long)">
 <h3>setEnergy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setEnergy</span><wbr><span class="parameters">(long&nbsp;stored,
- long&nbsp;capacity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setEnergy</span><wbr><span class="parameters">(long&nbsp;newStored,
+ long&nbsp;newCapacity)</span></div>
 </section>
 </li>
 <li>

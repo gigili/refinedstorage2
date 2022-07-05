@@ -114,7 +114,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#decrement(long)" class="member-name-link">decrement</a><wbr>(long&nbsp;amount)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#decrement(long)" class="member-name-link">decrement</a><wbr>(long&nbsp;amountToDecrement)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Decrements with the given amount.</div>
 </div>
@@ -125,7 +125,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResource()" class="member-name-link">getResource</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#increment(long)" class="member-name-link">increment</a><wbr>(long&nbsp;amount)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#increment(long)" class="member-name-link">increment</a><wbr>(long&nbsp;amountToIncrement)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Increments with the given amount.</div>
 </div>
@@ -174,13 +174,6 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="validate(T,long)">
-<h3 id="validate(java.lang.Object,long)">validate</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">validate</span><wbr><span class="parameters">(T&nbsp;resource,
- long&nbsp;amount)</span></div>
-</section>
-</li>
-<li>
 <section class="detail" id="getResource()">
 <h3>getResource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResourceAmount.html" title="type parameter in ResourceAmount">T</a></span>&nbsp;<span class="element-name">getResource</span>()</div>
@@ -195,23 +188,23 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="increment(long)">
 <h3>increment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">increment</span><wbr><span class="parameters">(long&nbsp;amount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">increment</span><wbr><span class="parameters">(long&nbsp;amountToIncrement)</span></div>
 <div class="block">Increments with the given amount.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>amount</code> - the amount to increment, must be larger than 0</dd>
+<dd><code>amountToIncrement</code> - the amount to increment, must be larger than 0</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="decrement(long)">
 <h3>decrement</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">decrement</span><wbr><span class="parameters">(long&nbsp;amount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">decrement</span><wbr><span class="parameters">(long&nbsp;amountToDecrement)</span></div>
 <div class="block">Decrements with the given amount.
  The amount, after performing this decrement, may not be 0 or less than 0.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>amount</code> - the amount to decrement, a positive number</dd>
+<dd><code>amountToDecrement</code> - the amount to decrement, a positive number</dd>
 </dl>
 </section>
 </li>
@@ -223,6 +216,13 @@ loadScripts(document, 'script');</script>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="validate(T,long)">
+<h3 id="validate(java.lang.Object,long)">validate</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">validate</span><wbr><span class="parameters">(T&nbsp;resource,
+ long&nbsp;amount)</span></div>
 </section>
 </li>
 </ul>

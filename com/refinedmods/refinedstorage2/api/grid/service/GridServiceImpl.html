@@ -96,7 +96,7 @@ implements <a href="GridService.html" title="interface in com.refinedmods.refine
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannel,com.refinedmods.refinedstorage2.api.storage.Source,java.util.function.Function,long)" class="member-name-link">GridServiceImpl</a><wbr>(<a href="../../storage/channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="GridServiceImpl.html" title="type parameter in GridServiceImpl">T</a>&gt;&nbsp;storageChannel,
- <a href="../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source,
+ <a href="../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;actor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GridServiceImpl.html" title="type parameter in GridServiceImpl">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;maxCountProvider,
  long&nbsp;singleAmount)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -149,15 +149,16 @@ implements <a href="GridService.html" title="interface in com.refinedmods.refine
 <section class="detail" id="&lt;init&gt;(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannel,com.refinedmods.refinedstorage2.api.storage.Source,java.util.function.Function,long)">
 <h3>GridServiceImpl</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">GridServiceImpl</span><wbr><span class="parameters">(<a href="../../storage/channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="GridServiceImpl.html" title="type parameter in GridServiceImpl">T</a>&gt;&nbsp;storageChannel,
- <a href="../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source,
+ <a href="../../storage/Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;actor,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GridServiceImpl.html" title="type parameter in GridServiceImpl">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;maxCountProvider,
  long&nbsp;singleAmount)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storageChannel</code> - the storage channel to act on</dd>
-<dd><code>source</code> - the source performing the grid interactions</dd>
+<dd><code>actor</code> - the actor performing the grid interactions</dd>
 <dd><code>maxCountProvider</code> - provider for the maximum amount of a given resource</dd>
-<dd><code>singleAmount</code> - amount that needs to be extracted when using <a href="GridInsertMode.html#SINGLE_RESOURCE"><code>GridInsertMode.SINGLE_RESOURCE</code></a> or <a href="GridExtractMode.html#SINGLE_RESOURCE"><code>GridExtractMode.SINGLE_RESOURCE</code></a></dd>
+<dd><code>singleAmount</code> - amount that needs to be extracted when using
+                         <a href="GridInsertMode.html#SINGLE_RESOURCE"><code>GridInsertMode.SINGLE_RESOURCE</code></a> or <a href="GridExtractMode.html#SINGLE_RESOURCE"><code>GridExtractMode.SINGLE_RESOURCE</code></a></dd>
 </dl>
 </section>
 </li>
@@ -178,8 +179,9 @@ implements <a href="GridService.html" title="interface in com.refinedmods.refine
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="GridService.html#extract(T,com.refinedmods.refinedstorage2.api.grid.service.GridExtractMode,com.refinedmods.refinedstorage2.api.storage.InsertableStorage)">GridService</a></code></span></div>
 <div class="block">Tries to move a resource from the network storage to the destination.
  The amount being extracted depends on the extraction mode.
- The grid service will first try to insert the entire amount (depending on the extraction mode and state of the network storage)
- into the destination (simulated), and will then attempt to insert the actual amount that there is space for (execute).</div>
+ The grid service will first try to insert the entire amount (depending on the extraction mode and state of
+ the network storage) into the destination (simulated), and will then attempt to insert the actual amount that
+ there is space for (execute).</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="GridService.html#extract(T,com.refinedmods.refinedstorage2.api.grid.service.GridExtractMode,com.refinedmods.refinedstorage2.api.storage.InsertableStorage)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="GridService.html" title="interface in com.refinedmods.refinedstorage2.api.grid.service">GridService</a>&lt;<a href="GridServiceImpl.html" title="type parameter in GridServiceImpl">T</a>&gt;</code></dd>
@@ -199,8 +201,9 @@ implements <a href="GridService.html" title="interface in com.refinedmods.refine
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="GridService.html#insert(T,com.refinedmods.refinedstorage2.api.grid.service.GridInsertMode,com.refinedmods.refinedstorage2.api.storage.ExtractableStorage)">GridService</a></code></span></div>
 <div class="block">Tries to move a resource from the source to the network storage.
  The amount being inserted depends on the insert mode.
- The grid service will first try to extract the entire amount (depending on the insertion mode and state of the source storage)
- into the network storage (simulated), and will then attempt to insert the actual amount that there is space for (execute).</div>
+ The grid service will first try to extract the entire amount (depending on the insertion mode and state of
+ the source storage) into the network storage (simulated), and will then attempt to insert the actual amount that
+ there is space for (execute).</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="GridService.html#insert(T,com.refinedmods.refinedstorage2.api.grid.service.GridInsertMode,com.refinedmods.refinedstorage2.api.storage.ExtractableStorage)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="GridService.html" title="interface in com.refinedmods.refinedstorage2.api.grid.service">GridService</a>&lt;<a href="GridServiceImpl.html" title="type parameter in GridServiceImpl">T</a>&gt;</code></dd>
