@@ -78,14 +78,9 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
-<dl class="notes">
-<dt>All Implemented Interfaces:</dt>
-<dd><code><a href="RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></code></dd>
-</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ControllerContainerMenu</span>
-<span class="extends-implements">extends <a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a>
-implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></span></div>
+<span class="extends-implements">extends <a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -135,25 +130,19 @@ implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmo
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCapacity()" class="member-name-link">getCapacity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRedstoneMode()" class="member-name-link">getRedstoneMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnergy(long,long)" class="member-name-link">setEnergy</a><wbr>(long&nbsp;newStored,
- long&nbsp;newCapacity)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnergyInfo(long,long)" class="member-name-link">setEnergyInfo</a><wbr>(long&nbsp;newStored,
+ long&nbsp;newCapacity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
-<code><a href="AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="AbstractBaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
+<code><a href="AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="AbstractBaseContainerMenu.html#getProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType)">getProperty</a>, <a href="AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="AbstractBaseContainerMenu.html#receivePropertyChangeFromClient(net.minecraft.resources.ResourceLocation,int)">receivePropertyChangeFromClient</a>, <a href="AbstractBaseContainerMenu.html#registerProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.Property)">registerProperty</a>, <a href="AbstractBaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Methods inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>addDataSlot, addDataSlots, addSlot, addSlotListener, broadcastFullState, canDragTo, canItemQuickReplace, canTakeItemForPickAll, checkContainerDataCount, checkContainerSize, clearContainer, clicked, clickMenuButton, findSlot, getCarried, getItems, getQuickcraftHeader, getQuickcraftMask, getQuickCraftSlotCount, getQuickcraftType, getRedstoneSignalFromBlockEntity, getRedstoneSignalFromContainer, getSlot, getStateId, getType, incrementStateId, initializeContents, isValidQuickcraftType, isValidSlotIndex, moveItemStackTo, removed, removeSlotListener, resetQuickCraft, resumeRemoteUpdates, sendAllDataToRemote, setCarried, setData, setItem, setRemoteCarried, setRemoteSlot, setRemoteSlotNoCopy, setSynchronizer, slotsChanged, stillValid, suppressRemoteUpdates, transferState</code></div>
@@ -207,9 +196,9 @@ implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmo
 </section>
 </li>
 <li>
-<section class="detail" id="setEnergy(long,long)">
-<h3>setEnergy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setEnergy</span><wbr><span class="parameters">(long&nbsp;newStored,
+<section class="detail" id="setEnergyInfo(long,long)">
+<h3>setEnergyInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setEnergyInfo</span><wbr><span class="parameters">(long&nbsp;newStored,
  long&nbsp;newCapacity)</span></div>
 </section>
 </li>
@@ -223,26 +212,6 @@ implements <a href="RedstoneModeAccessor.html" title="interface in com.refinedmo
 <section class="detail" id="getCapacity()">
 <h3>getCapacity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getCapacity</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getRedstoneMode()">
-<h3>getRedstoneMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></span>&nbsp;<span class="element-name">getRedstoneMode</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="RedstoneModeAccessor.html#getRedstoneMode()">getRedstoneMode</a></code>&nbsp;in interface&nbsp;<code><a href="RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">
-<h3>setRedstoneMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRedstoneMode</span><wbr><span class="parameters">(<a href="../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="RedstoneModeAccessor.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a></code>&nbsp;in interface&nbsp;<code><a href="RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></code></dd>
-</dl>
 </section>
 </li>
 </ul>

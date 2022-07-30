@@ -127,18 +127,18 @@ implements <a href="CompositeStorage.html" title="interface in com.refinedmods.r
 <div class="block">Clears all sources.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">extract</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">extract</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Extracts a resource from a storage.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceBySourceType(T,java.lang.Class)" class="member-name-link">findTrackedResourceBySourceType</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceByActorType(T,java.lang.Class)" class="member-name-link">findTrackedResourceByActorType</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Finds the tracked resource by source type.</div>
+<div class="block">Finds the tracked resource by actor type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAll()" class="member-name-link">getAll</a>()</code></div>
@@ -147,10 +147,10 @@ implements <a href="CompositeStorage.html" title="interface in com.refinedmods.r
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">insert</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Inserts a resource into a storage.</div>
 </div>
@@ -274,44 +274,44 @@ implements <a href="CompositeStorage.html" title="interface in com.refinedmods.r
 </section>
 </li>
 <li>
-<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
-<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</h3>
+<section class="detail" id="extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">
+<h3 id="extract(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">extract</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">extract</span><wbr><span class="parameters">(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">ExtractableStorage</a></code></span></div>
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">ExtractableStorage</a></code></span></div>
 <div class="block">Extracts a resource from a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">extract</a></code>&nbsp;in interface&nbsp;<code><a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of extraction</dd>
-<dd><code>source</code> - the source</dd>
+<dd><code>actor</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount extracted</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">insert</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">InsertableStorage</a></code></span></div>
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">InsertableStorage</a></code></span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
-<dd><code>source</code> - the source</dd>
+<dd><code>actor</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount inserted</dd>
 </dl>
@@ -342,20 +342,20 @@ implements <a href="CompositeStorage.html" title="interface in com.refinedmods.r
 </section>
 </li>
 <li>
-<section class="detail" id="findTrackedResourceBySourceType(T,java.lang.Class)">
-<h3 id="findTrackedResourceBySourceType(java.lang.Object,java.lang.Class)">findTrackedResourceBySourceType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</span>&nbsp;<span class="element-name">findTrackedResourceBySourceType</span><wbr><span class="parameters">(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../tracked/TrackedStorage.html#findTrackedResourceBySourceType(T,java.lang.Class)">TrackedStorage</a></code></span></div>
-<div class="block">Finds the tracked resource by source type.</div>
+<section class="detail" id="findTrackedResourceByActorType(T,java.lang.Class)">
+<h3 id="findTrackedResourceByActorType(java.lang.Object,java.lang.Class)">findTrackedResourceByActorType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</span>&nbsp;<span class="element-name">findTrackedResourceByActorType</span><wbr><span class="parameters">(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../tracked/TrackedStorage.html#findTrackedResourceByActorType(T,java.lang.Class)">TrackedStorage</a></code></span></div>
+<div class="block">Finds the tracked resource by actor type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../tracked/TrackedStorage.html#findTrackedResourceBySourceType(T,java.lang.Class)">findTrackedResourceBySourceType</a></code>&nbsp;in interface&nbsp;<code><a href="../tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../tracked/TrackedStorage.html#findTrackedResourceByActorType(T,java.lang.Class)">findTrackedResourceByActorType</a></code>&nbsp;in interface&nbsp;<code><a href="../tracked/TrackedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource</dd>
-<dd><code>sourceType</code> - the source type</dd>
+<dd><code>actorType</code> - the actor type</dd>
 <dt>Returns:</dt>
-<dd>the tracked resource, if present</dd>
+<dd>the tracked resource modified by the given actor type, if present</dd>
 </dl>
 </section>
 </li>

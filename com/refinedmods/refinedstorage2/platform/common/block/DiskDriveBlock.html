@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">net.minecraft.world.level.block.state.BlockBehaviour
 <div class="inheritance">net.minecraft.world.level.block.Block
 <div class="inheritance"><a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">com.refinedmods.refinedstorage2.platform.common.block.AbstractBaseBlock</a>
-<div class="inheritance"><a href="AbstractNetworkNodeContainerBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">com.refinedmods.refinedstorage2.platform.common.block.AbstractNetworkNodeContainerBlock</a>
+<div class="inheritance"><a href="AbstractDirectionalBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">com.refinedmods.refinedstorage2.platform.common.block.AbstractDirectionalBlock</a>&lt;<a href="../util/BiDirection.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">BiDirection</a>&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.common.block.DiskDriveBlock</div>
 </div>
 </div>
@@ -88,7 +88,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveBlock</span>
-<span class="extends-implements">extends <a href="AbstractNetworkNodeContainerBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractNetworkNodeContainerBlock</a></span></div>
+<span class="extends-implements">extends <a href="AbstractDirectionalBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalBlock</a>&lt;<a href="../util/BiDirection.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">BiDirection</a>&gt;
+implements net.minecraft.world.level.block.EntityBlock</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,12 +109,6 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
-<div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractNetworkNodeContainerBlock">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractNetworkNodeContainerBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractNetworkNodeContainerBlock</a></h3>
-<code><a href="AbstractNetworkNodeContainerBlock.html#ACTIVE">ACTIVE</a></code></div>
-<div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractBaseBlock">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractBaseBlock</a></h3>
-<code><a href="AbstractBaseBlock.html#DIRECTION">DIRECTION</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.level.block.Block">Fields inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
 <code>BLOCK_STATE_REGISTRY, INDESTRUCTIBLE, INSTANT, stateDefinition, UPDATE_ALL, UPDATE_ALL_IMMEDIATE, UPDATE_CLIENTS, UPDATE_IMMEDIATE, UPDATE_INVISIBLE, UPDATE_KNOWN_SHAPE, UPDATE_LIMIT, UPDATE_MOVE_BY_PISTON, UPDATE_NEIGHBORS, UPDATE_NONE, UPDATE_SUPPRESS_DROPS, UPDATE_SUPPRESS_LIGHT</code></div>
@@ -146,13 +141,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends net.minecraft.world.level.block.entity.BlockEntity&gt;<br>net.minecraft.world.level.block.entity.BlockEntityTicker&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTicker(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.entity.BlockEntityType)" class="member-name-link">getTicker</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="direction/DirectionType.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.direction">DirectionType</a>&lt;<a href="../util/BiDirection.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">BiDirection</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDirectionType()" class="member-name-link">getDirectionType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends net.minecraft.world.level.block.entity.BlockEntity&gt;<br>net.minecraft.world.level.block.entity.BlockEntityTicker&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTicker(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.entity.BlockEntityType)" class="member-name-link">getTicker</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
  net.minecraft.world.level.block.state.BlockState&nbsp;state,
  net.minecraft.world.level.block.entity.BlockEntityType&lt;T&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBiDirection()" class="member-name-link">hasBiDirection</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.level.block.entity.BlockEntity</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBlockEntity(net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState)" class="member-name-link">newBlockEntity</a><wbr>(net.minecraft.core.BlockPos&nbsp;pos,
@@ -162,11 +157,11 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractNetworkNodeContainerBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractNetworkNodeContainerBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractNetworkNodeContainerBlock</a></h3>
-<code><a href="AbstractNetworkNodeContainerBlock.html#createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition.Builder)">createBlockStateDefinition</a>, <a href="AbstractNetworkNodeContainerBlock.html#hasActive()">hasActive</a></code></div>
+<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractDirectionalBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractDirectionalBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalBlock</a></h3>
+<code><a href="AbstractDirectionalBlock.html#createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition.Builder)">createBlockStateDefinition</a>, <a href="AbstractDirectionalBlock.html#getDefaultState()">getDefaultState</a>, <a href="AbstractDirectionalBlock.html#getDirection(net.minecraft.world.level.block.state.BlockState)">getDirection</a>, <a href="AbstractDirectionalBlock.html#getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext)">getStateForPlacement</a>, <a href="AbstractDirectionalBlock.html#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)">rotate</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractBaseBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractBaseBlock</a></h3>
-<code><a href="AbstractBaseBlock.html#getMenuProvider(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos)">getMenuProvider</a>, <a href="AbstractBaseBlock.html#getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext)">getStateForPlacement</a>, <a href="AbstractBaseBlock.html#onRemove(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState,boolean)">onRemove</a>, <a href="AbstractBaseBlock.html#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)">rotate</a>, <a href="AbstractBaseBlock.html#tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUpdateColor</a>, <a href="AbstractBaseBlock.html#tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUseWrench</a>, <a href="AbstractBaseBlock.html#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)">use</a></code></div>
+<code><a href="AbstractBaseBlock.html#getMenuProvider(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos)">getMenuProvider</a>, <a href="AbstractBaseBlock.html#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">getScreenOpenableShape</a>, <a href="AbstractBaseBlock.html#onRemove(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState,boolean)">onRemove</a>, <a href="AbstractBaseBlock.html#tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUpdateColor</a>, <a href="AbstractBaseBlock.html#tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUseWrench</a>, <a href="AbstractBaseBlock.html#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)">use</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.Block">Methods inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
 <code>animateTick, appendHoverText, asBlock, asItem, box, builtInRegistryHolder, byItem, canSupportCenter, canSupportRigidBlock, defaultBlockState, destroy, dropFromExplosion, dropResources, dropResources, dropResources, dropResources, fallOn, fillItemCategory, getCloneItemStack, getDescriptionId, getDrops, getDrops, getExplosionResistance, getFriction, getId, getJumpFactor, getName, getShapeForEachState, getSoundType, getSpeedFactor, getStateDefinition, handlePrecipitation, hasDynamicShape, isExceptionForConnection, isFaceFull, isPossibleToRespawnInThis, isRandomlyTicking, isShapeFullBlock, playerDestroy, playerWillDestroy, popExperience, popResource, popResourceFromFace, propagatesSkylightDown, pushEntitiesUp, registerDefaultState, setPlacedBy, shouldRenderFace, spawnDestroyParticles, stateById, stepOn, toString, tryDropExperience, updateEntityAfterFallOn, updateFromNeighbourShapes, updateOrDestroy, updateOrDestroy, wasExploded, withPropertiesOf</code></div>
@@ -205,12 +200,12 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="hasBiDirection()">
-<h3>hasBiDirection</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasBiDirection</span>()</div>
+<section class="detail" id="getDirectionType()">
+<h3>getDirectionType</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="direction/DirectionType.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.direction">DirectionType</a>&lt;<a href="../util/BiDirection.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">BiDirection</a>&gt;</span>&nbsp;<span class="element-name">getDirectionType</span>()</div>
 <dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="AbstractBaseBlock.html#hasBiDirection()">hasBiDirection</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractBaseBlock</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractDirectionalBlock.html#getDirectionType()">getDirectionType</a></code>&nbsp;in class&nbsp;<code><a href="AbstractDirectionalBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalBlock</a>&lt;<a href="../util/BiDirection.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">BiDirection</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -219,6 +214,10 @@ loadScripts(document, 'script');</script>
 <h3>newBlockEntity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.world.level.block.entity.BlockEntity</span>&nbsp;<span class="element-name">newBlockEntity</span><wbr><span class="parameters">(net.minecraft.core.BlockPos&nbsp;pos,
  net.minecraft.world.level.block.state.BlockState&nbsp;state)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>newBlockEntity</code>&nbsp;in interface&nbsp;<code>net.minecraft.world.level.block.EntityBlock</code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -231,8 +230,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>getTicker</code>&nbsp;in interface&nbsp;<code>net.minecraft.world.level.block.EntityBlock</code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="AbstractNetworkNodeContainerBlock.html#getTicker(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.entity.BlockEntityType)">getTicker</a></code>&nbsp;in class&nbsp;<code><a href="AbstractNetworkNodeContainerBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractNetworkNodeContainerBlock</a></code></dd>
 </dl>
 </section>
 </li>

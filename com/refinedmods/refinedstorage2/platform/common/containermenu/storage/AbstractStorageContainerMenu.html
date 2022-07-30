@@ -15,11 +15,7 @@
 <script type="text/javascript" src="../../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var evenRowColor = "even-row-color";
-var oddRowColor = "odd-row-color";
-var tableTab = "table-tab";
-var activeTableTab = "active-table-tab";
-var pathtoroot = "../../../../../../../";
+<script type="text/javascript">var pathtoroot = "../../../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -52,7 +48,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method-detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search-input">SEARCH:</label>
@@ -82,7 +78,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../AccessModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">AccessModeAccessor</a></code>, <code><a href="../ExactModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">ExactModeAccessor</a></code>, <code><a href="../FilterModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">FilterModeAccessor</a></code>, <code><a href="../PriorityAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">PriorityAccessor</a></code>, <code><a href="../RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></code>, <code><a href="../ResourceTypeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">ResourceTypeAccessor</a></code>, <code><a href="StorageAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageAccessor</a></code></dd>
+<dd><code><a href="../ResourceTypeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">ResourceTypeAccessor</a></code>, <code><a href="StorageAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageAccessor</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -119,12 +115,12 @@ implements <a href="StorageAccessor.html" title="interface in com.refinedmods.re
  <a href="../../../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="../../../api/resource/filter/ResourceType.html" title="interface in com.refinedmods.refinedstorage2.platform.api.resource.filter">ResourceType</a>&gt;&nbsp;resourceTypeRegistry)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>protected </code></div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.inventory.MenuType,int,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.containermenu.storage.StorageSettingsProvider,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer)" class="member-name-link">AbstractStorageContainerMenu</a><wbr>(net.minecraft.world.inventory.MenuType&lt;?&gt;&nbsp;type,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(net.minecraft.world.inventory.MenuType,int,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.containermenu.storage.StorageSettingsProvider,com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.ResourceFilterContainer)" class="member-name-link">AbstractStorageContainerMenu</a><wbr>(net.minecraft.world.inventory.MenuType&lt;?&gt;&nbsp;type,
  int&nbsp;syncId,
  <a href="../../../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="../../../api/resource/filter/ResourceType.html" title="interface in com.refinedmods.refinedstorage2.platform.api.resource.filter">ResourceType</a>&gt;&nbsp;resourceTypeRegistry,
  net.minecraft.world.entity.player.Player&nbsp;player,
  <a href="StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a>&nbsp;storageSettingsProvider,
- <a href="../../../apiimpl/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter">ResourceFilterContainer</a>&nbsp;container)</code></div>
+ <a href="../../internal/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.internal.resource.filter">ResourceFilterContainer</a>&nbsp;container)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
@@ -133,52 +129,12 @@ implements <a href="StorageAccessor.html" title="interface in com.refinedmods.re
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
-<div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccessMode()" class="member-name-link">getAccessMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../api/core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilterMode()" class="member-name-link">getFilterMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriority()" class="member-name-link">getPriority</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRedstoneMode()" class="member-name-link">getRedstoneMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isExactMode()" class="member-name-link">isExactMode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)" class="member-name-link">setAccessMode</a><wbr>(<a href="../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setExactMode(boolean)" class="member-name-link">setExactMode</a><wbr>(boolean&nbsp;exactMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)" class="member-name-link">setFilterMode</a><wbr>(<a href="../../../../api/core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a>&nbsp;filterMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPriority(int)" class="member-name-link">setPriority</a><wbr>(int&nbsp;priority)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-</div>
-</div>
-</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractResourceFilterContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="../AbstractResourceFilterContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractResourceFilterContainerMenu</a></h3>
 <code><a href="../AbstractResourceFilterContainerMenu.html#addSlot(net.minecraft.world.inventory.Slot)">addSlot</a>, <a href="../AbstractResourceFilterContainerMenu.html#broadcastChanges()">broadcastChanges</a>, <a href="../AbstractResourceFilterContainerMenu.html#canTakeItemForPickAll(net.minecraft.world.item.ItemStack,net.minecraft.world.inventory.Slot)">canTakeItemForPickAll</a>, <a href="../AbstractResourceFilterContainerMenu.html#clicked(int,int,net.minecraft.world.inventory.ClickType,net.minecraft.world.entity.player.Player)">clicked</a>, <a href="../AbstractResourceFilterContainerMenu.html#getCurrentResourceTypeName()">getCurrentResourceTypeName</a>, <a href="../AbstractResourceFilterContainerMenu.html#initializeResourceFilterSlots(net.minecraft.network.FriendlyByteBuf)">initializeResourceFilterSlots</a>, <a href="../AbstractResourceFilterContainerMenu.html#readResourceFilterSlotUpdate(int,net.minecraft.network.FriendlyByteBuf)">readResourceFilterSlotUpdate</a>, <a href="../AbstractResourceFilterContainerMenu.html#resetSlots()">resetSlots</a>, <a href="../AbstractResourceFilterContainerMenu.html#setCurrentResourceType(net.minecraft.resources.ResourceLocation)">setCurrentResourceType</a>, <a href="../AbstractResourceFilterContainerMenu.html#toggleResourceType()">toggleResourceType</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="../AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
-<code><a href="../AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="../AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="../AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
+<code><a href="../AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="../AbstractBaseContainerMenu.html#getProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType)">getProperty</a>, <a href="../AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="../AbstractBaseContainerMenu.html#receivePropertyChangeFromClient(net.minecraft.resources.ResourceLocation,int)">receivePropertyChangeFromClient</a>, <a href="../AbstractBaseContainerMenu.html#registerProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.Property)">registerProperty</a>, <a href="../AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Methods inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>addDataSlot, addDataSlots, addSlotListener, broadcastFullState, canDragTo, canItemQuickReplace, checkContainerDataCount, checkContainerSize, clearContainer, clickMenuButton, findSlot, getCarried, getItems, getQuickcraftHeader, getQuickcraftMask, getQuickCraftSlotCount, getQuickcraftType, getRedstoneSignalFromBlockEntity, getRedstoneSignalFromContainer, getSlot, getStateId, getType, incrementStateId, initializeContents, isValidQuickcraftType, isValidSlotIndex, moveItemStackTo, removed, removeSlotListener, resetQuickCraft, resumeRemoteUpdates, sendAllDataToRemote, setCarried, setData, setItem, setRemoteCarried, setRemoteSlot, setRemoteSlotNoCopy, setSynchronizer, slotsChanged, stillValid, suppressRemoteUpdates, transferState</code></div>
@@ -211,122 +167,14 @@ implements <a href="StorageAccessor.html" title="interface in com.refinedmods.re
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.world.inventory.MenuType,int,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.containermenu.storage.StorageSettingsProvider,com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter.ResourceFilterContainer)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.world.inventory.MenuType,int,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.containermenu.storage.StorageSettingsProvider,com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.ResourceFilterContainer)">
 <h3>AbstractStorageContainerMenu</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">AbstractStorageContainerMenu</span><wbr><span class="parameters">(net.minecraft.world.inventory.MenuType&lt;?&gt;&nbsp;type,
  int&nbsp;syncId,
  <a href="../../../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="../../../api/resource/filter/ResourceType.html" title="interface in com.refinedmods.refinedstorage2.platform.api.resource.filter">ResourceType</a>&gt;&nbsp;resourceTypeRegistry,
  net.minecraft.world.entity.player.Player&nbsp;player,
  <a href="StorageSettingsProvider.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.storage">StorageSettingsProvider</a>&nbsp;storageSettingsProvider,
- <a href="../../../apiimpl/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.apiimpl.resource.filter">ResourceFilterContainer</a>&nbsp;container)</span></div>
-</section>
-</li>
-</ul>
-</section>
-</li>
-<!-- ============ METHOD DETAIL ========== -->
-<li>
-<section class="method-details" id="method-detail">
-<h2>Method Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="getPriority()">
-<h3>getPriority</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPriority</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../PriorityAccessor.html#getPriority()">getPriority</a></code>&nbsp;in interface&nbsp;<code><a href="../PriorityAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">PriorityAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setPriority(int)">
-<h3>setPriority</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPriority</span><wbr><span class="parameters">(int&nbsp;priority)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../PriorityAccessor.html#setPriority(int)">setPriority</a></code>&nbsp;in interface&nbsp;<code><a href="../PriorityAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">PriorityAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFilterMode()">
-<h3>getFilterMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../api/core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></span>&nbsp;<span class="element-name">getFilterMode</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../FilterModeAccessor.html#getFilterMode()">getFilterMode</a></code>&nbsp;in interface&nbsp;<code><a href="../FilterModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">FilterModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)">
-<h3>setFilterMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFilterMode</span><wbr><span class="parameters">(<a href="../../../../api/core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a>&nbsp;filterMode)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../FilterModeAccessor.html#setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)">setFilterMode</a></code>&nbsp;in interface&nbsp;<code><a href="../FilterModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">FilterModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="isExactMode()">
-<h3>isExactMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isExactMode</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../ExactModeAccessor.html#isExactMode()">isExactMode</a></code>&nbsp;in interface&nbsp;<code><a href="../ExactModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">ExactModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setExactMode(boolean)">
-<h3>setExactMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setExactMode</span><wbr><span class="parameters">(boolean&nbsp;exactMode)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../ExactModeAccessor.html#setExactMode(boolean)">setExactMode</a></code>&nbsp;in interface&nbsp;<code><a href="../ExactModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">ExactModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getAccessMode()">
-<h3>getAccessMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a></span>&nbsp;<span class="element-name">getAccessMode</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../AccessModeAccessor.html#getAccessMode()">getAccessMode</a></code>&nbsp;in interface&nbsp;<code><a href="../AccessModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">AccessModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)">
-<h3>setAccessMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAccessMode</span><wbr><span class="parameters">(<a href="../../../../api/storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../AccessModeAccessor.html#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)">setAccessMode</a></code>&nbsp;in interface&nbsp;<code><a href="../AccessModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">AccessModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getRedstoneMode()">
-<h3>getRedstoneMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></span>&nbsp;<span class="element-name">getRedstoneMode</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../RedstoneModeAccessor.html#getRedstoneMode()">getRedstoneMode</a></code>&nbsp;in interface&nbsp;<code><a href="../RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">
-<h3>setRedstoneMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRedstoneMode</span><wbr><span class="parameters">(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../RedstoneModeAccessor.html#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">setRedstoneMode</a></code>&nbsp;in interface&nbsp;<code><a href="../RedstoneModeAccessor.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu">RedstoneModeAccessor</a></code></dd>
-</dl>
+ <a href="../../internal/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.internal.resource.filter">ResourceFilterContainer</a>&nbsp;container)</span></div>
 </section>
 </li>
 </ul>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code></dd>
+<dd><code><a href="../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code>, <code><a href="../network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractNetworkNodeContainerBlockEntity&lt;T extends <a href="../../../api/network/node/NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node">NetworkNode</a>&gt;</span>
 <span class="extends-implements">extends net.minecraft.world.level.block.entity.BlockEntity
-implements <a href="../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></span></div>
+implements <a href="../network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,6 +129,16 @@ implements <a href="../../../api/network/node/container/NetworkNodeContainer.htm
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canAcceptIncomingConnection(net.minecraft.core.Direction)" class="member-name-link">canAcceptIncomingConnection</a><wbr>(net.minecraft.core.Direction&nbsp;direction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the not yet discovered node can accept an incoming connection.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canPerformOutgoingConnection(net.minecraft.core.Direction)" class="member-name-link">canPerformOutgoingConnection</a><wbr>(net.minecraft.core.Direction&nbsp;direction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the already discovered node can perform an outgoing connection.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRemoved()" class="member-name-link">clearRemoved</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -214,6 +224,38 @@ implements <a href="../../../api/network/node/container/NetworkNodeContainer.htm
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../api/network/node/container/NetworkNodeContainer.html#getNode()">getNode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="canPerformOutgoingConnection(net.minecraft.core.Direction)">
+<h3>canPerformOutgoingConnection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canPerformOutgoingConnection</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../network/node/PlatformNetworkNodeContainer.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">PlatformNetworkNodeContainer</a></code></span></div>
+<div class="block">Returns whether the already discovered node can perform an outgoing connection.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../network/node/PlatformNetworkNodeContainer.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">canPerformOutgoingConnection</a></code>&nbsp;in interface&nbsp;<code><a href="../network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the outgoing direction</dd>
+<dt>Returns:</dt>
+<dd>whether the node can perform an outgoing connection</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="canAcceptIncomingConnection(net.minecraft.core.Direction)">
+<h3>canAcceptIncomingConnection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canAcceptIncomingConnection</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../network/node/PlatformNetworkNodeContainer.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">PlatformNetworkNodeContainer</a></code></span></div>
+<div class="block">Returns whether the not yet discovered node can accept an incoming connection.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../network/node/PlatformNetworkNodeContainer.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">canAcceptIncomingConnection</a></code>&nbsp;in interface&nbsp;<code><a href="../network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the incoming direction</dd>
+<dt>Returns:</dt>
+<dd>whether the node can accept an incoming connection</dd>
 </dl>
 </section>
 </li>

@@ -113,11 +113,11 @@ implements <a href="TrackedStorageRepository.html" title="interface in com.refin
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceBySourceType(T,java.lang.Class)" class="member-name-link">findTrackedResourceBySourceType</a><wbr>(<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&nbsp;resource,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(T,com.refinedmods.refinedstorage2.api.storage.Source,long)" class="member-name-link">update</a><wbr>(<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&nbsp;resource,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(T,com.refinedmods.refinedstorage2.api.storage.Actor,long)" class="member-name-link">update</a><wbr>(<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&nbsp;resource,
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor,
  long&nbsp;time)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
@@ -152,14 +152,14 @@ implements <a href="TrackedStorageRepository.html" title="interface in com.refin
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="update(T,com.refinedmods.refinedstorage2.api.storage.Source,long)">
-<h3 id="update(java.lang.Object,com.refinedmods.refinedstorage2.api.storage.Source,long)">update</h3>
+<section class="detail" id="update(T,com.refinedmods.refinedstorage2.api.storage.Actor,long)">
+<h3 id="update(java.lang.Object,com.refinedmods.refinedstorage2.api.storage.Actor,long)">update</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&nbsp;resource,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source,
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor,
  long&nbsp;time)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TrackedStorageRepository.html#update(T,com.refinedmods.refinedstorage2.api.storage.Source,long)">update</a></code>&nbsp;in interface&nbsp;<code><a href="TrackedStorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorageRepository</a>&lt;<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&gt;</code></dd>
+<dd><code><a href="TrackedStorageRepository.html#update(T,com.refinedmods.refinedstorage2.api.storage.Actor,long)">update</a></code>&nbsp;in interface&nbsp;<code><a href="TrackedStorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorageRepository</a>&lt;<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -167,7 +167,7 @@ implements <a href="TrackedStorageRepository.html" title="interface in com.refin
 <section class="detail" id="findTrackedResourceBySourceType(T,java.lang.Class)">
 <h3 id="findTrackedResourceBySourceType(java.lang.Object,java.lang.Class)">findTrackedResourceBySourceType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</span>&nbsp;<span class="element-name">findTrackedResourceBySourceType</span><wbr><span class="parameters">(<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&nbsp;resource,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&gt;&nbsp;sourceType)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TrackedStorageRepository.html#findTrackedResourceBySourceType(T,java.lang.Class)">findTrackedResourceBySourceType</a></code>&nbsp;in interface&nbsp;<code><a href="TrackedStorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedStorageRepository</a>&lt;<a href="InMemoryTrackedStorageRepository.html" title="type parameter in InMemoryTrackedStorageRepository">T</a>&gt;</code></dd>

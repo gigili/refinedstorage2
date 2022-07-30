@@ -71,7 +71,7 @@ loadScripts(document, 'script');</script>
 <h1 title="Class DiskDriveItemBakedModel" class="title">Class DiskDriveItemBakedModel</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">com.refinedmods.refinedstorage2.platform.forge.render.model.baked.AbstractForwardingBakedModel</a>
+<div class="inheritance">net.minecraftforge.client.model.BakedModelWrapper&lt;net.minecraft.client.resources.model.BakedModel&gt;
 <div class="inheritance">com.refinedmods.refinedstorage2.platform.forge.render.model.baked.DiskDriveItemBakedModel</div>
 </div>
 </div>
@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DiskDriveItemBakedModel</span>
-<span class="extends-implements">extends <a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">AbstractForwardingBakedModel</a></span></div>
+<span class="extends-implements">extends net.minecraftforge.client.model.BakedModelWrapper&lt;net.minecraft.client.resources.model.BakedModel&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -91,8 +91,8 @@ loadScripts(document, 'script');</script>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.forge.render.model.baked.AbstractForwardingBakedModel">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.forge.render.model.baked.<a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">AbstractForwardingBakedModel</a></h3>
-<code><a href="AbstractForwardingBakedModel.html#baseModel">baseModel</a></code></div>
+<h3 id="fields-inherited-from-class-net.minecraftforge.client.model.BakedModelWrapper">Fields inherited from class&nbsp;net.minecraftforge.client.model.BakedModelWrapper</h3>
+<code>originalModel</code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -103,8 +103,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.client.resources.model.BakedModel,net.minecraft.client.resources.model.BakedModel,com.mojang.math.Vector3f%5B%5D,long)" class="member-name-link">DiskDriveItemBakedModel</a><wbr>(net.minecraft.client.resources.model.BakedModel&nbsp;baseModel,
- net.minecraft.client.resources.model.BakedModel&nbsp;diskDisconnectedModel,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(net.minecraft.client.resources.model.BakedModel,java.util.function.Function,com.mojang.math.Vector3f%5B%5D,long)" class="member-name-link">DiskDriveItemBakedModel</a><wbr>(net.minecraft.client.resources.model.BakedModel&nbsp;baseModel,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;com.mojang.math.Vector3f,<wbr>net.minecraft.client.resources.model.BakedModel&gt;&nbsp;diskBakery,
  com.mojang.math.Vector3f[]&nbsp;translators,
  long&nbsp;disks)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -122,24 +122,29 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.client.renderer.block.model.ItemOverrides</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverrides()" class="member-name-link">getOverrides</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.client.resources.model.BakedModel</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyTransform(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType,com.mojang.blaze3d.vertex.PoseStack,boolean)" class="member-name-link">applyTransform</a><wbr>(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType&nbsp;cameraTransformType,
+ com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ boolean&nbsp;applyLeftHandTransform)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.renderer.block.model.BakedQuad&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuads(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.util.RandomSource)" class="member-name-link">getQuads</a><wbr>(@Nullable net.minecraft.world.level.block.state.BlockState&nbsp;state,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.client.renderer.block.model.ItemOverrides</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverrides()" class="member-name-link">getOverrides</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.renderer.block.model.BakedQuad&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuads(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.util.RandomSource)" class="member-name-link">getQuads</a><wbr>(@Nullable net.minecraft.world.level.block.state.BlockState&nbsp;state,
  @Nullable net.minecraft.core.Direction&nbsp;side,
  @NotNull net.minecraft.util.RandomSource&nbsp;rand)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.client.resources.model.BakedModel</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handlePerspective(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType,com.mojang.blaze3d.vertex.PoseStack)" class="member-name-link">handlePerspective</a><wbr>(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType&nbsp;cameraTransformType,
- com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.resources.model.BakedModel&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderPasses(net.minecraft.world.item.ItemStack,boolean)" class="member-name-link">getRenderPasses</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;itemStack,
+ boolean&nbsp;fabulous)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.forge.render.model.baked.AbstractForwardingBakedModel">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.forge.render.model.baked.<a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">AbstractForwardingBakedModel</a></h3>
-<code><a href="AbstractForwardingBakedModel.html#getParticleIcon()">getParticleIcon</a>, <a href="AbstractForwardingBakedModel.html#getTransforms()">getTransforms</a>, <a href="AbstractForwardingBakedModel.html#isCustomRenderer()">isCustomRenderer</a>, <a href="AbstractForwardingBakedModel.html#isGui3d()">isGui3d</a>, <a href="AbstractForwardingBakedModel.html#useAmbientOcclusion()">useAmbientOcclusion</a>, <a href="AbstractForwardingBakedModel.html#usesBlockLight()">usesBlockLight</a></code></div>
+<h3 id="methods-inherited-from-class-net.minecraftforge.client.model.BakedModelWrapper">Methods inherited from class&nbsp;net.minecraftforge.client.model.BakedModelWrapper</h3>
+<code>getModelData, getParticleIcon, getParticleIcon, getQuads, getRenderTypes, getRenderTypes, getTransforms, isCustomRenderer, isGui3d, useAmbientOcclusion, useAmbientOcclusion, useAmbientOcclusion, usesBlockLight</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -155,10 +160,10 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(net.minecraft.client.resources.model.BakedModel,net.minecraft.client.resources.model.BakedModel,com.mojang.math.Vector3f[],long)">
+<section class="detail" id="&lt;init&gt;(net.minecraft.client.resources.model.BakedModel,java.util.function.Function,com.mojang.math.Vector3f[],long)">
 <h3>DiskDriveItemBakedModel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveItemBakedModel</span><wbr><span class="parameters">(net.minecraft.client.resources.model.BakedModel&nbsp;baseModel,
- net.minecraft.client.resources.model.BakedModel&nbsp;diskDisconnectedModel,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;com.mojang.math.Vector3f,<wbr>net.minecraft.client.resources.model.BakedModel&gt;&nbsp;diskBakery,
  com.mojang.math.Vector3f[]&nbsp;translators,
  long&nbsp;disks)</span></div>
 </section>
@@ -179,7 +184,7 @@ loadScripts(document, 'script');</script>
 <dt>Specified by:</dt>
 <dd><code>getOverrides</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.resources.model.BakedModel</code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="AbstractForwardingBakedModel.html#getOverrides()">getOverrides</a></code>&nbsp;in class&nbsp;<code><a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">AbstractForwardingBakedModel</a></code></dd>
+<dd><code>getOverrides</code>&nbsp;in class&nbsp;<code>net.minecraftforge.client.model.BakedModelWrapper&lt;net.minecraft.client.resources.model.BakedModel&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -197,18 +202,30 @@ loadScripts(document, 'script');</script>
 <dt>Specified by:</dt>
 <dd><code>getQuads</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.resources.model.BakedModel</code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="AbstractForwardingBakedModel.html#getQuads(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.util.RandomSource)">getQuads</a></code>&nbsp;in class&nbsp;<code><a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">AbstractForwardingBakedModel</a></code></dd>
+<dd><code>getQuads</code>&nbsp;in class&nbsp;<code>net.minecraftforge.client.model.BakedModelWrapper&lt;net.minecraft.client.resources.model.BakedModel&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="handlePerspective(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType,com.mojang.blaze3d.vertex.PoseStack)">
-<h3>handlePerspective</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.client.resources.model.BakedModel</span>&nbsp;<span class="element-name">handlePerspective</span><wbr><span class="parameters">(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType&nbsp;cameraTransformType,
- com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack)</span></div>
+<section class="detail" id="getRenderPasses(net.minecraft.world.item.ItemStack,boolean)">
+<h3>getRenderPasses</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.resources.model.BakedModel&gt;</span>&nbsp;<span class="element-name">getRenderPasses</span><wbr><span class="parameters">(net.minecraft.world.item.ItemStack&nbsp;itemStack,
+ boolean&nbsp;fabulous)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="AbstractForwardingBakedModel.html#handlePerspective(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType,com.mojang.blaze3d.vertex.PoseStack)">handlePerspective</a></code>&nbsp;in class&nbsp;<code><a href="AbstractForwardingBakedModel.html" title="class in com.refinedmods.refinedstorage2.platform.forge.render.model.baked">AbstractForwardingBakedModel</a></code></dd>
+<dd><code>getRenderPasses</code>&nbsp;in class&nbsp;<code>net.minecraftforge.client.model.BakedModelWrapper&lt;net.minecraft.client.resources.model.BakedModel&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="applyTransform(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType,com.mojang.blaze3d.vertex.PoseStack,boolean)">
+<h3>applyTransform</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.client.resources.model.BakedModel</span>&nbsp;<span class="element-name">applyTransform</span><wbr><span class="parameters">(net.minecraft.client.renderer.block.model.ItemTransforms.TransformType&nbsp;cameraTransformType,
+ com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ boolean&nbsp;applyLeftHandTransform)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>applyTransform</code>&nbsp;in class&nbsp;<code>net.minecraftforge.client.model.BakedModelWrapper&lt;net.minecraft.client.resources.model.BakedModel&gt;</code></dd>
 </dl>
 </section>
 </li>

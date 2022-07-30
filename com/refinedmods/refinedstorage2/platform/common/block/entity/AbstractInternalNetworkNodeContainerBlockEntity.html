@@ -80,11 +80,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code></dd>
+<dd><code><a href="../../../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a></code>, <code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="diskdrive/AbstractDiskDriveBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive">AbstractDiskDriveBlockEntity</a></code>, <code><a href="grid/AbstractGridBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.grid">AbstractGridBlockEntity</a></code>, <code><a href="storage/AbstractStorageBlockBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.storage">AbstractStorageBlockBlockEntity</a></code>, <code><a href="CableBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">CableBlockEntity</a></code>, <code><a href="ControllerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ControllerBlockEntity</a></code></dd>
+<dd><code><a href="diskdrive/AbstractDiskDriveBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive">AbstractDiskDriveBlockEntity</a></code>, <code><a href="grid/AbstractGridBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.grid">AbstractGridBlockEntity</a></code>, <code><a href="storage/AbstractStorageBlockBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.storage">AbstractStorageBlockBlockEntity</a></code>, <code><a href="CableBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">CableBlockEntity</a></code>, <code><a href="ControllerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ControllerBlockEntity</a></code>, <code><a href="ImporterBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ImporterBlockEntity</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractInternalNetworkNodeContainerBlockEntity&lt;T extends <a href="../../../../api/network/node/AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a>&gt;</span>
@@ -124,7 +124,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -142,19 +142,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serverTick(net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.AbstractInternalNetworkNodeContainerBlockEntity)" class="member-name-link">serverTick</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- <a href="AbstractInternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">AbstractInternalNetworkNodeContainerBlockEntity</a>&lt;?&gt;&nbsp;blockEntity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateActivenessInLevel(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)" class="member-name-link">updateActivenessInLevel</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.api.blockentity.AbstractNetworkNodeContainerBlockEntity">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.api.blockentity.<a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.api.blockentity">AbstractNetworkNodeContainerBlockEntity</a></h3>
-<code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#onNetworkInNodeInitialized()">onNetworkInNodeInitialized</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#toString()">toString</a></code></div>
+<code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">canAcceptIncomingConnection</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">canPerformOutgoingConnection</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#onNetworkInNodeInitialized()">onNetworkInNodeInitialized</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.entity.BlockEntity">Methods inherited from class&nbsp;net.minecraft.world.level.block.entity.BlockEntity</h3>
 <code>addEntityType, fillCrashReportCategory, getBlockPos, getBlockState, getLevel, getPosFromTag, getType, getUpdatePacket, getUpdateTag, hasLevel, isRemoved, loadStatic, onlyOpCanSetNbt, saveToItem, saveWithFullMetadata, saveWithId, saveWithoutMetadata, setBlockState, setChanged, setChanged, setLevel, triggerEvent</code></div>
@@ -210,10 +210,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="serverTick(net.minecraft.world.level.block.state.BlockState,com.refinedmods.refinedstorage2.platform.common.block.entity.AbstractInternalNetworkNodeContainerBlockEntity)">
-<h3>serverTick</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">serverTick</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- <a href="AbstractInternalNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">AbstractInternalNetworkNodeContainerBlockEntity</a>&lt;?&gt;&nbsp;blockEntity)</span></div>
+<section class="detail" id="updateActivenessInLevel(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)">
+<h3>updateActivenessInLevel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateActivenessInLevel</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ @Nullable
+ net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</span></div>
 </section>
 </li>
 <li>

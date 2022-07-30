@@ -127,16 +127,26 @@ loadScripts(document, 'script');</script>
  int&nbsp;inventoryX,
  int&nbsp;inventoryY)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.item.ItemStack</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quickMoveStack(net.minecraft.world.entity.player.Player,int)" class="member-name-link">quickMoveStack</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="property/ClientProperty.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.property">ClientProperty</a>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType)" class="member-name-link">getProperty</a><wbr>(<a href="property/PropertyType.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.property">PropertyType</a>&lt;T&gt;&nbsp;type)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.item.ItemStack</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quickMoveStack(net.minecraft.world.entity.player.Player,int)" class="member-name-link">quickMoveStack</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player,
  int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetSlots()" class="member-name-link">resetSlots</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stillValid(net.minecraft.world.entity.player.Player)" class="member-name-link">stillValid</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#receivePropertyChangeFromClient(net.minecraft.resources.ResourceLocation,int)" class="member-name-link">receivePropertyChangeFromClient</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;id,
+ int&nbsp;newValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected &lt;T&gt;&nbsp;void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#registerProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.Property)" class="member-name-link">registerProperty</a><wbr>(<a href="property/Property.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.property">Property</a>&lt;T&gt;&nbsp;property)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetSlots()" class="member-name-link">resetSlots</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stillValid(net.minecraft.world.entity.player.Player)" class="member-name-link">stillValid</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;player)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -172,6 +182,25 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType)">
+<h3>getProperty</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="property/ClientProperty.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.property">ClientProperty</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getProperty</span><wbr><span class="parameters">(<a href="property/PropertyType.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.property">PropertyType</a>&lt;T&gt;&nbsp;type)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="receivePropertyChangeFromClient(net.minecraft.resources.ResourceLocation,int)">
+<h3>receivePropertyChangeFromClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">receivePropertyChangeFromClient</span><wbr><span class="parameters">(net.minecraft.resources.ResourceLocation&nbsp;id,
+ int&nbsp;newValue)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="registerProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.Property)">
+<h3>registerProperty</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">registerProperty</span><wbr><span class="parameters">(<a href="property/Property.html" title="interface in com.refinedmods.refinedstorage2.platform.common.containermenu.property">Property</a>&lt;T&gt;&nbsp;property)</span></div>
+</section>
+</li>
 <li>
 <section class="detail" id="resetSlots()">
 <h3>resetSlots</h3>

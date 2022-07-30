@@ -91,7 +91,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a>&lt;T&gt;
 implements <a href="LimitedStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.limited">LimitedStorage</a>&lt;T&gt;</span></div>
 <div class="block">This class can decorate any other <a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage"><code>Storage</code></a> to add a capacity to it.
- <a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)"><code>InsertableStorage.insert(Object, long, Action, Source)</code></a> operations will respect this capacity.</div>
+ <a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)"><code>InsertableStorage.insert(Object, long, Action, Actor)</code></a> operations will respect this capacity.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -137,10 +137,10 @@ implements <a href="LimitedStorage.html" title="interface in com.refinedmods.ref
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCapacity()" class="member-name-link">getCapacity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)" class="member-name-link">insert</a><wbr>(<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&nbsp;resource,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">insert</a><wbr>(<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</code></div>
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Inserts a resource into a storage.</div>
 </div>
@@ -149,13 +149,13 @@ implements <a href="LimitedStorage.html" title="interface in com.refinedmods.ref
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.AbstractProxyStorage">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a></h3>
-<code><a href="../AbstractProxyStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a>, <a href="../AbstractProxyStorage.html#getAll()">getAll</a>, <a href="../AbstractProxyStorage.html#getStored()">getStored</a></code></div>
+<code><a href="../AbstractProxyStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">extract</a>, <a href="../AbstractProxyStorage.html#getAll()">getAll</a>, <a href="../AbstractProxyStorage.html#getStored()">getStored</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.ExtractableStorage">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a></h3>
-<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">extract</a></code></div>
+<code><a href="../ExtractableStorage.html#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">extract</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.storage.StorageView">Methods inherited from interface&nbsp;com.refinedmods.refinedstorage2.api.storage.<a href="../StorageView.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageView</a></h3>
 <code><a href="../StorageView.html#getAll()">getAll</a>, <a href="../StorageView.html#getStored()">getStored</a></code></div>
@@ -202,24 +202,24 @@ implements <a href="LimitedStorage.html" title="interface in com.refinedmods.ref
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">
-<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</h3>
+<section class="detail" id="insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">
+<h3 id="insert(java.lang.Object,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">insert</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&nbsp;resource,
  long&nbsp;amount,
  <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Source.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Source</a>&nbsp;source)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">InsertableStorage</a></code></span></div>
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">InsertableStorage</a></code></span></div>
 <div class="block">Inserts a resource into a storage.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../InsertableStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">insert</a></code>&nbsp;in interface&nbsp;<code><a href="../InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&gt;</code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="../AbstractProxyStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Source)">insert</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a>&lt;<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&gt;</code></dd>
+<dd><code><a href="../AbstractProxyStorage.html#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)">insert</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractProxyStorage.html" title="class in com.refinedmods.refinedstorage2.api.storage">AbstractProxyStorage</a>&lt;<a href="LimitedStorageImpl.html" title="type parameter in LimitedStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
 <dd><code>action</code> - the mode of insertion</dd>
-<dd><code>source</code> - the source</dd>
+<dd><code>actor</code> - the source</dd>
 <dt>Returns:</dt>
 <dd>the amount inserted</dd>
 </dl>
