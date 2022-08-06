@@ -102,7 +102,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#activenessProvider">activenessProvider</a>, <a href="../AbstractNetworkNode.html#network">network</a></code></div>
+<code><a href="../AbstractNetworkNode.html#network">network</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -165,7 +165,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isAllowed(T)" class="member-name-link">isAllowed</a><wbr>(<a href="StorageNetworkNode.html" title="type parameter in StorageNetworkNode">T</a>&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
@@ -188,7 +188,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActivenessProvider(java.util.function.BooleanSupplier)">setActivenessProvider</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a>, <a href="../AbstractNetworkNode.html#update()">update</a></code></div>
+<code><a href="../AbstractNetworkNode.html#doWork()">doWork</a>, <a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActive(boolean)">setActive</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -250,7 +250,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <li>
 <section class="detail" id="onActiveChanged(boolean)">
 <h3>onActiveChanged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../AbstractNetworkNode.html#onActiveChanged(boolean)">onActiveChanged</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>

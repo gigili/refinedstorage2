@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="CableNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">CableNetworkNode</a></code>, <code><a href="controller/ControllerNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.controller">ControllerNetworkNode</a></code>, <code><a href="diskdrive/DiskDriveNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveNetworkNode</a></code>, <code><a href="grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a></code>, <code><a href="importer/ImporterNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.importer">ImporterNetworkNode</a></code>, <code><a href="storage/StorageNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.storage">StorageNetworkNode</a></code></dd>
+<dd><code><a href="controller/ControllerNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.controller">ControllerNetworkNode</a></code>, <code><a href="diskdrive/DiskDriveNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveNetworkNode</a></code>, <code><a href="grid/GridNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.grid">GridNetworkNode</a></code>, <code><a href="importer/ImporterNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.importer">ImporterNetworkNode</a></code>, <code><a href="SimpleNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">SimpleNetworkNode</a></code>, <code><a href="storage/StorageNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node.storage">StorageNetworkNode</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
@@ -100,12 +100,9 @@ implements <a href="NetworkNode.html" title="interface in com.refinedmods.refine
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a></code></div>
-<div class="col-second even-row-color"><code><a href="#activenessProvider" class="member-name-link">activenessProvider</a></code></div>
+<div class="col-first even-row-color"><code>protected <a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></code></div>
+<div class="col-second even-row-color"><code><a href="#network" class="member-name-link">network</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected <a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#network" class="member-name-link">network</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -133,26 +130,26 @@ implements <a href="NetworkNode.html" title="interface in com.refinedmods.refine
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNetwork()" class="member-name-link">getNetwork</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isActive()" class="member-name-link">isActive</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setActivenessProvider(java.util.function.BooleanSupplier)" class="member-name-link">setActivenessProvider</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;activenessProvider)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doWork()" class="member-name-link">doWork</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNetwork()" class="member-name-link">getNetwork</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isActive()" class="member-name-link">isActive</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)" class="member-name-link">setNetwork</a><wbr>(<a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a>&nbsp;network)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setActive(boolean)" class="member-name-link">setActive</a><wbr>(boolean&nbsp;active)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update()" class="member-name-link">update</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)" class="member-name-link">setNetwork</a><wbr>(<a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a>&nbsp;network)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -178,13 +175,6 @@ implements <a href="NetworkNode.html" title="interface in com.refinedmods.refine
 </span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../Network.html" title="interface in com.refinedmods.refinedstorage2.api.network">Network</a></span>&nbsp;<span class="element-name">network</span></div>
 </section>
 </li>
-<li>
-<section class="detail" id="activenessProvider">
-<h3>activenessProvider</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a></span>&nbsp;<span class="element-name">activenessProvider</span></div>
-</section>
-</li>
 </ul>
 </section>
 </li>
@@ -208,13 +198,6 @@ implements <a href="NetworkNode.html" title="interface in com.refinedmods.refine
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="setActivenessProvider(java.util.function.BooleanSupplier)">
-<h3>setActivenessProvider</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setActivenessProvider</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;activenessProvider)</span></div>
-</section>
-</li>
-<li>
 <section class="detail" id="getNetwork()">
 <h3>getNetwork</h3>
 <div class="member-signature"><span class="annotations">@Nullable
@@ -237,23 +220,21 @@ implements <a href="NetworkNode.html" title="interface in com.refinedmods.refine
 </section>
 </li>
 <li>
-<section class="detail" id="isActive()">
-<h3>isActive</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isActive</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="NetworkNode.html#isActive()">isActive</a></code>&nbsp;in interface&nbsp;<code><a href="NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node">NetworkNode</a></code></dd>
-</dl>
+<section class="detail" id="setActive(boolean)">
+<h3>setActive</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setActive</span><wbr><span class="parameters">(boolean&nbsp;active)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="update()">
-<h3>update</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">update</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="NetworkNode.html#update()">update</a></code>&nbsp;in interface&nbsp;<code><a href="NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node">NetworkNode</a></code></dd>
-</dl>
+<section class="detail" id="isActive()">
+<h3>isActive</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isActive</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="doWork()">
+<h3>doWork</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">doWork</span>()</div>
 </section>
 </li>
 <li>

@@ -92,6 +92,9 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
+<code><a href="AbstractBaseContainerMenu.html#transferManager">transferManager</a></code></div>
+<div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Fields inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>CARRIED_SLOT_SIZE, containerId, QUICKCRAFT_HEADER_CONTINUE, QUICKCRAFT_HEADER_END, QUICKCRAFT_HEADER_START, QUICKCRAFT_TYPE_CHARITABLE, QUICKCRAFT_TYPE_CLONE, QUICKCRAFT_TYPE_GREEDY, SLOT_CLICKED_OUTSIDE, slots</code></div>
 </section>
@@ -108,10 +111,11 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
  net.minecraft.world.entity.player.Inventory&nbsp;playerInventory,
  net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.block.entity.ImporterBlockEntity,com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.ResourceFilterContainer)" class="member-name-link">ImporterContainerMenu</a><wbr>(int&nbsp;syncId,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.block.entity.ImporterBlockEntity,com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.ResourceFilterContainer,com.refinedmods.refinedstorage2.platform.common.block.entity.UpgradeContainer)" class="member-name-link">ImporterContainerMenu</a><wbr>(int&nbsp;syncId,
  net.minecraft.world.entity.player.Player&nbsp;player,
  <a href="../block/entity/ImporterBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ImporterBlockEntity</a>&nbsp;importer,
- <a href="../internal/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.internal.resource.filter">ResourceFilterContainer</a>&nbsp;resourceFilterContainer)</code></div>
+ <a href="../internal/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.internal.resource.filter">ResourceFilterContainer</a>&nbsp;resourceFilterContainer,
+ <a href="../block/entity/UpgradeContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">UpgradeContainer</a>&nbsp;upgradeContainer)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
@@ -122,7 +126,7 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <h2>Method Summary</h2>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractResourceFilterContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="AbstractResourceFilterContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractResourceFilterContainerMenu</a></h3>
-<code><a href="AbstractResourceFilterContainerMenu.html#addSlot(net.minecraft.world.inventory.Slot)">addSlot</a>, <a href="AbstractResourceFilterContainerMenu.html#broadcastChanges()">broadcastChanges</a>, <a href="AbstractResourceFilterContainerMenu.html#canTakeItemForPickAll(net.minecraft.world.item.ItemStack,net.minecraft.world.inventory.Slot)">canTakeItemForPickAll</a>, <a href="AbstractResourceFilterContainerMenu.html#clicked(int,int,net.minecraft.world.inventory.ClickType,net.minecraft.world.entity.player.Player)">clicked</a>, <a href="AbstractResourceFilterContainerMenu.html#getCurrentResourceTypeName()">getCurrentResourceTypeName</a>, <a href="AbstractResourceFilterContainerMenu.html#initializeResourceFilterSlots(net.minecraft.network.FriendlyByteBuf)">initializeResourceFilterSlots</a>, <a href="AbstractResourceFilterContainerMenu.html#readResourceFilterSlotUpdate(int,net.minecraft.network.FriendlyByteBuf)">readResourceFilterSlotUpdate</a>, <a href="AbstractResourceFilterContainerMenu.html#resetSlots()">resetSlots</a>, <a href="AbstractResourceFilterContainerMenu.html#setCurrentResourceType(net.minecraft.resources.ResourceLocation)">setCurrentResourceType</a>, <a href="AbstractResourceFilterContainerMenu.html#toggleResourceType()">toggleResourceType</a></code></div>
+<code><a href="AbstractResourceFilterContainerMenu.html#addSlot(net.minecraft.world.inventory.Slot)">addSlot</a>, <a href="AbstractResourceFilterContainerMenu.html#addToFilterIfNotExisting(net.minecraft.world.item.ItemStack)">addToFilterIfNotExisting</a>, <a href="AbstractResourceFilterContainerMenu.html#broadcastChanges()">broadcastChanges</a>, <a href="AbstractResourceFilterContainerMenu.html#canTakeItemForPickAll(net.minecraft.world.item.ItemStack,net.minecraft.world.inventory.Slot)">canTakeItemForPickAll</a>, <a href="AbstractResourceFilterContainerMenu.html#clicked(int,int,net.minecraft.world.inventory.ClickType,net.minecraft.world.entity.player.Player)">clicked</a>, <a href="AbstractResourceFilterContainerMenu.html#getCurrentResourceTypeName()">getCurrentResourceTypeName</a>, <a href="AbstractResourceFilterContainerMenu.html#initializeResourceFilterSlots(net.minecraft.network.FriendlyByteBuf)">initializeResourceFilterSlots</a>, <a href="AbstractResourceFilterContainerMenu.html#readResourceFilterSlotUpdate(int,net.minecraft.network.FriendlyByteBuf)">readResourceFilterSlotUpdate</a>, <a href="AbstractResourceFilterContainerMenu.html#resetSlots()">resetSlots</a>, <a href="AbstractResourceFilterContainerMenu.html#setCurrentResourceType(net.minecraft.resources.ResourceLocation)">setCurrentResourceType</a>, <a href="AbstractResourceFilterContainerMenu.html#toggleResourceType()">toggleResourceType</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
 <code><a href="AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="AbstractBaseContainerMenu.html#getProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType)">getProperty</a>, <a href="AbstractBaseContainerMenu.html#quickMoveStack(net.minecraft.world.entity.player.Player,int)">quickMoveStack</a>, <a href="AbstractBaseContainerMenu.html#receivePropertyChangeFromClient(net.minecraft.resources.ResourceLocation,int)">receivePropertyChangeFromClient</a>, <a href="AbstractBaseContainerMenu.html#registerProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.Property)">registerProperty</a>, <a href="AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
@@ -155,12 +159,13 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.block.entity.ImporterBlockEntity,com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.ResourceFilterContainer)">
+<section class="detail" id="&lt;init&gt;(int,net.minecraft.world.entity.player.Player,com.refinedmods.refinedstorage2.platform.common.block.entity.ImporterBlockEntity,com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.ResourceFilterContainer,com.refinedmods.refinedstorage2.platform.common.block.entity.UpgradeContainer)">
 <h3>ImporterContainerMenu</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ImporterContainerMenu</span><wbr><span class="parameters">(int&nbsp;syncId,
  net.minecraft.world.entity.player.Player&nbsp;player,
  <a href="../block/entity/ImporterBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ImporterBlockEntity</a>&nbsp;importer,
- <a href="../internal/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.internal.resource.filter">ResourceFilterContainer</a>&nbsp;resourceFilterContainer)</span></div>
+ <a href="../internal/resource/filter/ResourceFilterContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.internal.resource.filter">ResourceFilterContainer</a>&nbsp;resourceFilterContainer,
+ <a href="../block/entity/UpgradeContainer.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">UpgradeContainer</a>&nbsp;upgradeContainer)</span></div>
 </section>
 </li>
 </ul>

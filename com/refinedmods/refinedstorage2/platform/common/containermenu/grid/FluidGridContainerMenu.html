@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../../api/grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a></code>, <code><a href="../../../../api/resource/list/listenable/ResourceListListener.html" title="interface in com.refinedmods.refinedstorage2.api.resource.list.listenable">ResourceListListener</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code>, <code><a href="../../../api/grid/FluidGridEventHandler.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">FluidGridEventHandler</a></code></dd>
+<dd><code><a href="../../../../api/grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code>, <code><a href="../../../api/grid/FluidGridEventHandler.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">FluidGridEventHandler</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">FluidGridContainerMenu</span>
@@ -97,7 +97,10 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.grid.AbstractGridContainerMenu">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.grid.<a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a></h3>
-<code><a href="AbstractGridContainerMenu.html#grid">grid</a>, <a href="AbstractGridContainerMenu.html#playerInventory">playerInventory</a>, <a href="AbstractGridContainerMenu.html#storageChannel">storageChannel</a>, <a href="AbstractGridContainerMenu.html#view">view</a></code></div>
+<code><a href="AbstractGridContainerMenu.html#grid">grid</a>, <a href="AbstractGridContainerMenu.html#playerInventory">playerInventory</a>, <a href="AbstractGridContainerMenu.html#view">view</a></code></div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="../AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
+<code><a href="../AbstractBaseContainerMenu.html#transferManager">transferManager</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Fields inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>CARRIED_SLOT_SIZE, containerId, QUICKCRAFT_HEADER_CONTINUE, QUICKCRAFT_HEADER_END, QUICKCRAFT_HEADER_START, QUICKCRAFT_TYPE_CHARITABLE, QUICKCRAFT_TYPE_CLONE, QUICKCRAFT_TYPE_GREEDY, SLOT_CLICKED_OUTSIDE, slots</code></div>
@@ -135,9 +138,10 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult)" class="member-name-link">onChanged</a><wbr>(<a href="../../../../api/resource/list/ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;&nbsp;change)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)" class="member-name-link">onChanged</a><wbr>(<a href="../../../../api/resource/list/ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;&nbsp;change,
+ <a href="../../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when a list operation has occurred.</div>
+<div class="block">Called when a resource is changed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onExtract(com.refinedmods.refinedstorage2.platform.api.resource.FluidResource,com.refinedmods.refinedstorage2.api.grid.service.GridExtractMode,boolean)" class="member-name-link">onExtract</a><wbr>(<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&nbsp;fluidResource,
@@ -157,15 +161,12 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readResourceAmount(net.minecraft.network.FriendlyByteBuf)" class="member-name-link">readResourceAmount</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removed(net.minecraft.world.entity.player.Player)" class="member-name-link">removed</a><wbr>(net.minecraft.world.entity.player.Player&nbsp;playerEntity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.grid.AbstractGridContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.grid.<a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a></h3>
-<code><a href="AbstractGridContainerMenu.html#addSlots(int)">addSlots</a>, <a href="AbstractGridContainerMenu.html#getSize()">getSize</a>, <a href="AbstractGridContainerMenu.html#getSortingDirection()">getSortingDirection</a>, <a href="AbstractGridContainerMenu.html#getSortingType()">getSortingType</a>, <a href="AbstractGridContainerMenu.html#getSynchronizer()">getSynchronizer</a>, <a href="AbstractGridContainerMenu.html#getView()">getView</a>, <a href="AbstractGridContainerMenu.html#isActive()">isActive</a>, <a href="AbstractGridContainerMenu.html#isAutoSelected()">isAutoSelected</a>, <a href="AbstractGridContainerMenu.html#onActiveChanged(boolean)">onActiveChanged</a>, <a href="AbstractGridContainerMenu.html#onResourceUpdate(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onResourceUpdate</a>, <a href="AbstractGridContainerMenu.html#setAutoSelected(boolean)">setAutoSelected</a>, <a href="AbstractGridContainerMenu.html#setSearchBox(com.refinedmods.refinedstorage2.platform.common.screen.grid.GridSearchBox)">setSearchBox</a>, <a href="AbstractGridContainerMenu.html#setSize(com.refinedmods.refinedstorage2.platform.common.internal.grid.GridSize)">setSize</a>, <a href="AbstractGridContainerMenu.html#setSizeChangedListener(java.lang.Runnable)">setSizeChangedListener</a>, <a href="AbstractGridContainerMenu.html#setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">setSortingDirection</a>, <a href="AbstractGridContainerMenu.html#setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)">setSortingType</a>, <a href="AbstractGridContainerMenu.html#toggleSynchronizer()">toggleSynchronizer</a></code></div>
+<code><a href="AbstractGridContainerMenu.html#addSlots(int)">addSlots</a>, <a href="AbstractGridContainerMenu.html#getSize()">getSize</a>, <a href="AbstractGridContainerMenu.html#getSortingDirection()">getSortingDirection</a>, <a href="AbstractGridContainerMenu.html#getSortingType()">getSortingType</a>, <a href="AbstractGridContainerMenu.html#getSynchronizer()">getSynchronizer</a>, <a href="AbstractGridContainerMenu.html#getView()">getView</a>, <a href="AbstractGridContainerMenu.html#isActive()">isActive</a>, <a href="AbstractGridContainerMenu.html#isAutoSelected()">isAutoSelected</a>, <a href="AbstractGridContainerMenu.html#onActiveChanged(boolean)">onActiveChanged</a>, <a href="AbstractGridContainerMenu.html#onResourceUpdate(T,long,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onResourceUpdate</a>, <a href="AbstractGridContainerMenu.html#removed(net.minecraft.world.entity.player.Player)">removed</a>, <a href="AbstractGridContainerMenu.html#setAutoSelected(boolean)">setAutoSelected</a>, <a href="AbstractGridContainerMenu.html#setSearchBox(com.refinedmods.refinedstorage2.platform.common.screen.grid.GridSearchBox)">setSearchBox</a>, <a href="AbstractGridContainerMenu.html#setSize(com.refinedmods.refinedstorage2.platform.common.internal.grid.GridSize)">setSize</a>, <a href="AbstractGridContainerMenu.html#setSizeChangedListener(java.lang.Runnable)">setSizeChangedListener</a>, <a href="AbstractGridContainerMenu.html#setSortingDirection(com.refinedmods.refinedstorage2.api.grid.view.GridSortingDirection)">setSortingDirection</a>, <a href="AbstractGridContainerMenu.html#setSortingType(com.refinedmods.refinedstorage2.api.grid.view.GridSortingType)">setSortingType</a>, <a href="AbstractGridContainerMenu.html#toggleSynchronizer()">toggleSynchronizer</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="../AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
 <code><a href="../AbstractBaseContainerMenu.html#addPlayerInventory(net.minecraft.world.entity.player.Inventory,int,int)">addPlayerInventory</a>, <a href="../AbstractBaseContainerMenu.html#getProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.PropertyType)">getProperty</a>, <a href="../AbstractBaseContainerMenu.html#receivePropertyChangeFromClient(net.minecraft.resources.ResourceLocation,int)">receivePropertyChangeFromClient</a>, <a href="../AbstractBaseContainerMenu.html#registerProperty(com.refinedmods.refinedstorage2.platform.common.containermenu.property.Property)">registerProperty</a>, <a href="../AbstractBaseContainerMenu.html#resetSlots()">resetSlots</a>, <a href="../AbstractBaseContainerMenu.html#stillValid(net.minecraft.world.entity.player.Player)">stillValid</a></code></div>
@@ -212,16 +213,6 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="removed(net.minecraft.world.entity.player.Player)">
-<h3>removed</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removed</span><wbr><span class="parameters">(net.minecraft.world.entity.player.Player&nbsp;playerEntity)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="AbstractGridContainerMenu.html#removed(net.minecraft.world.entity.player.Player)">removed</a></code>&nbsp;in class&nbsp;<code><a href="AbstractGridContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu.grid">AbstractGridContainerMenu</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="readResourceAmount(net.minecraft.network.FriendlyByteBuf)">
 <h3>readResourceAmount</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../../../../api/resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</span>&nbsp;<span class="element-name">readResourceAmount</span><wbr><span class="parameters">(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</span></div>
@@ -232,16 +223,19 @@ implements <a href="../../../api/grid/FluidGridEventHandler.html" title="interfa
 </section>
 </li>
 <li>
-<section class="detail" id="onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult)">
+<section class="detail" id="onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">
 <h3>onChanged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onChanged</span><wbr><span class="parameters">(<a href="../../../../api/resource/list/ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;&nbsp;change)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/resource/list/listenable/ResourceListListener.html#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult)">ResourceListListener</a></code></span></div>
-<div class="block">Called when a list operation has occurred.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onChanged</span><wbr><span class="parameters">(<a href="../../../../api/resource/list/ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;&nbsp;change,
+ @Nullable
+ <a href="../../../../api/storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../../api/grid/GridWatcher.html#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">GridWatcher</a></code></span></div>
+<div class="block">Called when a resource is changed.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../api/resource/list/listenable/ResourceListListener.html#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult)">onChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/resource/list/listenable/ResourceListListener.html" title="interface in com.refinedmods.refinedstorage2.api.resource.list.listenable">ResourceListListener</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
+<dd><code><a href="../../../../api/grid/GridWatcher.html#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">onChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../api/grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&lt;<a href="../../../api/resource/FluidResource.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource">FluidResource</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>change</code> - the change</dd>
+<dd><code>trackedResource</code> - the tracked resource, if present</dd>
 </dl>
 </section>
 </li>

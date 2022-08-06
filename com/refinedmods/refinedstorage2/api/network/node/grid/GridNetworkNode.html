@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#activenessProvider">activenessProvider</a>, <a href="../AbstractNetworkNode.html#network">network</a></code></div>
+<code><a href="../AbstractNetworkNode.html#network">network</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -121,33 +121,36 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">addWatcher</a><wbr>(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher,java.lang.Class)" class="member-name-link">addWatcher</a><wbr>(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;&nbsp;watcher,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forEachResource(java.util.function.BiConsumer,java.lang.Class)" class="member-name-link">forEachResource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;&gt;&nbsp;consumer,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../grid/service/GridService.html" title="interface in com.refinedmods.refinedstorage2.api.grid.service">GridService</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createService(com.refinedmods.refinedstorage2.api.storage.Actor,java.util.function.Function,long)" class="member-name-link">createService</a><wbr>(<a href="../../../storage/Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;maxAmountProvider,
+ long&nbsp;singleAmount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forEachResource(java.util.function.BiConsumer,java.lang.Class)" class="member-name-link">forEachResource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;<a href="../../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;&gt;&nbsp;consumer,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;sourceType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceAmount()" class="member-name-link">getResourceAmount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../storage/channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageChannel()" class="member-name-link">getStorageChannel</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceAmount()" class="member-name-link">getResourceAmount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">removeWatcher</a><wbr>(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)" class="member-name-link">removeWatcher</a><wbr>(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;&nbsp;watcher)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActivenessProvider(java.util.function.BooleanSupplier)">setActivenessProvider</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a>, <a href="../AbstractNetworkNode.html#update()">update</a></code></div>
+<code><a href="../AbstractNetworkNode.html#doWork()">doWork</a>, <a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActive(boolean)">setActive</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -178,12 +181,6 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getStorageChannel()">
-<h3>getStorageChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../storage/channel/StorageChannel.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannel</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;</span>&nbsp;<span class="element-name">getStorageChannel</span>()</div>
-</section>
-</li>
-<li>
 <section class="detail" id="getResourceAmount()">
 <h3>getResourceAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getResourceAmount</span>()</div>
@@ -207,21 +204,30 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="addWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)">
+<section class="detail" id="addWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher,java.lang.Class)">
 <h3>addWatcher</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addWatcher</span><wbr><span class="parameters">(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addWatcher</span><wbr><span class="parameters">(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;&nbsp;watcher,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../../../storage/Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeWatcher(com.refinedmods.refinedstorage2.api.grid.GridWatcher)">
 <h3>removeWatcher</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeWatcher</span><wbr><span class="parameters">(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&nbsp;watcher)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeWatcher</span><wbr><span class="parameters">(<a href="../../../grid/GridWatcher.html" title="interface in com.refinedmods.refinedstorage2.api.grid">GridWatcher</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;&nbsp;watcher)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="createService(com.refinedmods.refinedstorage2.api.storage.Actor,java.util.function.Function,long)">
+<h3>createService</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../grid/service/GridService.html" title="interface in com.refinedmods.refinedstorage2.api.grid.service">GridService</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>&gt;</span>&nbsp;<span class="element-name">createService</span><wbr><span class="parameters">(<a href="../../../storage/Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GridNetworkNode.html" title="type parameter in GridNetworkNode">T</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;maxAmountProvider,
+ long&nbsp;singleAmount)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="onActiveChanged(boolean)">
 <h3>onActiveChanged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../AbstractNetworkNode.html#onActiveChanged(boolean)">onActiveChanged</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>

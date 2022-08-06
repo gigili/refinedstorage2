@@ -97,7 +97,7 @@ implements <a href="../../../../../api/network/node/importer/ImporterTransferStr
  <a href="../../../../../../api/storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">T</a>&gt;&nbsp;storageChannelType,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">P</a>,<wbr><a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">T</a>&gt;&nbsp;fromPlatformMapper,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">T</a>,<wbr><a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">P</a>&gt;&nbsp;toPlatformMapper,
- long&nbsp;transferQuota)</code></div>
+ long&nbsp;singleAmount)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -114,9 +114,10 @@ implements <a href="../../../../../api/network/node/importer/ImporterTransferStr
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../../../api/network/node/importer/ImporterTransferStrategy.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.importer">ImporterTransferStrategy</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#create(net.minecraft.server.level.ServerLevel,net.minecraft.core.BlockPos,net.minecraft.core.Direction)" class="member-name-link">create</a><wbr>(net.minecraft.server.level.ServerLevel&nbsp;level,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#create(net.minecraft.server.level.ServerLevel,net.minecraft.core.BlockPos,net.minecraft.core.Direction,boolean)" class="member-name-link">create</a><wbr>(net.minecraft.server.level.ServerLevel&nbsp;level,
  net.minecraft.core.BlockPos&nbsp;pos,
- net.minecraft.core.Direction&nbsp;direction)</code></div>
+ net.minecraft.core.Direction&nbsp;direction,
+ boolean&nbsp;hasStackUpgrade)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
@@ -142,7 +143,7 @@ implements <a href="../../../../../api/network/node/importer/ImporterTransferStr
  <a href="../../../../../../api/storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;<a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">T</a>&gt;&nbsp;storageChannelType,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">P</a>,<wbr><a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">T</a>&gt;&nbsp;fromPlatformMapper,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">T</a>,<wbr><a href="StorageImporterTransferStrategyFactory.html" title="type parameter in StorageImporterTransferStrategyFactory">P</a>&gt;&nbsp;toPlatformMapper,
- long&nbsp;transferQuota)</span></div>
+ long&nbsp;singleAmount)</span></div>
 </section>
 </li>
 </ul>
@@ -154,14 +155,15 @@ implements <a href="../../../../../api/network/node/importer/ImporterTransferStr
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="create(net.minecraft.server.level.ServerLevel,net.minecraft.core.BlockPos,net.minecraft.core.Direction)">
+<section class="detail" id="create(net.minecraft.server.level.ServerLevel,net.minecraft.core.BlockPos,net.minecraft.core.Direction,boolean)">
 <h3>create</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../../api/network/node/importer/ImporterTransferStrategy.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.importer">ImporterTransferStrategy</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(net.minecraft.server.level.ServerLevel&nbsp;level,
  net.minecraft.core.BlockPos&nbsp;pos,
- net.minecraft.core.Direction&nbsp;direction)</span></div>
+ net.minecraft.core.Direction&nbsp;direction,
+ boolean&nbsp;hasStackUpgrade)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../../../api/network/node/importer/ImporterTransferStrategyFactory.html#create(net.minecraft.server.level.ServerLevel,net.minecraft.core.BlockPos,net.minecraft.core.Direction)">create</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/network/node/importer/ImporterTransferStrategyFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.importer">ImporterTransferStrategyFactory</a></code></dd>
+<dd><code><a href="../../../../../api/network/node/importer/ImporterTransferStrategyFactory.html#create(net.minecraft.server.level.ServerLevel,net.minecraft.core.BlockPos,net.minecraft.core.Direction,boolean)">create</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../api/network/node/importer/ImporterTransferStrategyFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.importer">ImporterTransferStrategyFactory</a></code></dd>
 </dl>
 </section>
 </li>

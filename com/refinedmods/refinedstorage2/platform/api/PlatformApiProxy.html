@@ -144,13 +144,20 @@ implements <a href="PlatformApi.html" title="interface in com.refinedmods.refine
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="storage/type/StorageType.html" title="interface in com.refinedmods.refinedstorage2.platform.api.storage.type">StorageType</a>&lt;?&gt;&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageTypeRegistry()" class="member-name-link">getStorageTypeRegistry</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestNetworkNodeInitialization(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level,java.lang.Runnable)" class="member-name-link">requestNetworkNodeInitialization</a><wbr>(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
- net.minecraft.world.level.Level&nbsp;level,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;callback)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="upgrade/UpgradeRegistry.html" title="interface in com.refinedmods.refinedstorage2.platform.api.upgrade">UpgradeRegistry</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUpgradeRegistry()" class="member-name-link">getUpgradeRegistry</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestNetworkNodeRemoval(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)" class="member-name-link">requestNetworkNodeRemoval</a><wbr>(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestNetworkNodeInitialization(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level,java.lang.Runnable)" class="member-name-link">requestNetworkNodeInitialization</a><wbr>(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
+ net.minecraft.world.level.Level&nbsp;level,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;callback)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestNetworkNodeRemoval(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)" class="member-name-link">requestNetworkNodeRemoval</a><wbr>(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
+ net.minecraft.world.level.Level&nbsp;level)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)" class="member-name-link">requestNetworkNodeUpdate</a><wbr>(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
  net.minecraft.world.level.Level&nbsp;level)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
@@ -276,6 +283,16 @@ implements <a href="PlatformApi.html" title="interface in com.refinedmods.refine
 </section>
 </li>
 <li>
+<section class="detail" id="getUpgradeRegistry()">
+<h3>getUpgradeRegistry</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="upgrade/UpgradeRegistry.html" title="interface in com.refinedmods.refinedstorage2.platform.api.upgrade">UpgradeRegistry</a></span>&nbsp;<span class="element-name">getUpgradeRegistry</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PlatformApi.html#getUpgradeRegistry()">getUpgradeRegistry</a></code>&nbsp;in interface&nbsp;<code><a href="PlatformApi.html" title="interface in com.refinedmods.refinedstorage2.platform.api">PlatformApi</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="requestNetworkNodeInitialization(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level,java.lang.Runnable)">
 <h3>requestNetworkNodeInitialization</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">requestNetworkNodeInitialization</span><wbr><span class="parameters">(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
@@ -295,6 +312,17 @@ implements <a href="PlatformApi.html" title="interface in com.refinedmods.refine
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PlatformApi.html#requestNetworkNodeRemoval(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)">requestNetworkNodeRemoval</a></code>&nbsp;in interface&nbsp;<code><a href="PlatformApi.html" title="interface in com.refinedmods.refinedstorage2.platform.api">PlatformApi</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)">
+<h3>requestNetworkNodeUpdate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">requestNetworkNodeUpdate</span><wbr><span class="parameters">(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
+ net.minecraft.world.level.Level&nbsp;level)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PlatformApi.html#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)">requestNetworkNodeUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="PlatformApi.html" title="interface in com.refinedmods.refinedstorage2.platform.api">PlatformApi</a></code></dd>
 </dl>
 </section>
 </li>

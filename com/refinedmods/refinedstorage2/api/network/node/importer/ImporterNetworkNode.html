@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#activenessProvider">activenessProvider</a>, <a href="../AbstractNetworkNode.html#network">network</a></code></div>
+<code><a href="../AbstractNetworkNode.html#network">network</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -103,8 +103,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long)" class="member-name-link">ImporterNetworkNode</a><wbr>(long&nbsp;energyUsage,
- long&nbsp;coolDownTime)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long)" class="member-name-link">ImporterNetworkNode</a><wbr>(long&nbsp;energyUsage)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -120,11 +119,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doWork()" class="member-name-link">doWork</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilterMode()" class="member-name-link">getFilterMode</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilterMode()" class="member-name-link">getFilterMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEnergyUsage(long)" class="member-name-link">setEnergyUsage</a><wbr>(long&nbsp;energyUsage)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)" class="member-name-link">setFilterMode</a><wbr>(<a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a>&nbsp;mode)</code></div>
@@ -138,15 +143,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTransferStrategy(com.refinedmods.refinedstorage2.api.network.node.importer.ImporterTransferStrategy)" class="member-name-link">setTransferStrategy</a><wbr>(<a href="ImporterTransferStrategy.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.importer">ImporterTransferStrategy</a>&nbsp;transferStrategy)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update()" class="member-name-link">update</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#onActiveChanged(boolean)">onActiveChanged</a>, <a href="../AbstractNetworkNode.html#setActivenessProvider(java.util.function.BooleanSupplier)">setActivenessProvider</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a></code></div>
+<code><a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#onActiveChanged(boolean)">onActiveChanged</a>, <a href="../AbstractNetworkNode.html#setActive(boolean)">setActive</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -162,10 +164,9 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(long,long)">
+<section class="detail" id="&lt;init&gt;(long)">
 <h3>ImporterNetworkNode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ImporterNetworkNode</span><wbr><span class="parameters">(long&nbsp;energyUsage,
- long&nbsp;coolDownTime)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ImporterNetworkNode</span><wbr><span class="parameters">(long&nbsp;energyUsage)</span></div>
 </section>
 </li>
 </ul>
@@ -184,14 +185,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="update()">
-<h3>update</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">update</span>()</div>
+<section class="detail" id="doWork()">
+<h3>doWork</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">doWork</span>()</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../NetworkNode.html#update()">update</a></code>&nbsp;in interface&nbsp;<code><a href="../NetworkNode.html" title="interface in com.refinedmods.refinedstorage2.api.network.node">NetworkNode</a></code></dd>
 <dt>Overrides:</dt>
-<dd><code><a href="../AbstractNetworkNode.html#update()">update</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>
+<dd><code><a href="../AbstractNetworkNode.html#doWork()">doWork</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>
 </dl>
 </section>
 </li>
@@ -217,6 +216,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setFilterTemplates(java.util.Set)">
 <h3>setFilterTemplates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFilterTemplates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;templates)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setEnergyUsage(long)">
+<h3>setEnergyUsage</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setEnergyUsage</span><wbr><span class="parameters">(long&nbsp;energyUsage)</span></div>
 </section>
 </li>
 <li>

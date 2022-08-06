@@ -98,6 +98,9 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.containermenu.AbstractBaseContainerMenu">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.containermenu.<a href="AbstractBaseContainerMenu.html" title="class in com.refinedmods.refinedstorage2.platform.common.containermenu">AbstractBaseContainerMenu</a></h3>
+<code><a href="AbstractBaseContainerMenu.html#transferManager">transferManager</a></code></div>
+<div class="inherited-list">
 <h3 id="fields-inherited-from-class-net.minecraft.world.inventory.AbstractContainerMenu">Fields inherited from class&nbsp;net.minecraft.world.inventory.AbstractContainerMenu</h3>
 <code>CARRIED_SLOT_SIZE, containerId, QUICKCRAFT_HEADER_CONTINUE, QUICKCRAFT_HEADER_END, QUICKCRAFT_HEADER_START, QUICKCRAFT_TYPE_CHARITABLE, QUICKCRAFT_TYPE_CLONE, QUICKCRAFT_TYPE_GREEDY, SLOT_CLICKED_OUTSIDE, slots</code></div>
 </section>
@@ -141,37 +144,40 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSlot(net.minecraft.world.inventory.Slot)" class="member-name-link">addSlot</a><wbr>(net.minecraft.world.inventory.Slot&nbsp;slot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#broadcastChanges()" class="member-name-link">broadcastChanges</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToFilterIfNotExisting(net.minecraft.world.item.ItemStack)" class="member-name-link">addToFilterIfNotExisting</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;stack)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canTakeItemForPickAll(net.minecraft.world.item.ItemStack,net.minecraft.world.inventory.Slot)" class="member-name-link">canTakeItemForPickAll</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;stack,
- net.minecraft.world.inventory.Slot&nbsp;slot)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#broadcastChanges()" class="member-name-link">broadcastChanges</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clicked(int,int,net.minecraft.world.inventory.ClickType,net.minecraft.world.entity.player.Player)" class="member-name-link">clicked</a><wbr>(int&nbsp;id,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canTakeItemForPickAll(net.minecraft.world.item.ItemStack,net.minecraft.world.inventory.Slot)" class="member-name-link">canTakeItemForPickAll</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;stack,
+ net.minecraft.world.inventory.Slot&nbsp;slot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clicked(int,int,net.minecraft.world.inventory.ClickType,net.minecraft.world.entity.player.Player)" class="member-name-link">clicked</a><wbr>(int&nbsp;id,
  int&nbsp;dragType,
  net.minecraft.world.inventory.ClickType&nbsp;actionType,
  net.minecraft.world.entity.player.Player&nbsp;actor)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.chat.Component</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentResourceTypeName()" class="member-name-link">getCurrentResourceTypeName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeResourceFilterSlots(net.minecraft.network.FriendlyByteBuf)" class="member-name-link">initializeResourceFilterSlots</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.network.chat.Component</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentResourceTypeName()" class="member-name-link">getCurrentResourceTypeName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readResourceFilterSlotUpdate(int,net.minecraft.network.FriendlyByteBuf)" class="member-name-link">readResourceFilterSlotUpdate</a><wbr>(int&nbsp;slotIndex,
- net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetSlots()" class="member-name-link">resetSlots</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentResourceType(net.minecraft.resources.ResourceLocation)" class="member-name-link">setCurrentResourceType</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;id)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeResourceFilterSlots(net.minecraft.network.FriendlyByteBuf)" class="member-name-link">initializeResourceFilterSlots</a><wbr>(net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggleResourceType()" class="member-name-link">toggleResourceType</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readResourceFilterSlotUpdate(int,net.minecraft.network.FriendlyByteBuf)" class="member-name-link">readResourceFilterSlotUpdate</a><wbr>(int&nbsp;slotIndex,
+ net.minecraft.network.FriendlyByteBuf&nbsp;buf)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetSlots()" class="member-name-link">resetSlots</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentResourceType(net.minecraft.resources.ResourceLocation)" class="member-name-link">setCurrentResourceType</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;id)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toggleResourceType()" class="member-name-link">toggleResourceType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -275,6 +281,12 @@ implements <a href="ResourceTypeAccessor.html" title="interface in com.refinedmo
 <dt>Overrides:</dt>
 <dd><code>clicked</code>&nbsp;in class&nbsp;<code>net.minecraft.world.inventory.AbstractContainerMenu</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addToFilterIfNotExisting(net.minecraft.world.item.ItemStack)">
+<h3>addToFilterIfNotExisting</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToFilterIfNotExisting</span><wbr><span class="parameters">(net.minecraft.world.item.ItemStack&nbsp;stack)</span></div>
 </section>
 </li>
 <li>

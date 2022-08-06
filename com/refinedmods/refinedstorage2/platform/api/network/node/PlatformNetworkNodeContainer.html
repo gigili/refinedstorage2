@@ -129,7 +129,9 @@ extends <a href="../../../../api/network/node/container/NetworkNodeContainer.htm
 <section class="detail" id="canPerformOutgoingConnection(net.minecraft.core.Direction)">
 <h3>canPerformOutgoingConnection</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">canPerformOutgoingConnection</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
-<div class="block">Returns whether the already discovered node can perform an outgoing connection.</div>
+<div class="block">Returns whether the already discovered node can perform an outgoing connection.
+ Changes to this return value won't cause a rebuild of the network state.
+ If the return value ever changes, call <a href="../../PlatformApi.html#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)"><code>PlatformApi.requestNetworkNodeUpdate(NetworkNodeContainer, Level)</code></a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>direction</code> - the outgoing direction</dd>
@@ -142,7 +144,9 @@ extends <a href="../../../../api/network/node/container/NetworkNodeContainer.htm
 <section class="detail" id="canAcceptIncomingConnection(net.minecraft.core.Direction)">
 <h3>canAcceptIncomingConnection</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">canAcceptIncomingConnection</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
-<div class="block">Returns whether the not yet discovered node can accept an incoming connection.</div>
+<div class="block">Returns whether the not yet discovered node can accept an incoming connection.
+ Changes to this return value won't cause a rebuild of the network state.
+ If the return value ever changes, call <a href="../../PlatformApi.html#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)"><code>PlatformApi.requestNetworkNodeUpdate(NetworkNodeContainer, Level)</code></a>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>direction</code> - the incoming direction</dd>

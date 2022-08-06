@@ -130,10 +130,10 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.client.renderer.block.model.ItemOverrides</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverrides()" class="member-name-link">getOverrides</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.renderer.block.model.BakedQuad&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuads(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.util.RandomSource)" class="member-name-link">getQuads</a><wbr>(@Nullable net.minecraft.world.level.block.state.BlockState&nbsp;state,
- @Nullable net.minecraft.core.Direction&nbsp;side,
- @NotNull net.minecraft.util.RandomSource&nbsp;rand)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.renderer.block.model.BakedQuad&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuads(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.util.RandomSource)" class="member-name-link">getQuads</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ net.minecraft.core.Direction&nbsp;side,
+ net.minecraft.util.RandomSource&nbsp;rand)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.resources.model.BakedModel&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRenderPasses(net.minecraft.world.item.ItemStack,boolean)" class="member-name-link">getRenderPasses</a><wbr>(net.minecraft.world.item.ItemStack&nbsp;itemStack,
@@ -191,13 +191,13 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getQuads(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.util.RandomSource)">
 <h3>getQuads</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.renderer.block.model.BakedQuad&gt;</span>&nbsp;<span class="element-name">getQuads</span><wbr><span class="parameters">(@Nullable
- @Nullable net.minecraft.world.level.block.state.BlockState&nbsp;state,
+<div class="member-signature"><span class="annotations">@Nonnull
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;net.minecraft.client.renderer.block.model.BakedQuad&gt;</span>&nbsp;<span class="element-name">getQuads</span><wbr><span class="parameters">(@Nullable
+ net.minecraft.world.level.block.state.BlockState&nbsp;state,
  @Nullable
- @Nullable net.minecraft.core.Direction&nbsp;side,
- @NotNull
- @NotNull net.minecraft.util.RandomSource&nbsp;rand)</span></div>
+ net.minecraft.core.Direction&nbsp;side,
+ @Nonnull
+ net.minecraft.util.RandomSource&nbsp;rand)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code>getQuads</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.resources.model.BakedModel</code></dd>

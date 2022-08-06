@@ -50,7 +50,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
@@ -91,18 +91,9 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
-<div class="caption"><span>Fields</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Field</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#DISK_COUNT" class="member-name-link">DISK_COUNT</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-</div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Fields inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#activenessProvider">activenessProvider</a>, <a href="../AbstractNetworkNode.html#network">network</a></code></div>
+<code><a href="../AbstractNetworkNode.html#network">network</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -113,9 +104,10 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry)" class="member-name-link">DiskDriveNetworkNode</a><wbr>(long&nbsp;energyUsage,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(long,long,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry,int)" class="member-name-link">DiskDriveNetworkNode</a><wbr>(long&nbsp;energyUsage,
  long&nbsp;energyUsagePerDisk,
- <a href="../../../core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;?,<wbr><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;?&gt;&gt;&nbsp;storageChannelTypeRegistry)</code></div>
+ <a href="../../../core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;?,<wbr><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;?&gt;&gt;&nbsp;storageChannelTypeRegistry,
+ int&nbsp;diskCount)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -137,56 +129,59 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccessMode()" class="member-name-link">getAccessMode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilterMode()" class="member-name-link">getFilterMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriority()" class="member-name-link">getPriority</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAmountOfDiskSlots()" class="member-name-link">getAmountOfDiskSlots</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)" class="member-name-link">getStorageForChannel</a><wbr>(<a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnergyUsage()" class="member-name-link">getEnergyUsage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilterMode()" class="member-name-link">getFilterMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriority()" class="member-name-link">getPriority</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../../../storage/Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;T&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStorageForChannel(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)" class="member-name-link">getStorageForChannel</a><wbr>(<a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns an optional storage for the given storage channel type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize(com.refinedmods.refinedstorage2.api.storage.StorageRepository)" class="member-name-link">initialize</a><wbr>(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;newStorageRepository)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize(com.refinedmods.refinedstorage2.api.storage.StorageRepository)" class="member-name-link">initialize</a><wbr>(<a href="../../../storage/StorageRepository.html" title="interface in com.refinedmods.refinedstorage2.api.storage">StorageRepository</a>&nbsp;newStorageRepository)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDiskChanged(int)" class="member-name-link">onDiskChanged</a><wbr>(int&nbsp;slot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onDiskChanged(int)" class="member-name-link">onDiskChanged</a><wbr>(int&nbsp;slot)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)" class="member-name-link">setAccessMode</a><wbr>(<a href="../../../storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAccessMode(com.refinedmods.refinedstorage2.api.storage.AccessMode)" class="member-name-link">setAccessMode</a><wbr>(<a href="../../../storage/AccessMode.html" title="enum class in com.refinedmods.refinedstorage2.api.storage">AccessMode</a>&nbsp;accessMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDiskProvider(com.refinedmods.refinedstorage2.api.network.node.diskdrive.StorageDiskProvider)" class="member-name-link">setDiskProvider</a><wbr>(<a href="StorageDiskProvider.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">StorageDiskProvider</a>&nbsp;diskProvider)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDiskProvider(com.refinedmods.refinedstorage2.api.network.node.diskdrive.StorageDiskProvider)" class="member-name-link">setDiskProvider</a><wbr>(<a href="StorageDiskProvider.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">StorageDiskProvider</a>&nbsp;diskProvider)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)" class="member-name-link">setFilterMode</a><wbr>(<a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a>&nbsp;mode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilterMode(com.refinedmods.refinedstorage2.api.core.filter.FilterMode)" class="member-name-link">setFilterMode</a><wbr>(<a href="../../../core/filter/FilterMode.html" title="enum class in com.refinedmods.refinedstorage2.api.core.filter">FilterMode</a>&nbsp;mode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilterTemplates(java.util.Set)" class="member-name-link">setFilterTemplates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;templates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFilterTemplates(java.util.Set)" class="member-name-link">setFilterTemplates</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;templates)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setListener(com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveListener)" class="member-name-link">setListener</a><wbr>(<a href="DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a>&nbsp;listener)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setListener(com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveListener)" class="member-name-link">setListener</a><wbr>(<a href="DiskDriveListener.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.diskdrive">DiskDriveListener</a>&nbsp;listener)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNormalizer(java.util.function.UnaryOperator)" class="member-name-link">setNormalizer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;normalizer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNormalizer(java.util.function.UnaryOperator)" class="member-name-link">setNormalizer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;normalizer)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPriority(int)" class="member-name-link">setPriority</a><wbr>(int&nbsp;priority)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPriority(int)" class="member-name-link">setPriority</a><wbr>(int&nbsp;priority)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.api.network.node.AbstractNetworkNode">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.api.network.node.<a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></h3>
-<code><a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActivenessProvider(java.util.function.BooleanSupplier)">setActivenessProvider</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a>, <a href="../AbstractNetworkNode.html#update()">update</a></code></div>
+<code><a href="../AbstractNetworkNode.html#doWork()">doWork</a>, <a href="../AbstractNetworkNode.html#getNetwork()">getNetwork</a>, <a href="../AbstractNetworkNode.html#isActive()">isActive</a>, <a href="../AbstractNetworkNode.html#setActive(boolean)">setActive</a>, <a href="../AbstractNetworkNode.html#setNetwork(com.refinedmods.refinedstorage2.api.network.Network)">setNetwork</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -196,39 +191,18 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 </section>
 <section class="details">
 <ul class="details-list">
-<!-- ============ FIELD DETAIL =========== -->
-<li>
-<section class="field-details" id="field-detail">
-<h2>Field Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="DISK_COUNT">
-<h3>DISK_COUNT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DISK_COUNT</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../../../constant-values.html#com.refinedmods.refinedstorage2.api.network.node.diskdrive.DiskDriveNetworkNode.DISK_COUNT">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-</ul>
-</section>
-</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(long,long,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry)">
+<section class="detail" id="&lt;init&gt;(long,long,com.refinedmods.refinedstorage2.api.core.registry.OrderedRegistry,int)">
 <h3>DiskDriveNetworkNode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">DiskDriveNetworkNode</span><wbr><span class="parameters">(long&nbsp;energyUsage,
  long&nbsp;energyUsagePerDisk,
- <a href="../../../core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;?,<wbr><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;?&gt;&gt;&nbsp;storageChannelTypeRegistry)</span></div>
+ <a href="../../../core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;?,<wbr><a href="../../../storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;?&gt;&gt;&nbsp;storageChannelTypeRegistry,
+ int&nbsp;diskCount)</span></div>
 </section>
 </li>
 </ul>
@@ -254,7 +228,7 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <li>
 <section class="detail" id="onActiveChanged(boolean)">
 <h3>onActiveChanged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onActiveChanged</span><wbr><span class="parameters">(boolean&nbsp;newActive)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../AbstractNetworkNode.html#onActiveChanged(boolean)">onActiveChanged</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a></code></dd>
@@ -355,6 +329,12 @@ implements <a href="../../component/StorageProvider.html" title="interface in co
 <dt>Returns:</dt>
 <dd>the storage for the given channel, if present</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAmountOfDiskSlots()">
+<h3>getAmountOfDiskSlots</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getAmountOfDiskSlots</span>()</div>
 </section>
 </li>
 </ul>

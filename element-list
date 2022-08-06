@@ -37,6 +37,7 @@ com.refinedmods.refinedstorage2.platform.api.resource.filter
 com.refinedmods.refinedstorage2.platform.api.storage
 com.refinedmods.refinedstorage2.platform.api.storage.item
 com.refinedmods.refinedstorage2.platform.api.storage.type
+com.refinedmods.refinedstorage2.platform.api.upgrade
 com.refinedmods.refinedstorage2.platform.common
 com.refinedmods.refinedstorage2.platform.common.block
 com.refinedmods.refinedstorage2.platform.common.block.direction
@@ -52,6 +53,7 @@ com.refinedmods.refinedstorage2.platform.common.containermenu.slot
 com.refinedmods.refinedstorage2.platform.common.containermenu.storage
 com.refinedmods.refinedstorage2.platform.common.containermenu.storage.block
 com.refinedmods.refinedstorage2.platform.common.containermenu.storage.diskdrive
+com.refinedmods.refinedstorage2.platform.common.containermenu.transfer
 com.refinedmods.refinedstorage2.platform.common.content
 com.refinedmods.refinedstorage2.platform.common.internal.grid
 com.refinedmods.refinedstorage2.platform.common.internal.grid.view
@@ -62,6 +64,7 @@ com.refinedmods.refinedstorage2.platform.common.internal.resource.filter.item
 com.refinedmods.refinedstorage2.platform.common.internal.storage
 com.refinedmods.refinedstorage2.platform.common.internal.storage.channel
 com.refinedmods.refinedstorage2.platform.common.internal.storage.type
+com.refinedmods.refinedstorage2.platform.common.internal.upgrade
 com.refinedmods.refinedstorage2.platform.common.item
 com.refinedmods.refinedstorage2.platform.common.item.block
 com.refinedmods.refinedstorage2.platform.common.menu
@@ -75,6 +78,7 @@ com.refinedmods.refinedstorage2.platform.common.screen.widget
 com.refinedmods.refinedstorage2.platform.common.util
 com.refinedmods.refinedstorage2.platform.fabric
 com.refinedmods.refinedstorage2.platform.fabric.block.entity
+com.refinedmods.refinedstorage2.platform.fabric.containermenu
 com.refinedmods.refinedstorage2.platform.fabric.integration
 com.refinedmods.refinedstorage2.platform.fabric.integration.energy
 com.refinedmods.refinedstorage2.platform.fabric.integration.jei
@@ -95,6 +99,7 @@ com.refinedmods.refinedstorage2.platform.fabric.render.model.baked.transform
 com.refinedmods.refinedstorage2.platform.fabric.util
 com.refinedmods.refinedstorage2.platform.forge
 com.refinedmods.refinedstorage2.platform.forge.block.entity
+com.refinedmods.refinedstorage2.platform.forge.containermenu
 com.refinedmods.refinedstorage2.platform.forge.integration.energy
 com.refinedmods.refinedstorage2.platform.forge.integration.jei
 com.refinedmods.refinedstorage2.platform.forge.integration.rei

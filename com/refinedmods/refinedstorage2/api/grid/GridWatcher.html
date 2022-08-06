@@ -68,7 +68,7 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.refinedmods.refinedstorage2.api.grid</a></div>
-<h1 title="Interface GridWatcher" class="title">Interface GridWatcher</h1>
+<h1 title="Interface GridWatcher" class="title">Interface GridWatcher&lt;T&gt;</h1>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
      since="2.0.0-milestone.1.0")
-</span><span class="modifiers">public interface </span><span class="element-name type-name-label">GridWatcher</span></div>
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">GridWatcher&lt;T&gt;</span></div>
 <div class="block">A grid listener.</div>
 </section>
 <section class="summary">
@@ -98,6 +98,12 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onActiveChanged(boolean)" class="member-name-link">onActiveChanged</a><wbr>(boolean&nbsp;newActive)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Called when the activeness state of the grid has changed.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)" class="member-name-link">onChanged</a><wbr>(<a href="../resource/list/ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="GridWatcher.html" title="type parameter in GridWatcher">T</a>&gt;&nbsp;change,
+ <a href="../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Called when a resource is changed.</div>
 </div>
 </div>
 </div>
@@ -121,6 +127,20 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>newActive</code> - the new activeness state</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onChanged(com.refinedmods.refinedstorage2.api.resource.list.ResourceListOperationResult,com.refinedmods.refinedstorage2.api.storage.tracked.TrackedResource)">
+<h3>onChanged</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onChanged</span><wbr><span class="parameters">(<a href="../resource/list/ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="GridWatcher.html" title="type parameter in GridWatcher">T</a>&gt;&nbsp;change,
+ @Nullable
+ <a href="../storage/tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&nbsp;trackedResource)</span></div>
+<div class="block">Called when a resource is changed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>change</code> - the change</dd>
+<dd><code>trackedResource</code> - the tracked resource, if present</dd>
 </dl>
 </section>
 </li>

@@ -131,33 +131,54 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activenessChanged(boolean)" class="member-name-link">activenessChanged</a><wbr>(boolean&nbsp;active)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRedstoneMode()" class="member-name-link">getRedstoneMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateActivenessInLevel(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)" class="member-name-link">updateActivenessInLevel</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#activenessChanged(net.minecraft.world.level.block.state.BlockState,boolean,net.minecraft.world.level.block.state.properties.BooleanProperty)" class="member-name-link">activenessChanged</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ boolean&nbsp;newActive,
  net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canAcceptIncomingConnection(net.minecraft.core.Direction)" class="member-name-link">canAcceptIncomingConnection</a><wbr>(net.minecraft.core.Direction&nbsp;direction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the not yet discovered node can accept an incoming connection.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#canPerformOutgoingConnection(net.minecraft.core.Direction)" class="member-name-link">canPerformOutgoingConnection</a><wbr>(net.minecraft.core.Direction&nbsp;direction)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the already discovered node can perform an outgoing connection.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.common.util.concurrent.RateLimiter</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createRateLimiter(int)" class="member-name-link">createRateLimiter</a><wbr>(int&nbsp;amountOfSpeedUpgrades)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doWork()" class="member-name-link">doWork</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final net.minecraft.core.Direction</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDirection()" class="member-name-link">getDirection</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRedstoneMode()" class="member-name-link">getRedstoneMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateActiveness(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)" class="member-name-link">updateActiveness</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.api.blockentity.AbstractNetworkNodeContainerBlockEntity">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.api.blockentity.<a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.api.blockentity">AbstractNetworkNodeContainerBlockEntity</a></h3>
-<code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">canAcceptIncomingConnection</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">canPerformOutgoingConnection</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#onNetworkInNodeInitialized()">onNetworkInNodeInitialized</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#toString()">toString</a></code></div>
+<code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#clearRemoved()">clearRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#getNode()">getNode</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#onNetworkInNodeInitialized()">onNetworkInNodeInitialized</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#setBlockState(net.minecraft.world.level.block.state.BlockState)">setBlockState</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#setRemoved()">setRemoved</a>, <a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.entity.BlockEntity">Methods inherited from class&nbsp;net.minecraft.world.level.block.entity.BlockEntity</h3>
-<code>addEntityType, fillCrashReportCategory, getBlockPos, getBlockState, getLevel, getPosFromTag, getType, getUpdatePacket, getUpdateTag, hasLevel, isRemoved, loadStatic, onlyOpCanSetNbt, saveToItem, saveWithFullMetadata, saveWithId, saveWithoutMetadata, setBlockState, setChanged, setChanged, setLevel, triggerEvent</code></div>
+<code>addEntityType, fillCrashReportCategory, getBlockPos, getBlockState, getLevel, getPosFromTag, getType, getUpdatePacket, getUpdateTag, hasLevel, isRemoved, loadStatic, onlyOpCanSetNbt, saveToItem, saveWithFullMetadata, saveWithId, saveWithoutMetadata, setChanged, setChanged, setLevel, triggerEvent</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -210,17 +231,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="updateActivenessInLevel(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)">
-<h3>updateActivenessInLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateActivenessInLevel</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+<section class="detail" id="updateActiveness(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)">
+<h3>updateActiveness</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateActiveness</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
  @Nullable
  net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="activenessChanged(boolean)">
+<section class="detail" id="activenessChanged(net.minecraft.world.level.block.state.BlockState,boolean,net.minecraft.world.level.block.state.properties.BooleanProperty)">
 <h3>activenessChanged</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">activenessChanged</span><wbr><span class="parameters">(boolean&nbsp;active)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">activenessChanged</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+ boolean&nbsp;newActive,
+ @Nullable
+ net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</span></div>
 </section>
 </li>
 <li>
@@ -233,6 +257,65 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)">
 <h3>setRedstoneMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRedstoneMode</span><wbr><span class="parameters">(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="doWork()">
+<h3>doWork</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">doWork</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="canPerformOutgoingConnection(net.minecraft.core.Direction)">
+<h3>canPerformOutgoingConnection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canPerformOutgoingConnection</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">PlatformNetworkNodeContainer</a></code></span></div>
+<div class="block">Returns whether the already discovered node can perform an outgoing connection.
+ Changes to this return value won't cause a rebuild of the network state.
+ If the return value ever changes, call <a href="../../../api/PlatformApi.html#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)"><code>PlatformApi.requestNetworkNodeUpdate(NetworkNodeContainer, Level)</code></a>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">canPerformOutgoingConnection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></code></dd>
+<dt>Overrides:</dt>
+<dd><code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#canPerformOutgoingConnection(net.minecraft.core.Direction)">canPerformOutgoingConnection</a></code>&nbsp;in class&nbsp;<code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.api.blockentity">AbstractNetworkNodeContainerBlockEntity</a>&lt;<a href="AbstractInternalNetworkNodeContainerBlockEntity.html" title="type parameter in AbstractInternalNetworkNodeContainerBlockEntity">T</a> extends <a href="../../../../api/network/node/AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the outgoing direction</dd>
+<dt>Returns:</dt>
+<dd>whether the node can perform an outgoing connection</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="canAcceptIncomingConnection(net.minecraft.core.Direction)">
+<h3>canAcceptIncomingConnection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">canAcceptIncomingConnection</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">PlatformNetworkNodeContainer</a></code></span></div>
+<div class="block">Returns whether the not yet discovered node can accept an incoming connection.
+ Changes to this return value won't cause a rebuild of the network state.
+ If the return value ever changes, call <a href="../../../api/PlatformApi.html#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)"><code>PlatformApi.requestNetworkNodeUpdate(NetworkNodeContainer, Level)</code></a>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">canAcceptIncomingConnection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/network/node/PlatformNetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node">PlatformNetworkNodeContainer</a></code></dd>
+<dt>Overrides:</dt>
+<dd><code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html#canAcceptIncomingConnection(net.minecraft.core.Direction)">canAcceptIncomingConnection</a></code>&nbsp;in class&nbsp;<code><a href="../../../api/blockentity/AbstractNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.api.blockentity">AbstractNetworkNodeContainerBlockEntity</a>&lt;<a href="AbstractInternalNetworkNodeContainerBlockEntity.html" title="type parameter in AbstractInternalNetworkNodeContainerBlockEntity">T</a> extends <a href="../../../../api/network/node/AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>direction</code> - the incoming direction</dd>
+<dt>Returns:</dt>
+<dd>whether the node can accept an incoming connection</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDirection()">
+<h3>getDirection</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">protected final</span>&nbsp;<span class="return-type">net.minecraft.core.Direction</span>&nbsp;<span class="element-name">getDirection</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="createRateLimiter(int)">
+<h3>createRateLimiter</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.RateLimiter</span>&nbsp;<span class="element-name">createRateLimiter</span><wbr><span class="parameters">(int&nbsp;amountOfSpeedUpgrades)</span></div>
 </section>
 </li>
 </ul>
