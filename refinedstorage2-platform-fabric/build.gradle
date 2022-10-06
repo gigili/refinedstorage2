@@ -58,12 +58,10 @@ dependencies {
     }
     include "teamreborn:energy:${project.energyVersion}"
 
-    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api:${project.reiVersion}") {
-        exclude(group: 'me.shedaniel.cloth')
+    modLocalRuntime "dev.architectury:architectury-fabric:5.9.31"
+    modImplementation("me.shedaniel:RoughlyEnoughItems-fabric:${project.reiVersion}") {
+        exclude group: "net.fabricmc.fabric-api"
     }
-    // We test with REI on Fabric.
-    modRuntimeOnly "dev.architectury:architectury-fabric:6.2.43" // For REI
-    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.reiVersion}")
 
     modCompileOnlyApi "mezz.jei:jei-${project.minecraftVersion}-common-api:${project.jeiVersion}"
     modCompileOnlyApi "mezz.jei:jei-${project.minecraftVersion}-fabric-api:${project.jeiVersion}"

@@ -39,7 +39,10 @@ public class FluidResourceType implements ResourceType {
 
     @Override
     public Optional<FilteredResource> translate(final Object value) {
-        return Platform.INSTANCE.convertToFluid(value).map(FluidFilteredResource::new);
+        return Platform.INSTANCE.convertToFluid(value).map(fluid -> new FluidFilteredResource(
+            fluid,
+            Platform.INSTANCE.getBucketAmount()
+        ));
     }
 
     @Override

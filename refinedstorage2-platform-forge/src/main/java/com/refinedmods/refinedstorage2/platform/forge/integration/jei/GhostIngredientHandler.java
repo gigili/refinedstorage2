@@ -13,14 +13,13 @@ import java.util.stream.Collectors;
 
 import mezz.jei.api.gui.handlers.IGhostIngredientHandler;
 import net.minecraft.client.renderer.Rect2i;
-import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("rawtypes")
 public class GhostIngredientHandler implements IGhostIngredientHandler<AbstractBaseScreen> {
     @Override
-    public <I> @NotNull List<Target<I>> getTargets(final AbstractBaseScreen gui,
-                                                   final I ingredient,
-                                                   final boolean doStart) {
+    public <I> List<Target<I>> getTargets(final AbstractBaseScreen gui,
+                                          final I ingredient,
+                                          final boolean doStart) {
         if (gui.getMenu() instanceof AbstractResourceFilterContainerMenu menu) {
             return getTargets(gui, ingredient, menu);
         }
