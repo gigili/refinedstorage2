@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="diskdrive/AbstractDiskDriveBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive">AbstractDiskDriveBlockEntity</a></code>, <code><a href="grid/AbstractGridBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.grid">AbstractGridBlockEntity</a></code>, <code><a href="storage/AbstractStorageBlockBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.storage">AbstractStorageBlockBlockEntity</a></code>, <code><a href="CableBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">CableBlockEntity</a></code>, <code><a href="ControllerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ControllerBlockEntity</a></code>, <code><a href="ImporterBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ImporterBlockEntity</a></code></dd>
+<dd><code><a href="diskdrive/AbstractDiskDriveBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.diskdrive">AbstractDiskDriveBlockEntity</a></code>, <code><a href="grid/AbstractGridBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.grid">AbstractGridBlockEntity</a></code>, <code><a href="AbstractLevelInteractingNetworkNodeContainerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">AbstractLevelInteractingNetworkNodeContainerBlockEntity</a></code>, <code><a href="storage/AbstractStorageBlockBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity.storage">AbstractStorageBlockBlockEntity</a></code>, <code><a href="CableBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">CableBlockEntity</a></code>, <code><a href="ControllerBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">ControllerBlockEntity</a></code>, <code><a href="InterfaceBlockEntity.html" title="class in com.refinedmods.refinedstorage2.platform.common.block.entity">InterfaceBlockEntity</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractInternalNetworkNodeContainerBlockEntity&lt;T extends <a href="../../../../api/network/node/AbstractNetworkNode.html" title="class in com.refinedmods.refinedstorage2.api.network.node">AbstractNetworkNode</a>&gt;</span>
@@ -145,31 +145,28 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns whether the already discovered node can perform an outgoing connection.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.common.util.concurrent.RateLimiter</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createRateLimiter(int)" class="member-name-link">createRateLimiter</a><wbr>(int&nbsp;amountOfSpeedUpgrades)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doWork()" class="member-name-link">doWork</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final net.minecraft.core.Direction</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDirection()" class="member-name-link">getDirection</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRedstoneMode()" class="member-name-link">getRedstoneMode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doWork()" class="member-name-link">doWork</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final net.minecraft.core.Direction</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDirection()" class="member-name-link">getDirection</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRedstoneMode()" class="member-name-link">getRedstoneMode</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#load(net.minecraft.nbt.CompoundTag)" class="member-name-link">load</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveAdditional(net.minecraft.nbt.CompoundTag)" class="member-name-link">saveAdditional</a><wbr>(net.minecraft.nbt.CompoundTag&nbsp;tag)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRedstoneMode(com.refinedmods.refinedstorage2.platform.common.util.RedstoneMode)" class="member-name-link">setRedstoneMode</a><wbr>(<a href="../../util/RedstoneMode.html" title="enum class in com.refinedmods.refinedstorage2.platform.common.util">RedstoneMode</a>&nbsp;redstoneMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateActiveness(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)" class="member-name-link">updateActiveness</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateActiveness(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.state.properties.BooleanProperty)" class="member-name-link">updateActiveness</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
  net.minecraft.world.level.block.state.properties.BooleanProperty&nbsp;activenessProperty)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -310,12 +307,6 @@ loadScripts(document, 'script');</script>
 <h3>getDirection</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">protected final</span>&nbsp;<span class="return-type">net.minecraft.core.Direction</span>&nbsp;<span class="element-name">getDirection</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="createRateLimiter(int)">
-<h3>createRateLimiter</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.RateLimiter</span>&nbsp;<span class="element-name">createRateLimiter</span><wbr><span class="parameters">(int&nbsp;amountOfSpeedUpgrades)</span></div>
 </section>
 </li>
 </ul>

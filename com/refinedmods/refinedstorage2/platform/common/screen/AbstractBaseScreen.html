@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="grid/AbstractGridScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen.grid">AbstractGridScreen</a></code>, <code><a href="AbstractStorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">AbstractStorageScreen</a></code>, <code><a href="ControllerScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">ControllerScreen</a></code>, <code><a href="ImporterScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">ImporterScreen</a></code></dd>
+<dd><code><a href="amount/AbstractAmountScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen.amount">AbstractAmountScreen</a></code>, <code><a href="grid/AbstractGridScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen.grid">AbstractGridScreen</a></code>, <code><a href="AbstractStorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">AbstractStorageScreen</a></code>, <code><a href="ControllerScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">ControllerScreen</a></code>, <code><a href="ExporterScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">ExporterScreen</a></code>, <code><a href="ExternalStorageScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">ExternalStorageScreen</a></code>, <code><a href="ImporterScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">ImporterScreen</a></code>, <code><a href="InterfaceScreen.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen">InterfaceScreen</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractBaseScreen&lt;T extends net.minecraft.world.inventory.AbstractContainerMenu&gt;</span>
@@ -145,7 +145,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -154,16 +154,51 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSideButton(com.refinedmods.refinedstorage2.platform.common.screen.widget.AbstractSideButtonWidget)" class="member-name-link">addSideButton</a><wbr>(<a href="widget/AbstractSideButtonWidget.html" title="class in com.refinedmods.refinedstorage2.platform.common.screen.widget">AbstractSideButtonWidget</a>&nbsp;button)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceFilterButtonX()" class="member-name-link">getResourceFilterButtonX</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract net.minecraft.resources.ResourceLocation</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTexture()" class="member-name-link">getTexture</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#init()" class="member-name-link">init</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isResourceFilterButtonActive()" class="member-name-link">isResourceFilterButtonActive</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isResourceFilterButtonVisible()" class="member-name-link">isResourceFilterButtonVisible</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>protected static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#prepareBackgroundShader(net.minecraft.resources.ResourceLocation)" class="member-name-link">prepareBackgroundShader</a><wbr>(net.minecraft.resources.ResourceLocation&nbsp;texture)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#render(com.mojang.blaze3d.vertex.PoseStack,int,int,float)" class="member-name-link">render</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ int&nbsp;mouseX,
+ int&nbsp;mouseY,
+ float&nbsp;delta)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)" class="member-name-link">renderBg</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderAmount(com.mojang.blaze3d.vertex.PoseStack,int,int,java.lang.String,int,boolean)" class="member-name-link">renderAmount</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ int&nbsp;x,
+ int&nbsp;y,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;amount,
+ int&nbsp;color,
+ boolean&nbsp;large)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)" class="member-name-link">renderBg</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
  float&nbsp;delta,
  int&nbsp;mouseX,
  int&nbsp;mouseY)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderResourceFilterSlotAmount(com.mojang.blaze3d.vertex.PoseStack,int,int,com.refinedmods.refinedstorage2.platform.api.resource.filter.FilteredResource)" class="member-name-link">renderResourceFilterSlotAmount</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ int&nbsp;x,
+ int&nbsp;y,
+ <a href="../../api/resource/filter/FilteredResource.html" title="interface in com.refinedmods.refinedstorage2.platform.api.resource.filter">FilteredResource</a>&nbsp;filteredResource)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#renderResourceFilterSlots(com.mojang.blaze3d.vertex.PoseStack)" class="member-name-link">renderResourceFilterSlots</a><wbr>(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
@@ -171,18 +206,28 @@ loadScripts(document, 'script');</script>
  int&nbsp;x,
  int&nbsp;y)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected final void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setScissor(int,int,int,int)" class="member-name-link">setScissor</a><wbr>(int&nbsp;x,
  int&nbsp;y,
  int&nbsp;w,
  int&nbsp;h)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slotClicked(net.minecraft.world.inventory.Slot,int,int,net.minecraft.world.inventory.ClickType)" class="member-name-link">slotClicked</a><wbr>(net.minecraft.world.inventory.Slot&nbsp;slot,
+ int&nbsp;slotId,
+ int&nbsp;mouseButton,
+ net.minecraft.world.inventory.ClickType&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tryOpenResourceFilterAmountScreen(net.minecraft.world.inventory.Slot,net.minecraft.world.inventory.ClickType)" class="member-name-link">tryOpenResourceFilterAmountScreen</a><wbr>(net.minecraft.world.inventory.Slot&nbsp;slot,
+ net.minecraft.world.inventory.ClickType&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.inventory.AbstractContainerScreen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.inventory.AbstractContainerScreen</h3>
-<code>checkHotbarKeyPressed, clearDraggingState, containerTick, getMenu, hasClickedOutside, isHovering, isPauseScreen, keyPressed, mouseClicked, mouseDragged, mouseReleased, onClose, removed, render, renderLabels, renderSlotHighlight, slotClicked, tick</code></div>
+<code>checkHotbarKeyPressed, clearDraggingState, containerTick, getMenu, hasClickedOutside, isHovering, isPauseScreen, keyPressed, mouseClicked, mouseDragged, mouseReleased, onClose, removed, renderLabels, renderSlotHighlight, tick</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.client.gui.screens.Screen">Methods inherited from class&nbsp;net.minecraft.client.gui.screens.Screen</h3>
 <code>addRenderableOnly, addRenderableWidget, addWidget, afterKeyboardAction, afterMouseAction, afterMouseMove, children, clearWidgets, findNarratableWidget, getNarrationMessage, getTitle, getTooltipFromItem, handleComponentClicked, handleDelayedNarration, hasAltDown, hasControlDown, hasShiftDown, hideWidgets, init, insertText, isCopy, isCut, isMouseOver, isPaste, isSelectAll, isValidCharacterForName, narrationEnabled, onFilesDrop, rebuildWidgets, removeWidget, renderBackground, renderBackground, renderComponentHoverEffect, renderComponentTooltip, renderDirtBackground, renderTooltip, renderTooltip, renderTooltip, renderTooltip, resize, shouldCloseOnEsc, triggerImmediateNarration, updateNarratedWidget, updateNarrationState, wrapScreenError</code></div>
@@ -239,6 +284,30 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getResourceFilterButtonX()">
+<h3>getResourceFilterButtonX</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getResourceFilterButtonX</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isResourceFilterButtonVisible()">
+<h3>isResourceFilterButtonVisible</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isResourceFilterButtonVisible</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="isResourceFilterButtonActive()">
+<h3>isResourceFilterButtonActive</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isResourceFilterButtonActive</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getTexture()">
+<h3>getTexture</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">net.minecraft.resources.ResourceLocation</span>&nbsp;<span class="element-name">getTexture</span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="renderBg(com.mojang.blaze3d.vertex.PoseStack,float,int,int)">
 <h3>renderBg</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">renderBg</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
@@ -252,9 +321,50 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="prepareBackgroundShader(net.minecraft.resources.ResourceLocation)">
+<h3>prepareBackgroundShader</h3>
+<div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">prepareBackgroundShader</span><wbr><span class="parameters">(net.minecraft.resources.ResourceLocation&nbsp;texture)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="render(com.mojang.blaze3d.vertex.PoseStack,int,int,float)">
+<h3>render</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">render</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ int&nbsp;mouseX,
+ int&nbsp;mouseY,
+ float&nbsp;delta)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>render</code>&nbsp;in interface&nbsp;<code>net.minecraft.client.gui.components.Widget</code></dd>
+<dt>Overrides:</dt>
+<dd><code>render</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;<a href="AbstractBaseScreen.html" title="type parameter in AbstractBaseScreen">T</a> extends net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="renderResourceFilterSlots(com.mojang.blaze3d.vertex.PoseStack)">
 <h3>renderResourceFilterSlots</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">renderResourceFilterSlots</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack)</span></div>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">renderResourceFilterSlots</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="renderResourceFilterSlotAmount(com.mojang.blaze3d.vertex.PoseStack,int,int,com.refinedmods.refinedstorage2.platform.api.resource.filter.FilteredResource)">
+<h3>renderResourceFilterSlotAmount</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">renderResourceFilterSlotAmount</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ int&nbsp;x,
+ int&nbsp;y,
+ <a href="../../api/resource/filter/FilteredResource.html" title="interface in com.refinedmods.refinedstorage2.platform.api.resource.filter">FilteredResource</a>&nbsp;filteredResource)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="renderAmount(com.mojang.blaze3d.vertex.PoseStack,int,int,java.lang.String,int,boolean)">
+<h3>renderAmount</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">renderAmount</span><wbr><span class="parameters">(com.mojang.blaze3d.vertex.PoseStack&nbsp;poseStack,
+ int&nbsp;x,
+ int&nbsp;y,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;amount,
+ int&nbsp;color,
+ boolean&nbsp;large)</span></div>
 </section>
 </li>
 <li>
@@ -266,7 +376,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setScissor(int,int,int,int)">
 <h3>setScissor</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setScissor</span><wbr><span class="parameters">(int&nbsp;x,
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setScissor</span><wbr><span class="parameters">(int&nbsp;x,
  int&nbsp;y,
  int&nbsp;w,
  int&nbsp;h)</span></div>
@@ -282,6 +392,26 @@ loadScripts(document, 'script');</script>
 <dt>Overrides:</dt>
 <dd><code>renderTooltip</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;<a href="AbstractBaseScreen.html" title="type parameter in AbstractBaseScreen">T</a> extends net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="slotClicked(net.minecraft.world.inventory.Slot,int,int,net.minecraft.world.inventory.ClickType)">
+<h3>slotClicked</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">slotClicked</span><wbr><span class="parameters">(net.minecraft.world.inventory.Slot&nbsp;slot,
+ int&nbsp;slotId,
+ int&nbsp;mouseButton,
+ net.minecraft.world.inventory.ClickType&nbsp;type)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code>slotClicked</code>&nbsp;in class&nbsp;<code>net.minecraft.client.gui.screens.inventory.AbstractContainerScreen&lt;<a href="AbstractBaseScreen.html" title="type parameter in AbstractBaseScreen">T</a> extends net.minecraft.world.inventory.AbstractContainerMenu&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tryOpenResourceFilterAmountScreen(net.minecraft.world.inventory.Slot,net.minecraft.world.inventory.ClickType)">
+<h3>tryOpenResourceFilterAmountScreen</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">tryOpenResourceFilterAmountScreen</span><wbr><span class="parameters">(net.minecraft.world.inventory.Slot&nbsp;slot,
+ net.minecraft.world.inventory.ClickType&nbsp;type)</span></div>
 </section>
 </li>
 </ul>

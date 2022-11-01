@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="ImporterBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">ImporterBlock</a></code></dd>
+<dd><code><a href="ExporterBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">ExporterBlock</a></code>, <code><a href="ExternalStorageBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">ExternalStorageBlock</a></code>, <code><a href="ImporterBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">ImporterBlock</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractDirectionalCableBlock</span>
@@ -141,7 +141,7 @@ implements net.minecraft.world.level.block.SimpleWaterloggedBlock</span></div>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -156,8 +156,14 @@ implements net.minecraft.world.level.block.SimpleWaterloggedBlock</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="direction/DirectionType.html" title="interface in com.refinedmods.refinedstorage2.platform.common.block.direction">DirectionType</a>&lt;net.minecraft.core.Direction&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDirectionType()" class="member-name-link">getDirectionType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.level.material.FluidState</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFluidState(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">getFluidState</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract net.minecraft.world.phys.shapes.VoxelShape</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtensionShape(net.minecraft.core.Direction)" class="member-name-link">getExtensionShape</a><wbr>(net.minecraft.core.Direction&nbsp;direction)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.level.material.FluidState</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFluidState(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">getFluidState</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected net.minecraft.world.phys.shapes.VoxelShape</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">getScreenOpenableShape</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.phys.shapes.VoxelShape</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.phys.shapes.CollisionContext)" class="member-name-link">getShape</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
@@ -195,7 +201,7 @@ implements net.minecraft.world.level.block.SimpleWaterloggedBlock</span></div>
 <code><a href="AbstractDirectionalBlock.html#extractDirection(net.minecraft.world.level.block.state.BlockState)">extractDirection</a>, <a href="AbstractDirectionalBlock.html#getDirection(net.minecraft.world.level.block.state.BlockState)">getDirection</a>, <a href="AbstractDirectionalBlock.html#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)">rotate</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractBaseBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractBaseBlock</a></h3>
-<code><a href="AbstractBaseBlock.html#getMenuProvider(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos)">getMenuProvider</a>, <a href="AbstractBaseBlock.html#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">getScreenOpenableShape</a>, <a href="AbstractBaseBlock.html#onRemove(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState,boolean)">onRemove</a>, <a href="AbstractBaseBlock.html#tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUpdateColor</a>, <a href="AbstractBaseBlock.html#tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUseWrench</a>, <a href="AbstractBaseBlock.html#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)">use</a></code></div>
+<code><a href="AbstractBaseBlock.html#getMenuProvider(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos)">getMenuProvider</a>, <a href="AbstractBaseBlock.html#onRemove(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState,boolean)">onRemove</a>, <a href="AbstractBaseBlock.html#tryUpdateColor(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUpdateColor</a>, <a href="AbstractBaseBlock.html#tryUseWrench(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.world.phys.BlockHitResult,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand)">tryUseWrench</a>, <a href="AbstractBaseBlock.html#use(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.Level,net.minecraft.core.BlockPos,net.minecraft.world.entity.player.Player,net.minecraft.world.InteractionHand,net.minecraft.world.phys.BlockHitResult)">use</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-net.minecraft.world.level.block.Block">Methods inherited from class&nbsp;net.minecraft.world.level.block.Block</h3>
 <code>animateTick, appendHoverText, asBlock, asItem, box, builtInRegistryHolder, byItem, canSupportCenter, canSupportRigidBlock, defaultBlockState, destroy, dropFromExplosion, dropResources, dropResources, dropResources, dropResources, fallOn, fillItemCategory, getCloneItemStack, getDescriptionId, getDrops, getDrops, getExplosionResistance, getFriction, getId, getJumpFactor, getName, getShapeForEachState, getSoundType, getSpeedFactor, getStateDefinition, handlePrecipitation, hasDynamicShape, isExceptionForConnection, isFaceFull, isPossibleToRespawnInThis, isRandomlyTicking, isShapeFullBlock, playerDestroy, playerWillDestroy, popExperience, popResource, popResourceFromFace, pushEntitiesUp, registerDefaultState, setPlacedBy, shouldRenderFace, spawnDestroyParticles, stateById, stepOn, toString, tryDropExperience, updateEntityAfterFallOn, updateFromNeighbourShapes, updateOrDestroy, updateOrDestroy, wasExploded, withPropertiesOf</code></div>
@@ -334,6 +340,23 @@ implements net.minecraft.world.level.block.SimpleWaterloggedBlock</span></div>
 <dt>Overrides:</dt>
 <dd><code>getShape</code>&nbsp;in class&nbsp;<code>net.minecraft.world.level.block.state.BlockBehaviour</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">
+<h3>getScreenOpenableShape</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type">net.minecraft.world.phys.shapes.VoxelShape</span>&nbsp;<span class="element-name">getScreenOpenableShape</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="AbstractBaseBlock.html#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">getScreenOpenableShape</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractBaseBlock</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getExtensionShape(net.minecraft.core.Direction)">
+<h3>getExtensionShape</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">net.minecraft.world.phys.shapes.VoxelShape</span>&nbsp;<span class="element-name">getExtensionShape</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
 </section>
 </li>
 </ul>

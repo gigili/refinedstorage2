@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -144,29 +144,23 @@ implements net.minecraft.world.level.block.EntityBlock</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected net.minecraft.world.phys.shapes.VoxelShape</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)" class="member-name-link">getScreenOpenableShape</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExtensionShape(net.minecraft.core.Direction)" class="member-name-link">getExtensionShape</a><wbr>(net.minecraft.core.Direction&nbsp;direction)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.phys.shapes.VoxelShape</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.phys.shapes.CollisionContext)" class="member-name-link">getShape</a><wbr>(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- net.minecraft.world.level.BlockGetter&nbsp;world,
- net.minecraft.core.BlockPos&nbsp;pos,
- net.minecraft.world.phys.shapes.CollisionContext&nbsp;ctx)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends net.minecraft.world.level.block.entity.BlockEntity&gt;<br>net.minecraft.world.level.block.entity.BlockEntityTicker&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTicker(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.entity.BlockEntityType)" class="member-name-link">getTicker</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends net.minecraft.world.level.block.entity.BlockEntity&gt;<br>net.minecraft.world.level.block.entity.BlockEntityTicker&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTicker(net.minecraft.world.level.Level,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.entity.BlockEntityType)" class="member-name-link">getTicker</a><wbr>(net.minecraft.world.level.Level&nbsp;level,
  net.minecraft.world.level.block.state.BlockState&nbsp;blockState,
  net.minecraft.world.level.block.entity.BlockEntityType&lt;T&gt;&nbsp;type)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.level.block.entity.BlockEntity</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBlockEntity(net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState)" class="member-name-link">newBlockEntity</a><wbr>(net.minecraft.core.BlockPos&nbsp;pos,
- net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>net.minecraft.world.level.block.entity.BlockEntity</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBlockEntity(net.minecraft.core.BlockPos,net.minecraft.world.level.block.state.BlockState)" class="member-name-link">newBlockEntity</a><wbr>(net.minecraft.core.BlockPos&nbsp;pos,
+ net.minecraft.world.level.block.state.BlockState&nbsp;state)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractDirectionalCableBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractDirectionalCableBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalCableBlock</a></h3>
-<code><a href="AbstractDirectionalCableBlock.html#createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition.Builder)">createBlockStateDefinition</a>, <a href="AbstractDirectionalCableBlock.html#getDefaultState()">getDefaultState</a>, <a href="AbstractDirectionalCableBlock.html#getDirectionType()">getDirectionType</a>, <a href="AbstractDirectionalCableBlock.html#getFluidState(net.minecraft.world.level.block.state.BlockState)">getFluidState</a>, <a href="AbstractDirectionalCableBlock.html#getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext)">getStateForPlacement</a>, <a href="AbstractDirectionalCableBlock.html#isPathfindable(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.level.pathfinder.PathComputationType)">isPathfindable</a>, <a href="AbstractDirectionalCableBlock.html#propagatesSkylightDown(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos)">propagatesSkylightDown</a>, <a href="AbstractDirectionalCableBlock.html#updateShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.LevelAccessor,net.minecraft.core.BlockPos,net.minecraft.core.BlockPos)">updateShape</a></code></div>
+<code><a href="AbstractDirectionalCableBlock.html#createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition.Builder)">createBlockStateDefinition</a>, <a href="AbstractDirectionalCableBlock.html#getDefaultState()">getDefaultState</a>, <a href="AbstractDirectionalCableBlock.html#getDirectionType()">getDirectionType</a>, <a href="AbstractDirectionalCableBlock.html#getFluidState(net.minecraft.world.level.block.state.BlockState)">getFluidState</a>, <a href="AbstractDirectionalCableBlock.html#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">getScreenOpenableShape</a>, <a href="AbstractDirectionalCableBlock.html#getShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.phys.shapes.CollisionContext)">getShape</a>, <a href="AbstractDirectionalCableBlock.html#getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext)">getStateForPlacement</a>, <a href="AbstractDirectionalCableBlock.html#isPathfindable(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.level.pathfinder.PathComputationType)">isPathfindable</a>, <a href="AbstractDirectionalCableBlock.html#propagatesSkylightDown(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos)">propagatesSkylightDown</a>, <a href="AbstractDirectionalCableBlock.html#updateShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.core.Direction,net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.LevelAccessor,net.minecraft.core.BlockPos,net.minecraft.core.BlockPos)">updateShape</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.refinedmods.refinedstorage2.platform.common.block.AbstractDirectionalBlock">Methods inherited from class&nbsp;com.refinedmods.refinedstorage2.platform.common.block.<a href="AbstractDirectionalBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalBlock</a></h3>
 <code><a href="AbstractDirectionalBlock.html#extractDirection(net.minecraft.world.level.block.state.BlockState)">extractDirection</a>, <a href="AbstractDirectionalBlock.html#getDirection(net.minecraft.world.level.block.state.BlockState)">getDirection</a>, <a href="AbstractDirectionalBlock.html#rotate(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.block.Rotation)">rotate</a></code></div>
@@ -239,26 +233,12 @@ implements net.minecraft.world.level.block.EntityBlock</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.phys.shapes.CollisionContext)">
-<h3>getShape</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">net.minecraft.world.phys.shapes.VoxelShape</span>&nbsp;<span class="element-name">getShape</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state,
- net.minecraft.world.level.BlockGetter&nbsp;world,
- net.minecraft.core.BlockPos&nbsp;pos,
- net.minecraft.world.phys.shapes.CollisionContext&nbsp;ctx)</span></div>
+<section class="detail" id="getExtensionShape(net.minecraft.core.Direction)">
+<h3>getExtensionShape</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">net.minecraft.world.phys.shapes.VoxelShape</span>&nbsp;<span class="element-name">getExtensionShape</span><wbr><span class="parameters">(net.minecraft.core.Direction&nbsp;direction)</span></div>
 <dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="AbstractDirectionalCableBlock.html#getShape(net.minecraft.world.level.block.state.BlockState,net.minecraft.world.level.BlockGetter,net.minecraft.core.BlockPos,net.minecraft.world.phys.shapes.CollisionContext)">getShape</a></code>&nbsp;in class&nbsp;<code><a href="AbstractDirectionalCableBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalCableBlock</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">
-<h3>getScreenOpenableShape</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type">net.minecraft.world.phys.shapes.VoxelShape</span>&nbsp;<span class="element-name">getScreenOpenableShape</span><wbr><span class="parameters">(net.minecraft.world.level.block.state.BlockState&nbsp;state)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="AbstractBaseBlock.html#getScreenOpenableShape(net.minecraft.world.level.block.state.BlockState)">getScreenOpenableShape</a></code>&nbsp;in class&nbsp;<code><a href="AbstractBaseBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractBaseBlock</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractDirectionalCableBlock.html#getExtensionShape(net.minecraft.core.Direction)">getExtensionShape</a></code>&nbsp;in class&nbsp;<code><a href="AbstractDirectionalCableBlock.html" title="class in com.refinedmods.refinedstorage2.platform.common.block">AbstractDirectionalCableBlock</a></code></dd>
 </dl>
 </section>
 </li>

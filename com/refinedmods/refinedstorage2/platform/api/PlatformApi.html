@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -111,6 +111,12 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="network/node/exporter/ExporterTransferStrategyFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.exporter">ExporterTransferStrategyFactory</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExporterTransferStrategyRegistry()" class="member-name-link">getExporterTransferStrategyRegistry</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="network/node/externalstorage/PlatformExternalStorageProviderFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.externalstorage">PlatformExternalStorageProviderFactory</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalStorageProviderFactory(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)" class="member-name-link">getExternalStorageProviderFactory</a><wbr>(<a href="../../api/storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="grid/GridSynchronizer.html" title="interface in com.refinedmods.refinedstorage2.platform.api.grid">GridSynchronizer</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getGridSynchronizerRegistry()" class="member-name-link">getGridSynchronizerRegistry</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
@@ -148,6 +154,10 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#requestNetworkNodeUpdate(com.refinedmods.refinedstorage2.api.network.node.container.NetworkNodeContainer,net.minecraft.world.level.Level)" class="member-name-link">requestNetworkNodeUpdate</a><wbr>(<a href="../../api/network/node/container/NetworkNodeContainer.html" title="interface in com.refinedmods.refinedstorage2.api.network.node.container">NetworkNodeContainer</a>&nbsp;container,
  net.minecraft.world.level.Level&nbsp;level)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>&lt;T&gt;&nbsp;void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalStorageProviderFactory(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType,com.refinedmods.refinedstorage2.platform.api.network.node.externalstorage.PlatformExternalStorageProviderFactory)" class="member-name-link">setExternalStorageProviderFactory</a><wbr>(<a href="../../api/storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType,
+ <a href="network/node/externalstorage/PlatformExternalStorageProviderFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.externalstorage">PlatformExternalStorageProviderFactory</a>&nbsp;factory)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -198,6 +208,26 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getImporterTransferStrategyRegistry()">
 <h3>getImporterTransferStrategyRegistry</h3>
 <div class="member-signature"><span class="return-type"><a href="../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="network/node/importer/ImporterTransferStrategyFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.importer">ImporterTransferStrategyFactory</a>&gt;</span>&nbsp;<span class="element-name">getImporterTransferStrategyRegistry</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getExporterTransferStrategyRegistry()">
+<h3>getExporterTransferStrategyRegistry</h3>
+<div class="member-signature"><span class="return-type"><a href="../../api/core/registry/OrderedRegistry.html" title="interface in com.refinedmods.refinedstorage2.api.core.registry">OrderedRegistry</a>&lt;net.minecraft.resources.ResourceLocation,<wbr><a href="network/node/exporter/ExporterTransferStrategyFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.exporter">ExporterTransferStrategyFactory</a>&gt;</span>&nbsp;<span class="element-name">getExporterTransferStrategyRegistry</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setExternalStorageProviderFactory(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType,com.refinedmods.refinedstorage2.platform.api.network.node.externalstorage.PlatformExternalStorageProviderFactory)">
+<h3>setExternalStorageProviderFactory</h3>
+<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setExternalStorageProviderFactory</span><wbr><span class="parameters">(<a href="../../api/storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType,
+ <a href="network/node/externalstorage/PlatformExternalStorageProviderFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.externalstorage">PlatformExternalStorageProviderFactory</a>&nbsp;factory)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getExternalStorageProviderFactory(com.refinedmods.refinedstorage2.api.storage.channel.StorageChannelType)">
+<h3>getExternalStorageProviderFactory</h3>
+<div class="member-signature"><span class="type-parameters">&lt;T&gt;</span>
+<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="network/node/externalstorage/PlatformExternalStorageProviderFactory.html" title="interface in com.refinedmods.refinedstorage2.platform.api.network.node.externalstorage">PlatformExternalStorageProviderFactory</a>&gt;</span>&nbsp;<span class="element-name">getExternalStorageProviderFactory</span><wbr><span class="parameters">(<a href="../../api/storage/channel/StorageChannelType.html" title="interface in com.refinedmods.refinedstorage2.api.storage.channel">StorageChannelType</a>&lt;T&gt;&nbsp;channelType)</span></div>
 </section>
 </li>
 <li>

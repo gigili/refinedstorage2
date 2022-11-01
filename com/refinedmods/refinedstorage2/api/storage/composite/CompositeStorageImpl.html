@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -122,59 +122,71 @@ implements <a href="CompositeStorage.html" title="interface in com.refinedmods.r
 <div class="block">Adds a source and resorts them.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSources()" class="member-name-link">clearSources</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addToCache(T,long)" class="member-name-link">addToCache</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ long&nbsp;amount)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Clears all sources.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">extract</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
- long&nbsp;amount,
- <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Extracts a resource from a storage.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceByActorType(T,java.lang.Class)" class="member-name-link">findTrackedResourceByActorType</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Finds the tracked resource by actor type.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAll()" class="member-name-link">getAll</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">insert</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
- long&nbsp;amount,
- <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
- <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Inserts a resource into a storage.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onAddedIntoComposite(com.refinedmods.refinedstorage2.api.storage.composite.ParentComposite)" class="member-name-link">onAddedIntoComposite</a><wbr>(<a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;parentComposite)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called by a <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a> when this <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> is added into the composite storage.</div>
+<div class="block">Adds a resource to the composite storage cache.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onRemovedFromComposite(com.refinedmods.refinedstorage2.api.storage.composite.ParentComposite)" class="member-name-link">onRemovedFromComposite</a><wbr>(<a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;parentComposite)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSources()" class="member-name-link">clearSources</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called by a <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a> when this <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> is removed from the composite storage.</div>
+<div class="block">Clears all sources.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extract(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">extract</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ long&nbsp;amount,
+ <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Extracts a resource from a storage.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../tracked/TrackedResource.html" title="class in com.refinedmods.refinedstorage2.api.storage.tracked">TrackedResource</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findTrackedResourceByActorType(T,java.lang.Class)" class="member-name-link">findTrackedResourceByActorType</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&gt;&nbsp;actorType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Finds the tracked resource by actor type.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../resource/ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAll()" class="member-name-link">getAll</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStored()" class="member-name-link">getStored</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(T,long,com.refinedmods.refinedstorage2.api.core.Action,com.refinedmods.refinedstorage2.api.storage.Actor)" class="member-name-link">insert</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ long&nbsp;amount,
+ <a href="../../core/Action.html" title="enum class in com.refinedmods.refinedstorage2.api.core">Action</a>&nbsp;action,
+ <a href="../Actor.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Actor</a>&nbsp;actor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Inserts a resource into a storage.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onAddedIntoComposite(com.refinedmods.refinedstorage2.api.storage.composite.ParentComposite)" class="member-name-link">onAddedIntoComposite</a><wbr>(<a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;parentComposite)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Called by a <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a> when this <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> is added into the composite storage.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onSourceAddedToChild(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">onSourceAddedToChild</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;source)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onRemovedFromComposite(com.refinedmods.refinedstorage2.api.storage.composite.ParentComposite)" class="member-name-link">onRemovedFromComposite</a><wbr>(<a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;parentComposite)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Called by a <a href="CompositeStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeStorage</code></a> when this <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> is removed from the composite storage.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onSourceAddedToChild(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">onSourceAddedToChild</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called by the <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> to notify to this parent composite storage
  that a source has been added.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onSourceRemovedFromChild(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">onSourceRemovedFromChild</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;source)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#onSourceRemovedFromChild(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">onSourceRemovedFromChild</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called by the <a href="CompositeAwareChild.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>CompositeAwareChild</code></a> to notify to this parent composite storage
  that a source has been removed.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFromCache(T,long)" class="member-name-link">removeFromCache</a><wbr>(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ long&nbsp;amount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes a resource from the composite storage cache.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeSource(com.refinedmods.refinedstorage2.api.storage.Storage)" class="member-name-link">removeSource</a><wbr>(<a href="../Storage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">Storage</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;&nbsp;source)</code></div>
@@ -414,6 +426,40 @@ implements <a href="CompositeStorage.html" title="interface in com.refinedmods.r
 <dd><code><a href="ParentComposite.html#onSourceRemovedFromChild(com.refinedmods.refinedstorage2.api.storage.Storage)">onSourceRemovedFromChild</a></code>&nbsp;in interface&nbsp;<code><a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
 <dt>Parameters:</dt>
 <dd><code>source</code> - the source</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addToCache(T,long)">
+<h3 id="addToCache(java.lang.Object,long)">addToCache</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToCache</span><wbr><span class="parameters">(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ long&nbsp;amount)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ParentComposite.html#addToCache(T,long)">ParentComposite</a></code></span></div>
+<div class="block">Adds a resource to the composite storage cache.
+ Useful for the <a href="ConsumingStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>ConsumingStorage</code></a> to propagate changes manually.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ParentComposite.html#addToCache(T,long)">addToCache</a></code>&nbsp;in interface&nbsp;<code><a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resource</code> - the resource</dd>
+<dd><code>amount</code> - the amount</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeFromCache(T,long)">
+<h3 id="removeFromCache(java.lang.Object,long)">removeFromCache</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeFromCache</span><wbr><span class="parameters">(<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&nbsp;resource,
+ long&nbsp;amount)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ParentComposite.html#removeFromCache(T,long)">ParentComposite</a></code></span></div>
+<div class="block">Removes a resource from the composite storage cache.
+ Useful for the <a href="ConsumingStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite"><code>ConsumingStorage</code></a> to propagate changes manually.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ParentComposite.html#removeFromCache(T,long)">removeFromCache</a></code>&nbsp;in interface&nbsp;<code><a href="ParentComposite.html" title="interface in com.refinedmods.refinedstorage2.api.storage.composite">ParentComposite</a>&lt;<a href="CompositeStorageImpl.html" title="type parameter in CompositeStorageImpl">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>resource</code> - the resource</dd>
+<dd><code>amount</code> - the amount</dd>
 </dl>
 </section>
 </li>

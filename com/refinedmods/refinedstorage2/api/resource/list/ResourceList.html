@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -76,8 +76,12 @@ loadScripts(document, 'script');</script>
 <dd><code>T</code> - the type of resource</dd>
 </dl>
 <dl class="notes">
+<dt>All Known Subinterfaces:</dt>
+<dd><code><a href="../../../platform/api/resource/list/FuzzyResourceList.html" title="interface in com.refinedmods.refinedstorage2.platform.api.resource.list">FuzzyResourceList</a>&lt;T&gt;</code></dd>
+</dl>
+<dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="AbstractProxyResourceList.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">AbstractProxyResourceList</a></code>, <code><a href="listenable/ListenableResourceList.html" title="class in com.refinedmods.refinedstorage2.api.resource.list.listenable">ListenableResourceList</a></code>, <code><a href="ResourceListImpl.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListImpl</a></code></dd>
+<dd><code><a href="AbstractProxyResourceList.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">AbstractProxyResourceList</a></code>, <code><a href="../../../platform/api/resource/list/FuzzyResourceListImpl.html" title="class in com.refinedmods.refinedstorage2.platform.api.resource.list">FuzzyResourceListImpl</a></code>, <code><a href="listenable/ListenableResourceList.html" title="class in com.refinedmods.refinedstorage2.api.resource.list.listenable">ListenableResourceList</a></code>, <code><a href="ResourceListImpl.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListImpl</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@API(status=STABLE,
@@ -130,10 +134,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieves all resources and their amounts from the list.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove(T,long)" class="member-name-link">remove</a><wbr>(<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&nbsp;resource,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#remove(com.refinedmods.refinedstorage2.api.resource.ResourceAmount)" class="member-name-link">remove</a><wbr>(<a href="../ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&gt;&nbsp;resourceAmount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Removes an amount of a certain resource in the list.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove(T,long)" class="member-name-link">remove</a><wbr>(<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&nbsp;resource,
  long&nbsp;amount)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Removes an amount of a certain resource in the list.</div>
 </div>
 </div>
@@ -190,6 +199,21 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>resource</code> - the resource, may not be null</dd>
 <dd><code>amount</code> - the amount, must be larger than 0</dd>
+<dt>Returns:</dt>
+<dd>a result if the removal operation was successful, otherwise an empty <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="remove(com.refinedmods.refinedstorage2.api.resource.ResourceAmount)">
+<h3>remove</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ResourceListOperationResult.html" title="class in com.refinedmods.refinedstorage2.api.resource.list">ResourceListOperationResult</a>&lt;<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&gt;&gt;</span>&nbsp;<span class="element-name">remove</span><wbr><span class="parameters">(<a href="../ResourceAmount.html" title="class in com.refinedmods.refinedstorage2.api.resource">ResourceAmount</a>&lt;<a href="ResourceList.html" title="type parameter in ResourceList">T</a>&gt;&nbsp;resourceAmount)</span></div>
+<div class="block">Removes an amount of a certain resource in the list.
+ If the amount reaches 0 due to this removal, the resource is removed from the list.
+ Shorthand for <a href="#remove(T,long)"><code>remove(Object, long)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>resourceAmount</code> - the resource and the amount</dd>
 <dt>Returns:</dt>
 <dd>a result if the removal operation was successful, otherwise an empty <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a></dd>
 </dl>

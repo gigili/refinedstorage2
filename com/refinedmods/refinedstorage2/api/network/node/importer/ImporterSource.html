@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../../script-dir/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../../script-dir/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -72,6 +72,10 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - the resource type</dd>
+</dl>
+<dl class="notes">
 <dt>All Superinterfaces:</dt>
 <dd><code><a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;</code>, <code><a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</code></dd>
 </dl>
@@ -80,8 +84,15 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../platform/forge/internal/network/node/importer/FluidHandlerImporterSource.html" title="class in com.refinedmods.refinedstorage2.platform.forge.internal.network.node.importer">FluidHandlerImporterSource</a></code>, <code><a href="../../../../platform/forge/internal/network/node/importer/ItemHandlerImporterSource.html" title="class in com.refinedmods.refinedstorage2.platform.forge.internal.network.node.importer">ItemHandlerImporterSource</a></code>, <code><a href="../../../../platform/fabric/internal/network/node/importer/StorageImporterSource.html" title="class in com.refinedmods.refinedstorage2.platform.fabric.internal.network.node.importer">StorageImporterSource</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ImporterSource&lt;T&gt;</span><span class="extends-implements">
+<div class="type-signature"><span class="annotations">@API(status=STABLE,
+     since="2.0.0-milestone.2.1")
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">ImporterSource&lt;T&gt;</span><span class="extends-implements">
 extends <a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">ExtractableStorage</a>&lt;T&gt;, <a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage">InsertableStorage</a>&lt;T&gt;</span></div>
+<div class="block">Represents a source for the importer.
+ A valid source for the importer needs to be an <a href="../../../storage/ExtractableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage"><code>ExtractableStorage</code></a>, so the resources can be extracted
+ for insertion into the target network.
+ A valid source for the importer needs to be a <a href="../../../storage/InsertableStorage.html" title="interface in com.refinedmods.refinedstorage2.api.storage"><code>InsertableStorage</code></a> as well, so that transfers that end up
+ failing can be given back to the source.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,6 +134,10 @@ extends <a href="../../../storage/ExtractableStorage.html" title="interface in c
 <section class="detail" id="getResources()">
 <h3>getResources</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html" title="class or interface in java.util" class="external-link">Iterator</a>&lt;<a href="ImporterSource.html" title="type parameter in ImporterSource">T</a>&gt;</span>&nbsp;<span class="element-name">getResources</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the resources that this source has</dd>
+</dl>
 </section>
 </li>
 </ul>
